@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartment Booking</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Book Now Button -->
+    <button class="btn btn-primary book-now-btn" data-apartment="Luxury Suite">Book Now</button>
+
+    <!-- Policy Modal -->
+    <div class="modal fade" id="policyModal" tabindex="-1" aria-labelledby="policyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="policyModalLabel">Booking Policies</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1>Booking Policies</h1>
+                    <p>Welcome to Pristine Apartments. Please review our policies before proceeding with your booking.</p>
+                    <ul>
+                        <li>1. Check-out time is 12 noon.</li>
+                        <li>2. Booking is confirmed only when payment is received.</li>
+                        <li>3. Refunds are available if canceled 48 hours before check-in.</li>
+                        <li>4. A valid ID is required for check-in.</li>
+                        <li>5. No illegal activities are allowed in the apartment.</li>
+                    </ul>
+                    <div class="text-center">
+                        <p>By proceeding, you accept the above policies.</p>
+                        <button type="button" class="btn btn-success" id="agreeBtn">Agree & Proceed</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reservation Modal -->
+    <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reservationModalLabel">Make a Reservation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reservationForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="text" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="checkin" class="form-label">Check-in Date</label>
+                            <input type="date" class="form-control" id="checkin" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="checkout" class="form-label">Check-out Date</label>
+                            <input type="date" class="form-control" id="checkout" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="guests" class="form-label">Number of Guests</label>
+                            <input type="number" class="form-control" id="guests" min="1" required>
+                        </div>
+                        <input type="hidden" id="apartmentName">
+                        <button type="submit" class="btn btn-primary w-100">Confirm Booking</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (required for modals) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            // Handle "Book Now" button click
+            document.querySelectorAll('.book-now-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    const apartmentName = this.getAttribute('data-apartment');
+                    document.getElementById('apartmentName').value = apartmentName; 
+                    localStorage.setItem('selectedApartment', apartmentName); // Store in localStorage
+
+                    // Show Policy Modal
+                    const policyModal = new bootstrap.Modal(document.getElementById('policyModal'));
+                    policyModal.show();
+                });
+            });
+
+            // Handle "Agree & Proceed" button in policy modal
+            document.getElementById('agreeBtn').addEventListener('click', function () {
+                const storedApartmentName = localStorage.getItem('selectedApartment');
+                if (storedApartmentName) {
+                    document.getElementById('apartmentName').value = storedApartmentName;
+                }
+
+                // Close Policy Modal before opening Reservation Form
+                const policyModalEl = document.getElementById('policyModal');
+                const policyModal = bootstrap.Modal.getInstance(policyModalEl); 
+                policyModal.hide();
+
+                // Ensure the policy modal is completely closed before opening the next
+                policyModalEl.addEventListener('hidden.bs.modal', function () {
+                    const reservationModal = new bootstrap.Modal(document.getElementById('reservationModal'));
+                    reservationModal.show();
+                }, { once: true });
+            });
+
+            // Handle Reservation Form Submission
+            document.getElementById('reservationForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                
+                alert("Reservation successful! You will receive a confirmation email shortly.");
+                
+                // Close the modal
+                const reservationModalEl = document.getElementById('reservationModal');
+                const reservationModal = bootstrap.Modal.getInstance(reservationModalEl);
+                reservationModal.hide();
+            });
+
+        });
+    </script>
+
+</body>
+</html>

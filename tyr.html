@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Policy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .containerxx {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        p {
+            text-align: center;
+            font-size: 16px;
+            color: #555;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .accpt {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .btn-accpt {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .agree-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .cancel-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Booking Policy Modal -->
+<div class="modal fade" id="policyModal" tabindex="-1" aria-labelledby="policyModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="policyModalLabel">Booking Policies</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <h1>Booking Policies</h1>
+              <p>Welcome to Pristine Apartments. To ensure a comfortable and secure stay for all our guests, please take a moment to read through our policies before proceeding with your booking.</p>
+              <ul>
+                  <li>1. Check-out time is 12 noon prompt. Extension will attract the appropriate night rate.</li>
+                  <li>2. Booking is confirmed only when payment has been received by the Management and a Booking Confirmation Advice is sent.</li>
+                  <li>3. Refund of payment is made only if booking is cancelled within 48 hours to check-in date.</li>
+                  <li>4. A valid means of identification is required to be presented on arrival for checking in.</li>
+                  <li>5. The apartment is provided with cooking and laundry appliances. Any other special requests concerning laundry and cooking should be made in advance.</li>
+                  <li>6. Smoking is not allowed in the public spaces but could be permitted only in the balcony of the apartment.</li>
+                  <li>7. The occupant will not do anything that will create inconvenience to other apartment users.</li>
+                  <li>8. The occupant will not use the apartment for any illicit or illegal activities or any activity of a criminal nature.</li>
+                  <li>9. The Management of the apartment facility is under obligation to report any activity of a suspicious criminal nature to the security agencies.</li>
+                  <li>10. The facilities and appliances provided in the apartment are for use solely within the apartment.</li>
+                  <li>11. The facilities and appliances in the apartment are for the convenience and comfort of the occupant and are to be used responsibly and without damages to avoid a surcharge.</li>
+              </ul>
+              <div class="text-center">
+                  <p>By proceeding with the booking, you accept the above policies.</p>
+                  <button type="button" class="btn btn-success" id="agreeBtn">Agree & Proceed</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<script></script>
+</body>
+</html>

@@ -1,0 +1,2096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestine Apartment</title>
+    <script>
+      !function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    
+      fbq('init', '3570049643299661'); 
+      fbq('track', 'PageView');
+    </script>
+        <script type="text/javascript">
+          (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "q4i8nxllpb");
+      </script>
+
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTY8FXJJJ0"></script>
+            <script>
+            window. dataLayer = window.dataLayer || [];
+            function gtag() {dataLayer. push (arguments) ;} gtag ('js', new Date());
+            gtag( 'config', 'G-YTY8FXJJJ0');
+            </script>
+        
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Galada&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Pompiere&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gpt.css">
+    <style>
+
+      body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        background-color: #ececec;
+        overflow-y: scroll;
+        
+      }
+        .header {
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+        h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, #470b24, #ff758c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Container */
+  .contact-info p {
+    font-size: 0.8rem; /* Adjust font size for small devices */
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-info-location,
+  .contact-info-call {
+    text-align: center; /* Center-align text on small screens */
+  }
+}
+
+
+   
+  
+    
+
+
+
+
+        .contact-info {
+            text-align: right;
+            font-size: 0.9rem;
+        }
+        .logo {
+            text-align: center;
+        }
+        .contact-info p {
+            margin: 0;
+        }
+   
+        .booking-bar {
+            background-color: #f8f9fa;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: none;
+        }
+     /* Background container */
+
+.background-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background images */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.background-image.active {
+  opacity: 1;
+}
+
+/* Overlay content */
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+/* Text container styles */
+.text-container {
+  max-width: 600px; /* Adjust as needed */
+  text-align: center;
+}
+  .perfect{
+   
+    font-weight: 300;
+   
+  }
+  @media (max-width: 576px){
+    .perfect{
+    
+    font-weight: 300;
+   font-size: 25px;
+   font-weight: 600;
+    font-style: italic;
+  }
+  }
+    /* Carousel Container */
+    .carousel-container {
+      width: 79%;
+      max-width: 1200px;
+      height: 30rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+      justify-content: space-between;
+      height: 70vh; /* Ensure full screen height */
+      margin: 8rem auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .carousel-item img {
+      margin: 2em auto;
+    }
+
+    /* Caption on the Left */
+    .carousel-caption-left {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  width: 47%;
+  height: 300px;
+  z-index: 2;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* Adds a subtle shadow */
+}
+
+
+    .carousel-caption-left h3 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .carousel-caption-left p {
+      font-size: 1rem;
+      color: #555;
+      margin: 10px 0;
+    }
+
+    .carousel-caption-left a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    
+  #caption{
+    margin-top: 4r;
+  }
+
+
+
+    /* Main Carousel */
+    .carousel-inner {
+      width: 80%;
+      margin-left: auto;
+      overflow: hidden;
+      border-radius: 10px;
+ 
+    }
+
+    .carousel-inner img {
+      width: 100%;
+     
+      margin-left: 6rem;
+    }
+
+    /* Carousel Controls */
+    .carousel-control-prev,
+    .carousel-control-next {
+      justify-content: center;
+      align-items: center;
+      width: 5%;
+      height: 3rem;
+      margin: auto;
+      background-color: #0056b3;
+      z-index: 10;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(17, 17, 137);
+      margin: auto;
+    
+    }
+    .customers-review .carousel-control-prev{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin:  auto;
+      position: absolute;
+     
+    }
+  
+
+    /* Responsive Design  mobile*/
+    @media (max-width: 768px) {
+
+      
+
+      /* nav and header section */
+      .header{
+        display: none;
+      }
+
+      .carousel-caption-left {
+        display: none;
+        width: 90%;
+        left: 5%;
+        height: 200px;
+        transform: translateY(-50%);
+      }
+  
+      .carousel-inner {
+        width: 100%;
+      }
+     
+    }
+ 
+
+ /* General roomSection Styling */
+ .rooms {
+     
+      padding: 2rem;
+      
+    }
+  
+    .section-title {
+      text-align: center;
+      font-size: 4.4rem;
+      margin-bottom: 2rem;
+      color: #343a40; /* Dark text color */
+    }
+
+    @media (max-width: 768px){
+
+.section-title {
+text-align: center;
+font-size: 2.5rem;
+margin-bottom: 2rem;
+margin-top: 1.5rem;
+font-weight: 700;
+color: #343540; /* Dark text color */
+font-style: italic;
+box-shadow: 0 4px 6px rgb(12, 46, 179); /* Adds a subtle shadow */
+
+}
+
+}
+  
+    /* Room Card Styling */
+    .room-cards {
+  display: flex;
+  flex-wrap: wrap;
+  
+  justify-content: center;
+  gap: 2.5rem; /* Space between cards */
+  width: 100%; /* Ensure the container takes up full width */
+  
+}
+
+  
+.room-card {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 3px 4px rgba(3, 24, 210, 0.6);
+  border-top-left-radius: 3em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px; /* Keeps the card's width unchanged */
+  flex: 1 1 auto; /* Maintains proportional flexibility */
+ 
+  
+}
+/* .room-card {
+  background: linear-gradient(145deg, #d3b119, #d600c863);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 
+              -4px -4px 8px rgba(230, 98, 4, 0.7);
+  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+@keyframes animated-shadow {
+  0% {
+    box-shadow: 2px 4px 9px rgba(247, 8, 167, 0.821);
+  }
+  25% {
+    box-shadow: 1px 7px 11px rgb(1, 52, 255);
+  }
+  50% {
+    box-shadow: 1px 4px 13px rgb(255, 234, 0);
+  }
+  75% {
+    box-shadow: 0px 6px 9px rgba(234, 8, 151, 0.855);
+  }
+  100% {
+    box-shadow: 3px 8px 11px rgba(250, 5, 5, 0.883);
+  }
+}
+
+  
+    .room-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  
+    /* Transparent Blue Background on Image */
+    .room-card img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      display: block;
+    }
+  
+    .room-card .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(126, 126, 126, 0.213); /* Transparent Blue */
+      z-index: 1; /* Make sure it sits on top of the image */
+      opacity: 0.5; /* Adjust transparency */
+    }
+  
+    /* Room Details Styling */
+    .room-details {
+    
+      position: relative;
+      padding: 1rem;
+      text-align: center;
+      z-index: 2; /* Ensures text sits above the overlay */
+      text-align: start;
+    }
+  
+    .room-details h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    .room-details p {
+      margin: 0.5rem 0;
+      font-size: 17px;
+    }
+  
+    .room-details .price {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #4d402c;
+      font-size: 2em;
+    }
+  
+    /* Button Styling */
+    .room-details .btn {
+   
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 2rem;
+      margin-left: -5em;
+      text-transform: uppercase;
+      width: 195px;
+      
+    }
+    
+    .room-details button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #d50756;
+    box-sizing: border-box;
+    animation: moving-border 4s linear infinite;
+  }
+  .rooms .room-details-btn button{
+    margin-top: 9em;
+  }
+  
+  @keyframes moving-border {
+    0% {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 3%, 0% 3%);
+    }
+    25% {
+      clip-path: polygon(97% 0%, 100% 0%, 100% 100%, 97% 100%);
+    }
+    50% {
+      clip-path: polygon(0% 97%, 100% 97%, 100% 100%, 0% 100%);
+    }
+    75% {
+      clip-path: polygon(0% 0%, 3% 0%, 3% 100%, 0% 100%);
+    }
+    100% {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 3%, 0% 3%);
+    }
+  }
+  
+    .room-details .btn a {
+      text-decoration: none;
+      color: inherit;
+    }
+  
+    .room-details .btn:hover {
+      background-color: #141515;
+      color: #fff;
+    }
+
+    .room-icons {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+.icon {
+  font-size: 1.2rem;
+  color: #4d402c; /* Customize icon color */
+}
+
+.icon i {
+  margin-right: 5px;
+}
+
+.rare{
+  margin: 7em auto;
+}
+  
+@media (max-width: 768px){
+  .room-card{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgb(2, 16, 72); /* Adds a subtle shadow */
+}
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Adjust room card height and spacing */
+.rooms .room-card {
+  height: auto; /* Let the content dictate height */
+  margin-bottom: 1rem;
+}
+
+/* Adjust room image dimensions */
+.rooms .room-card img {
+  height: 250rem; /* Restrict image height */
+  object-fit: cover;
+  width: 100%; /* Ensure the image takes the full width */
+}
+
+/* Reduce padding and margins in room details */
+.rooms .room-details {
+  height: 12em;
+  padding: 1rem;
+  
+  
+}
+
+.rooms .room-details h2 {
+  font-size: 18px;
+ font-weight: bold;
+  text-align: start;
+ 
+}
+
+.rooms .room-details p {
+  font-size: 1rem;
+}
+
+.rooms .room-details-price .price {
+  font-size: 1.5rem;
+}
+
+.rooms .room-details-btn button {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  margin-top: 90px;
+  width: 120px;
+  
+}
+
+
+.room-icons .icon i {
+font-size: 1.1rem;  /* Reduce the size for mobile screens */
+color: rgb(27, 61, 250);
+}
+}
+
+
+
+/* General Layout */
+.HOTEL-services {
+  display: flex;
+  flex-wrap: wrap; /* Wrap content on small screens */
+  gap: 20px;
+  box-shadow: 0 4px 6px rgb(3, 24, 210);
+}
+
+/* Text Section */
+.HOTEL-services-text {
+  flex: 1; /* Take up equal space */
+ 
+  max-width: 50%; /* Limit width to 50% */
+  
+}
+
+/* Image Section */
+.HOTEL-services-image {
+  flex: 1; /* Take up equal space */
+  display: flex;
+  justify-content: flex-end; /* Align image to the right */
+  background-color: #000;
+}
+
+/* Image Styling */
+.HOTEL-services-image img {
+  max-width: 100%;
+  
+  height: auto; /* Maintain aspect ratio */
+}
+@media (max-width: 768px){
+  .HOTEL-services{
+    box-shadow: 0 4px 6px rgb(2, 16, 72); /* Adds a subtle shadow */
+  }
+
+  .HOTEL-services-text {
+    max-width: 100%; /* Allow the text section to take up the full width */
+    text-align: center; /* Center-align the text for a clean mobile look */
+    margin-bottom: 20px; /* Add spacing below the text section */
+  }
+  .HOTEL-services-image {
+    justify-content: center; /* Center the image section */
+  }
+  .HOTEL-services-image img {
+    width: 100%; /* Ensure the image scales to fit the container */
+    max-width: 400px; /* Optional: limit the maximum image size for better display */
+    height: auto; /* Maintain the aspect ratio */
+  }
+}
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+
+  .located{
+    display: none;
+  }
+  
+  .about-cons{
+    width: 100%;
+  }
+
+  @media screen and (max-width: 768px) { 
+ 
+
+        .calton-desp-img img {
+            max-width: 200px; /* Adjust the size for mobile */
+        }
+        
+    }
+
+
+  .carousel-container
+  {
+    margin-top: -7em;
+  }
+
+
+  .locate-us{
+    display: none;
+  }
+
+  .HOTEL-services-text,
+  .HOTEL-services-image {
+   
+    flex: 0 0 100%; /* Flex item takes full width */
+
+  }
+
+  .HOTEL-services-image {
+ 
+    justify-content: center; /* Center image on small screens */
+  }
+}
+
+/* Styles for devices between 1024px and 1440px (common desktop range) */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+
+    .about-cons{
+       width: 75%;
+       padding: 2em;
+       justify-content: start;
+    }
+    .calton-desp-p{
+      font-size: larger;
+    }
+
+    .mg-fluid {
+      max-width: 144em;
+    }
+}
+
+
+
+
+.hero {
+    background: url('images/plesant\ street.jpg') center/cover no-repeat;
+    height: 550px;
+    position: relative;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    z-index: 1;
+    margin-top: 3em;
+  }
+  
+
+  .hero-overlay-para1{
+    width: 43%;
+  }
+  .hero-overlay-para2{
+    width: 45%;
+
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+ 
+   /* About Section */
+   .aboutx {
+    display: flex;
+    /* padding: 40px 20px; */
+    gap: 30px;
+    width: 60em;
+    height: auto;
+    margin: 40px auto;
+    background: #f8f8f8;
+    position: relative;
+    z-index: 2; /* Ensures the About section appears in front of the Hero section */
+    margin-top: -15rem; /* Overlaps the Hero section */
+    box-shadow: 0 4px 6px rgb(2, 16, 72); /* Adds a subtle shadow */
+    border-radius: 10px;
+  }
+  .aboutx button a{
+    color: #000;
+  }
+  .aboutx-container {
+    
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+
+  }
+  
+  .aboutx-content {
+    width: 40%;
+    background-color: #0d9cd4;
+    height: 100%;
+    padding: 2em;
+  }
+  .aboutx-btn{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    height: 4rem;
+    width: 14rem;
+    border: none;
+    margin-top: 4em;
+    box-shadow: 0 4px 6px rgb(12, 46, 179);
+    border-radius: 2em;
+    animation: animated-shadow 3.5s infinite ease-in-out; /* Add continuous animation */
+    
+  }
+  .aboutx-btn a{
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .about-content h4 {
+    color: #2d2d2d;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-content h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #fff
+
+  }
+  
+  .about-content p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+ 
+ 
+
+
+
+  .about-image {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    max-width: 800px; /* Adjust as needed */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #2d2d2d;
+  }
+  .whatsapp-link {
+                position: fixed;
+                bottom: 120px;
+                left: 20px;
+                z-index: 500;
+            } 
+
+            .whatsapp-link img {
+                width: 50px;
+                height: 50px;
+                
+            } 
+
+  
+  .about-image img,
+  .about-image video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  
+  .carousel-item {
+            padding: 2rem;
+            text-align: center;
+        }
+        .review-text {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        .carousel-inner {
+    height: 370px; /* Adjust based on the tallest slide content */
+    display: flex;
+    align-items: center; /* Center-align the content vertically */
+}
+
+    
+        .review-author {
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+        .customers-header{
+          padding: 1em;
+          font-weight: bold;
+          font-style: italic;
+         
+        }
+            /* foootter */
+
+
+            footer {
+  background-color: #d1e9eb;
+  color: #333;
+  height: 67rem; /* Let the height adjust automatically for content */
+  padding: 20px 0;
+ 
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: space-between;
+}
+
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #000;
+  padding: 20px 10px;
+}
+
+.footer .btn {
+  background-color: #6c5236;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+}
+
+.footer .btn:hover {
+  background-color: #523f2a;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #b30707;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #6c5236;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer .col-lg-3 {
+  flex: 1 1 30%; /* Allow each column to take up 30% of available space and adjust as needed */
+  margin: 10px;
+}
+
+.footer .calton-desp,
+.footer .connet-sec {
+  flex-direction: column;
+}
+
+.footer .calton-desp,
+.footer .connet-sec,
+.footer .locate-content {
+  width: 100%; /* Ensure full width on smaller screens */
+}
+@media (max-width: 768px) {
+  .footer .col-lg-3 {
+    flex: 1 1 100%; /* Make each column take up the full width on smaller screens */
+  }
+  .footer{
+  
+  }
+  
+
+  .locate-content{
+    display: none;
+  }
+}
+
+    .parent-contaiin{
+      justify-content: center;
+      width: 100%;
+      overflow: hidden;
+    
+    }
+
+    .scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #0d6efd; /* Change color as needed */
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none; /* Initially hidden */
+  z-index: 1000; /* Ensure it appears on top */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+    .mainNv{
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: white;
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  height: 130px;
+
+  
+  
+}
+.mainNav-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+
+
+
+.logo img {
+  height: 50px;
+  display: none;
+}
+
+/* Nav Links */
+.mainnav-links {
+  list-style: none;
+  display: flex;
+justify-content: center;
+  gap: 2.5rem;
+ 
+  width: 100%;
+ 
+}
+
+.mainnav-links li a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2.6rem;
+  transition: color 0.3s;
+}
+.closeNav-toggle {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10; /* Ensure it's above other elements */
+}
+
+.mainnav-links.show .closeNav-toggle {
+  display: block; /* Show the button when menu is visible */
+}
+.mainnav-links li a:hover {
+  color: #ff9f43;
+}
+.Navmenu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 11;
+  
+}
+.Navmenu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #007BFF;
+  transition: all 0.3s ease;
+}
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .mainNv {
+  padding: em;
+  background: #fcf9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgb(12, 46, 179);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+ 
+}
+
+  .mainNav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    
+  }
+
+  .Navmenu-toggle {
+    display: flex;
+    background: #fcf9f9;
+    
+    
+  }
+
+  .logo img {
+    display: block;
+  }
+
+  .mainnav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden by default */
+    flex-direction: column;
+    background: #000; /* Add background for visibility */
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 19; /* Above content but below toggle */
+    overflow-y: auto; /* Allow scrolling if the content overflows */
+  }
+  
+  .mainnav-links.show {
+    right: 0; /* Make visible */
+  }
+  
+  .mainnav-links li {
+    margin: 1rem 0; /* Space between links */
+    font-size: 13px;
+  }
+  .mainnav-links li a{
+    font-size: 20px;
+  }
+
+  /* sliding bg video */
+  .background-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    background: #000;
+    height: 540px;
+  }
+
+  .background-image image {
+    height: 100%; /* Adjust height for smaller screens */
+  }
+
+  .overlay-content {
+    font-size: 1rem; /* Smaller font size */
+    padding: 1rem; /* Add padding for readability */
+  }
+
+  .booking-bar {
+    display: none;
+  }
+
+}
+ 
+  
+
+ 
+  @media (max-width: 768px) {
+    /* Reduce the title font size */
+    .room-card{
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .room-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 6px rgb(12, 46, 179);
+    }
+   
+
+    /* Adjust room card height and spacing */
+    .rooms .room-card {
+      height: auto; /* Let the content dictate height */
+      margin-bottom: 2rem;
+    }
+
+    /* Adjust room image dimensions */
+    .rooms .room-card img {
+      height: 270px; /* Restrict image height */
+      object-fit: cover;
+      width: 100%; /* Ensure the image takes the full width */
+    }
+
+    /* Reduce padding and margins in room details */
+    .rooms .room-details {
+      height: 14em;
+      padding: 1rem;
+      
+      
+    }
+
+
+    .rooms .room-details p {
+      font-size: 0.9rem;
+    }
+
+    .rooms .room-details-price .price {
+      font-size: 1.3rem;
+    }
+
+    .rooms .room-details-btn button {
+      font-size: 0.9rem;
+      margin-top: 5em;
+    
+    
+    }
+
+    .room-icons .icon i {
+    font-size: 1.1rem;  /* Reduce the size for mobile screens */
+  }
+  
+
+ 
+
+  /* Apply the background color change animation on hover for mobile */
+  .room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: changeBackgroundColor 2s ease-in-out forwards;
+  }
+
+
+  /* the video section */
+
+  .hero{
+  display: none;
+ }
+ .aboutx {
+    flex-direction: column; /* Stack items vertically on mobile */
+    width: 100%; /* Full-width section on mobile */
+    height: auto; /* Allow content to adjust dynamically */
+    margin-top: 0; /* Remove negative margin for better spacing */
+    padding: 20px; /* Add padding for better readability */
+    margin-top: 2EM;
+    color: white;
+  }
+
+  .aboutx-container {
+    flex-direction: column; /* Stack content vertically */
+    gap: 20px; /* Add spacing between elements */
+  }
+
+  .aboutx-content {
+    width: 100%; /* Take full width on mobile */
+    text-align: center; /* Center-align text */
+    padding: 20px;
+    justify-content: start;
+    text-align: start;
+  }
+
+  .aboutx-content h2 {
+    font-size: 1.5rem; /* Adjust font size for mobile readability */
+  }
+
+  .about-image {
+    width: 100%; /* Full width for image */
+    height: auto; /* Let image height adjust dynamically */
+  }
+
+  .about-image img {
+    width: 100%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+  }
+
+  .custom-margin {
+    margin-top: 2em !important; /* Override inline style for mobile */
+    height: auto;
+    margin-bottom: 12em;
+  }
+}
+
+   /* Keyframe animation to change background color */
+@keyframes changeBackgroundColor {
+  0% {
+    background-color: #f0f8ff; /* Original blue */
+  }
+  50% {
+    background-color: #06365376; /* New blue */
+  }
+  100% {
+    background-color: #f0f8ff; /* Original blue again */
+  }
+}
+
+
+.btn-book {
+            position: fixed; /* Fix the button at the bottom of the viewport */
+            bottom: 0; /* Position it at the bottom */
+            left: 0;
+            width: 100%; /* Full width */
+            background-color: #007BFF; /* Blue background */
+            color: white; /* White text */
+            text-align: center; /* Center the text */
+            padding: 15px 0; /* Padding for better touch experience */
+            font-size: 18px; /* Font size */
+            font-weight: bold; /* Bold text */
+            text-decoration: none; /* Remove underline */
+            z-index: 9999; /* Ensure it appears above all other content */
+            display: none; /* Initially hidden */
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for a floating effect */
+            border: none;
+        }
+
+        /* Show the button only on mobile screens */
+        @media (max-width: 768px) {
+            .btn-book {
+                display: block; /* Display the button on mobile */
+                
+            }
+    
+        }
+
+
+         /* map */
+         .mobileMap {
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically (optional) */
+  margin: auto; /* Centers horizontally if a width is set */
+  text-align: center; /* Ensures alignment for inline elements */
+  
+}
+/* Hide the map by default */
+.mobileMap {
+  display: none; /* Hidden on all devices by default */
+}
+
+/* Show the map only on mobile devices (screen width ≤ 768px) */
+@media (max-width: 768px) {
+  .locate-content{
+    display: none;
+  }
+  .mobileMap {
+    display: block; /* Visible on mobile screens */
+    text-align: center; /* Center align for better appearance */
+    margin: auto;
+    justify-content: center;
+    height: 400px;
+    margin-top: 3rem;
+
+  }
+
+  .mobileMap iframe {
+    margin-top:rem; /* Adjust top margin for spacing */
+    width: 90%;
+    height: 100%;
+    /* Ensure responsiveness */
+     /* Adjust height for smaller screens */
+   
+  }
+}
+
+@keyframes shootout {
+  0% {
+    transform: scale(0.9) translateZ(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05) translateZ(20px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateZ(10px);
+  }
+}
+ 
+.discount-badge {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  background-color: #0037ff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.pricz{
+  margin-top: -1em;
+  text-decoration: line-through;
+}
+
+
+.containerxx {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+       .containerxx h1 {
+            text-align: center;
+            color: #444;
+        }
+        .accpt {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .btn-accpt {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .agree-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .agree-btn a{
+          text-decoration: none;
+          color: white;
+        }
+        .cancel-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .cancel-btn a{
+          text-decoration: none;
+          color: white;
+        }
+        @media (max-width: 600px) {
+            .containerxx {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+    </style>
+
+ 
+ 
+
+</head>
+<body>
+
+  <div class="parent-contaiin">
+
+
+    <header class="header container-fluid">
+      <div class="row align-items-center px-4">
+        <!-- Logo Section -->
+        <div class="col-12 col-md-4 text-center text-md-start">
+          <div class="logo" style="width: 189px; margin: 0;">
+            <a href="index.html">
+              <img
+                src="images/6-5-e1626882432619.png"
+                alt=""
+                style="height: 50px; display: block; margin: 0;"
+              />
+            </a>
+            <span style="font-weight: bold; display: block; text-align: center;">
+            </span>
+          </div>
+        </div>
+    
+        <!-- Contact Information Section -->
+        <div class="col-12 col-md-8 mt-3 mt-md-0 p">
+          <div class="contact-info row g-3">
+            <!-- Location -->
+            <div class="contact-info-location col-12 col-lg-6 text-center text-lg-start">
+              <p>
+                <i class="fas fa-map-marker-alt"></i>
+                #Plot 219, Apo Dutse, Apo, Abuja FCT, Nigeria
+                46 km from Abuja Int'l Airport
+
+                
+              </p>
+            </div>
+        
+            <!-- Contact Details -->
+            <div class="contact-info-call col-12 col-lg-6 text-center text-lg-end ms-auto">
+              <p>
+                <i class="fas fa-phone"></i> (+234) 0802 982 3593</p>
+              <p>
+                <i></i>
+              </p>
+              <p>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:Support@prestineapartment.com">Support@prestineapartment.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+    </header>
+
+
+    <!-- navbar section -->
+
+    <nav class="mainNv">
+      <div class="mainNav-container">
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <img src="images/6-5-e1626882432619.png" alt="Logo">
+        </a>
+    
+        <!-- Toggle Button -->
+        <button class="Navmenu-toggle" id="NavmenuToggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+         
+        </button>
+    
+        <!-- Navigation Links -->
+        <ul class="mainnav-links" id="mainnavLinks">
+          <button class="closeNav-toggle" id="closeNavToggle">✕</button>
+          <li><a href="Apartment.html">Apartments</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+
+
+   
+    <div class="containerxx">
+        <h1>Booking Policies</h1>
+        <p>Welcome to Pristine Apartments. To ensure a comfortable and secure stay for all our guests, please take a moment to read through our policies before proceeding with your booking.</p>
+        <ul>
+          1. Check-out time is 12 noon prompt. Extension will attract the appropriate night rate. 
+          2. Booking is confirmed only when payment has been received by the Management and a Booking Confirmation Advice is sent. 
+          3. Refund of payment is made if booking is cancelled within 48 hours to check-in date.
+          4. A valid means of identification is required to be presented on arrival for checking in.
+          5. The apartment is provided with cooking and laundry appliances. Any special requests concerning laundry and cooking should be made in advance.
+          6. Smoking is not allowed in the apartment or in any part of the facility.
+          7. The occupant will not do anything that will create inconvenience to other apartment users. 
+          8. The occupant will not use the apartment for any illicit or illegal activities or any activity of a criminal nature. The Management of the apartment facility is under obligation to report any activity of a suspicious criminal nature to the security agencies.
+          9. The facilities and appliances provided in the apartment are for use solely within the apartment. 
+          10. The facilities and appliances in the apartment are for the convenience and comfort of the occupant and are to be used responsibly and without damages to avoid a surcharge.
+        </ul>
+        <div style="color: rgb(6, 0, 0);">By proceeding with the booking, you accept the above policies.</div>
+        <div class="btn-accpt">
+            <button class="btn book-now-btn bg-primary" id="read-more-btn"             data-apartment="Modern-1-room-Apartment-Lugbe " data-bs-toggle="modal" data-bs-target="#reservationModal">Agree & Proceed</button>
+
+            <button class="btn cancel-btn"><a href="Modern 1-room-Apartment - Lugbe.html">Cancel Booking</a></button>
+        </div>
+    </div>
+
+
+
+
+    <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="reservationModalLabel">Hotel Reservation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="reservationForm">
+              <div class="mb-3">
+                <!-- Title on the first line -->
+                <label for="title" class="form-label">Title</label>
+                <select class="form-select mb-2" id="title" name="user_title" required>
+                    <option value="" disabled selected>Select Title</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Dr">Dr</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="mb-3">
+                <div class="row">
+                    <!-- First Name on the second line -->
+                    <div class="col">
+                        <label for="first_name" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter your first name" required>
+                    </div>
+                    <!-- Last Name on the second line -->
+                    <div class="col">
+                        <label for="last_name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter your last name" required>
+                    </div>
+                </div>
+            </div>
+            
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" name="user_email" placeholder="Enter your email" required>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="user_phone" placeholder="Enter your phone number" required>
+              </div>
+              <div class="mb-3">
+                <label for="checkin" class="form-label">Check-In Date</label>
+                <input type="date" class="form-control" id="checkin" name="checkin_date" required>
+              </div>
+              <div class="mb-3">
+                <label for="checkout" class="form-label">Check-Out Date</label>
+                <input type="date" class="form-control" id="checkout" name="checkout_date" required>
+              </div>
+              <div class="mb-3">
+                <label for="guests" class="form-label">Number of Guests</label>
+                <input type="number" class="form-control" id="guests" name="guest_number" placeholder="Enter number of guests" required>
+              </div>
+
+             
+              <input type="hidden" id="hiddenRoomRate" name="room_rate">
+              <input type="hidden" id="hiddenVAT" name="vat_amount">
+              <input type="hidden" id="hiddenServiceCharge" name="service_charge">
+              <input type="hidden" id="hiddenGrandTotal" name="grand_total">
+              <input type="hidden" name="apartment_name" id="apartmentName">
+              <input type="hidden" id="hiddensubtotal" name="subtotal">
+              <input type="hidden" id="hiddenTotalNights" name="total_nights">
+              
+              <!-- <p>Total Price (Excluding VAT): <span id="priceDisplay">₦0.00</span></p> -->
+  
+
+              <button type="submit" class="btn btn-primary w-100">Submit Reservation</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     
+      <!-- footer -->
+    <footer class="footer">
+      <div class="container d-flex">
+      
+          <!-- Locate Us Section -->
+          <div class=" bg-white locate-content justify-content-between mt-4 col-lg-3 col-md-6 mb-4" style="height: 30em; width: 0%;">
+              <div class="locate-content p-3 m-auto" style="height: 17em; width: 90%;">
+                  <h3 style="font-size: 30px;">Locate Us</h3>
+                  <button class="btn btn-sm w-50"  style="height: 70px;">View on Map</button>
+  
+                  <h2 class="mt-5">Places Near by</h2>
+                  <ul class="mt-3">
+                    <li>1. - Novare ShopRite Apo </li>
+                    <li>2. - ⁠Cedarcrest Hospitals-Ap0</li>
+                    <li>3. - Trademore Estates- lugbe</li>
+                    <li>4. -  ⁠Dunamis International Gospel Centre, Glory Dome</li>
+                  </ul>
+                </div>
+
+                <div class="map w-100" style="margin-top: 15em;">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.8384986523947!2d7.4910934000000005!3d8.987004599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0d2a678a79e3%3A0x1124c0d588f26144!2sPleasant%20Places%2CApo!5e0!3m2!1sen!2sng!4v1735572037165!5m2!1sen!2sng" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div> 
+
+              
+           
+          </div>
+          
+          
+          <!-- About Us Section -->
+          <div class="col-lg-3 col-md-6  mb-4 w-100" style="text-align: start; margin-top: rem;">
+  
+              <div class="calton-desp d-flex justify-content-between m-auto" style="font-size: smaller;  width: 100%; ">
+  
+                  <div class="calton-desp-img mt-3">
+                      <img src="images/6-5-e1626882432619.png" alt="The Wells Carlton Logo" class="img-fluid mb-3" style="max-width: 200px;">
+                  </div>
+      
+  
+  
+                  <div class="calton-desp-p">
+                      <p>
+                        Welcome to Prestine Apartments, where comfort meets convenience in the heart of Apo. Located just minutes away from the bustling Shoprite Apo, our apartments offer the perfect blend of modern living and easy access to the city’s top attractions.
+                        
+                        At Prestine Apartments, we are dedicated to providing a living experience that is not only stylish and comfortable but also tailored to meet the diverse needs of our residents. From cozy studio apartments to spacious three-bedroom units, each space is thoughtfully designed with high-quality finishes, contemporary amenities, and a focus on functionality.
+                        Our prime location ensures that you’re always connected to the best the city has to offer. Whether it’s shopping, dining, entertainment, or transportation, everything you need is right at your doorstep. We prioritize safety and peace of mind with secure, well-maintained buildings and a welcoming community atmosphere.
+                        Experience modern living redefined at Prestine Apartments. Welcome home!
+                    .</p>
+                  </div>
+                 
+              </div>
+            
+              
+  
+          <!-- Connect With Us Section -->
+  
+          <div class="connet-sec  d-flex m-auto" style="height:55rem;">
+              <div class="">
+                  <h3>Connect With Us</h3>
+                  <div class="Connect-content" style="margin-top: -1.5rem;">
+                    <p><i class="fas fa-map-marker-alt"></i> Plot 219, Apo Dutse, Apo, Abuja FCT, Nigeria.</p>
+                    <p><i class="fas fa-phone"></i> (+234) 0802 982 3593</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:Support@prestineapartment.com">Support@prestineapartment.com</a></p>
+                    
+                  </div>
+          
+                  </div>
+              
+                <!-- Useful Links Section -->
+                <div class="usefull-container;">
+                  <h3>Useful Links</h3>
+                  <ul>
+                    <li><a href="Apartment.html">Check Apartments</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                  <div class="social-icons mt-3">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-google-plus"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <p>Copyright © 2021 <strong>Prestine Apartments</strong>. All rights reserved.</p>
+                  </div>
+                </div>
+              </div>
+          
+        </div>
+        
+      </div>
+    </footer>
+     <!-- Fixed "Book Now" Button -->
+     <button type="button" class="btn-book" id="read-more-btn" data-bs-toggle="modal" data-bs-target="#reservationModal" style="color: white;">Book Now</button>
+
+         <!-- Modal for Reservation -->
+         <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="reservationModalLabel">Hotel Reservation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="reservationForm">
+                  <div class="mb-3">
+                    <div class="row">
+                      <div class="col-auto">
+                        <label for="name" class="form-label">Title</label>
+                        <select class="form-select mb-2" id="title" name="user_tltle" required>
+                          <option value="" disabled selected>Select Title</option>
+                          <option value="Mr">Mr</option>
+                          <option value="Mrs">Mrs</option>
+                          <option value="Ms">Ms</option>
+                          <option value="Dr">Dr</option>
+                          <option value="Other">Other</option>
+                        </select>
+                      </div>
+                      
+                      <div class="col">
+                         <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" name="user_name" placeholder="Enter your full name" required>
+                      </div>
+                    </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="user_email" placeholder="Enter your email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="user_phone" placeholder="Enter your phone number" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="checkin" class="form-label">Check-In Date</label>
+                    <input type="date" class="form-control" id="checkin" name="checkin_date" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="checkout" class="form-label">Check-Out Date</label>
+                    <input type="date" class="form-control" id="checkout" name="checkout_date" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="guests" class="form-label">Number of Guests</label>
+                    <input type="number" class="form-control" id="guests" name="guest_number" placeholder="Enter number of guests" required>
+                  </div>
+
+                 
+                  <input type="hidden" id="hiddenRoomRate" name="room_rate">
+                  <input type="hidden" id="hiddenVAT" name="vat_amount">
+                  <input type="hidden" id="hiddenServiceCharge" name="service_charge">
+                  <input type="hidden" id="hiddenGrandTotal" name="grand_total">
+                  <input type="hidden" name="apartment_name" id="apartmentName">
+                  <p>Total Price (Excluding VAT): <span id="priceDisplay">₦0.00</span></p>
+      
+
+                  <button type="submit" class="btn btn-primary w-100">Submit Reservation</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+
+
+         <!-- Placeholder for Notification -->
+         <div id="notificationArea" class="fixed top-0 left-0 right-0 text-center text-lg font-semibold hidden"></div>
+  
+
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function changeCarouselImage(index) {
+            const carousel = document.querySelector('#roomCarousel');
+            const carouselInstance = bootstrap.Carousel.getInstance(carousel);
+            carouselInstance.to(index);
+        }
+    </script>
+
+    <script>
+
+const images = document.querySelectorAll('.background-image');
+    let currentIndex = 0;
+  
+    function changeBackground() {
+      // Remove 'active' class from all images
+      images.forEach((img) => img.classList.remove('active'));
+  
+      // Add 'active' class to the current image
+      images[currentIndex].classList.add('active');
+  
+      // Update the index for the next image
+      currentIndex = (currentIndex + 1) % images.length;
+    }
+  
+    // Change the background every 8 seconds
+    setInterval(changeBackground, 8000);
+  
+    // Initialize the first image
+    changeBackground();
+
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+  const playButton = document.getElementById("playButton");
+  const video = document.getElementById("aboutVideo");
+  const image = document.getElementById("aboutImage");
+
+  playButton.addEventListener("click", () => {
+    // Hide the image and play button
+    playButton.style.display = "none";
+    image.style.display = "none";
+
+    // Show the video and start playback
+    video.style.display = "block";
+    video.play();
+  });
+});
+    </script>
+
+
+
+<!-- Include EmailJS -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script>
+    // Initialize EmailJS
+  emailjs.init('2ZNOdi6QPItTHItBO');
+  
+  // Function to format numbers with commas
+  function formatNumberWithCommas(amount) {
+      return amount.toLocaleString(undefined, { minimumFractionDigits: 2 });
+  }
+  
+  // Function to update price based on check-in and check-out dates
+  function updatePrice() {
+      const checkinDate = document.getElementById('checkin').value;
+      const checkoutDate = document.getElementById('checkout').value;
+      const roomRate = parseFloat(document.getElementById('hiddenRoomRate').value) || 45000;
+  
+      if (!checkinDate || !checkoutDate) {
+          document.getElementById('priceDisplay').textContent = "₦0.00";
+          return;
+      }
+  
+      const checkin = new Date(checkinDate);
+      const checkout = new Date(checkoutDate);
+      const totalNights = Math.ceil((checkout - checkin) / (1000 * 60 * 60 * 24));
+  
+      if (isNaN(totalNights) || totalNights <= 0) {
+          document.getElementById('priceDisplay').textContent = "₦0.00";
+          return;
+      }
+  
+      const subtotal = totalNights * roomRate;
+      document.getElementById('priceDisplay').textContent = `₦${formatNumberWithCommas(subtotal)}`;
+  }
+  
+  // Event listeners for date inputs
+  document.getElementById('checkin').addEventListener('change', updatePrice);
+  document.getElementById('checkout').addEventListener('change', updatePrice);
+  
+  // Handle "Book Now" button click
+  document.querySelectorAll('.book-now-btn').forEach(button => {
+      button.addEventListener('click', function () {
+          document.getElementById('apartmentName').value = this.getAttribute('data-apartment');
+          document.getElementById('hiddenRoomRate').value = this.getAttribute('data-price') || 45000;
+      });
+  });
+  
+  // Handle form submission
+  document.getElementById('reservationForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+  
+      const checkinDate = document.getElementById('checkin').value;
+      const checkoutDate = document.getElementById('checkout').value;
+      const guestNumber = document.getElementById('guests').value;
+      const totalNights = Math.max(1, parseInt((new Date(checkoutDate) - new Date(checkinDate)) / (1000 * 60 * 60 * 24)));
+  
+      if (!checkinDate || !checkoutDate || totalNights <= 0) {
+          alert('Invalid check-in or check-out dates.');
+          return;
+      }
+  
+      // Extract form values
+      const title = document.getElementById("title").value;  // Fix: Now extracting the title
+      const firstName = document.getElementById("first_name").value.trim();
+      const lastName = document.getElementById("last_name").value.trim();
+      const userEmail = document.getElementById("email").value;
+      const userPhone = document.getElementById("phone").value;
+      const apartmentName = document.getElementById("apartmentName").value;
+  
+      // Calculate pricing
+      const displayedSubtotal = document.getElementById('priceDisplay').textContent.replace(/₦|,/g, '').trim();
+      const subtotal = parseFloat(displayedSubtotal) || 0;
+      const vatAmount = subtotal * 0.075;
+      const serviceCharge = subtotal * 0.1;
+      const grandTotal = subtotal + vatAmount + serviceCharge;
+  
+      // ✅ Update hidden form fields before sending (formatted with commas)
+      document.getElementById('hiddensubtotal').value = formatNumberWithCommas(subtotal);
+      document.getElementById('hiddenVAT').value = formatNumberWithCommas(vatAmount);
+      document.getElementById('hiddenServiceCharge').value = formatNumberWithCommas(serviceCharge);
+      document.getElementById('hiddenGrandTotal').value = formatNumberWithCommas(grandTotal);
+      document.getElementById('hiddenTotalNights').value = totalNights;
+  
+      console.log("Sending EmailJS Template Params:", {
+        user_title: title,  // Fix: Sending the title
+          first_name: firstName,
+          last_name: lastName,
+          user_email: userEmail,
+          user_phone: userPhone,
+          checkin_date: checkinDate,
+          checkout_date: checkoutDate,
+          guest_number: guestNumber,
+          apartment_name: apartmentName,
+          subtotal: `₦${formatNumberWithCommas(subtotal)}`,
+          vat_amount: `₦${formatNumberWithCommas(vatAmount)}`,
+          service_charge: `₦${formatNumberWithCommas(serviceCharge)}`,
+          grand_total: `₦${formatNumberWithCommas(grandTotal)}`,
+          total_nights: totalNights
+      });
+  
+emailjs.sendForm('service_p6y1fke', 'template_vvm744y', this)
+        .then(response => {
+            console.log('Client Email Sent', response.status, response.text);
+        })
+        .catch(error => {
+            console.error('Client Email Error', error);
+        });
+
+    // ✅ Send to Company
+    emailjs.sendForm('service_p6y1fke', 'template_iyygb2u', this)
+        .then(response => {
+            console.log('Company Email Sent', response.status, response.text);
+            // Only redirect after both are successful (optional)
+            window.location.href = 'confirmation.html';
+        })
+        .catch(error => {
+            console.error('Company Email Error', error);
+            alert('Failed to notify company. Please try again.');
+        });
+});
+  </script>
+  
+<script>
+  // Wait until the DOM is fully loaded
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollToTop = document.getElementById("scrollToTop");
+
+    // Show the button when scrolling down
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 1700) { // Show after scrolling 300px
+        scrollToTop.style.display = "block";
+      } else {
+        scrollToTop.style.display = "none";
+      }
+    });
+
+    // Scroll to the top smoothly when the button is clicked
+    scrollToTop.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  });
+</script>
+
+<!-- Toggle Nav section -->
+
+<script>
+  // JavaScript for Navbar Toggle
+// JavaScript for Navbar Toggle
+const toggleButton = document.getElementById("NavmenuToggle");
+const closeNavButton = document.getElementById("closeNavToggle");
+const navLinks = document.getElementById("mainnavLinks");
+
+// Function to show or hide the navigation menu
+const toggleNav = () => {
+  navLinks.classList.toggle("show");
+};
+
+// Event listener for the main toggle button
+if (toggleButton) {
+  toggleButton.addEventListener("click", toggleNav);
+}
+
+// Event listener for the close button inside the menu
+if (closeNavButton) {
+  closeNavButton.addEventListener("click", toggleNav);
+}
+
+// Optional: Close the nav menu when clicking on a link (for smaller screens)
+const navItems = document.querySelectorAll(".mainnav-links a");
+navItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+  });
+});
+
+</script>
+
+
+<script>
+  // Get the dropdown and name input elements
+  const titleDropdown = document.getElementById("title");
+  const nameInput = document.getElementById("name");
+
+  // Add an event listener for when the dropdown value changes
+  titleDropdown.addEventListener("change", function () {
+    // Get the selected title
+    const selectedTitle = titleDropdown.value;
+
+    // Update the name input to start with the selected title
+    nameInput.value = selectedTitle + " ";
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

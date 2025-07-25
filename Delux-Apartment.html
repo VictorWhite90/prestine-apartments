@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestine Apartments</title>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-59GPZ9JP');</script>
+  <!-- End Google Tag Manager -->
+  
+
+
+    <script>
+      !function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    
+      fbq('init', '3570049643299661'); 
+      fbq('track', 'PageView');
+    </script>
+        <script type="text/javascript">
+          (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "q4i8nxllpb");
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTY8FXJJJ0"></script>
+      <script>
+      window. dataLayer = window.dataLayer || [];
+      function gtag() {dataLayer. push (arguments) ;} gtag ('js', new Date());
+      gtag( 'config', 'G-YTY8FXJJJ0');
+      </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="gpt.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+    <style>
+          body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        overflow-y: scroll;
+        
+      }
+
+      .parent-contaiin{
+      justify-content: center;
+      width: 100%;
+      overflow: hidden;
+    
+    }
+        .header {
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+        @media (max-width: 768px) {
+      .header{
+        display: none;
+        }}
+
+
+        .ratings {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .ratings div {
+            text-align: center;
+        }
+        
+        .mainNv{
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: white;
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  height: 130px;
+  font-family: Georgia, 'Times New Roman', Times, serif; /* Use the imported font */
+  
+  
+}
+.mainNav-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+
+
+
+.logo img {
+  height: 50px;
+  display: none;
+}
+
+/* Nav Links */
+.mainnav-links {
+  list-style: none;
+  display: flex;
+justify-content: center;
+  gap: 2.5rem;
+ 
+  width: 100%;
+ 
+}
+
+.mainnav-links li a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2.6rem;
+  transition: color 0.3s;
+}
+.closeNav-toggle {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10; /* Ensure it's above other elements */
+}
+
+.mainnav-links.show .closeNav-toggle {
+  display: block; /* Show the button when menu is visible */
+}
+.mainnav-links li a:hover {
+  color: #f68113;
+}
+.Navmenu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 11;
+  
+}
+.Navmenu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #007BFF;
+  transition: all 0.3s ease;
+}
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .mainNv {
+  padding: em;
+  background: #fcf9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgb(12, 46, 179);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+ 
+}
+
+  .mainNav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    
+  }
+
+  .Navmenu-toggle {
+    display: flex;
+    background: #fcf9f9;
+    
+    
+  }
+
+  .logo img {
+    display: block;
+  }
+
+  .mainnav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden by default */
+    flex-direction: column;
+    background: #000; /* Add background for visibility */
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 19; /* Above content but below toggle */
+    overflow-y: auto; /* Allow scrolling if the content overflows */
+  }
+  
+  .mainnav-links.show {
+    right: 0; /* Make visible */
+  }
+  
+  .mainnav-links li {
+    margin: 1rem 0; /* Space between links */
+    font-size: 13px;
+  }
+  .mainnav-links li a{
+    font-size: 20px;
+  }
+
+
+
+
+        .booking-bar {
+          display: none;
+        }
+        
+
+      }
+
+        .booking-bar {
+          display: flex;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgb(3, 24, 210);
+        }
+
+        /* carousel */
+     
+         .carousel-inner img {
+           width: 100%;
+            height: 700px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-inner img {
+                height: 500px;
+            }
+
+            .IMG-content2{
+            display: none;
+          }
+        }
+
+        @media (max-width: 576px) {
+            .carousel-inner img {
+                height: 300px;
+               
+
+            }
+            .thum-images{
+              margin-top: -3rem;
+              width: 100%;
+              background-color: #007BFF;
+              margin: auto;
+              justify-content: center;
+            }
+        }
+
+        .features {
+            background-color: rgba(1, 13, 17, 0.897);
+            color: white;
+            width: 30%;
+            height: 30em;
+            position: relative;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .features ul{
+            font-size: 13px;
+        }
+        .features .btn{
+           
+            width: 85%;
+            height: 3em;
+            text-align: center;
+            margin-top: 19em;
+
+           
+        }
+        .desktop-price{
+          margin-top: 4rem;
+        }
+        @media (max-width: 768px){
+          .features{
+            display: none;
+          }
+        }
+        .centered-div {
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    /* Optional: Define a height for the div */
+   
+}
+
+        .features button{
+            border: none;
+            font-size: small;
+            width: 100%;
+            height: 100%;
+         
+        }
+        .features button a{
+            text-decoration: none;
+            color: black;
+           
+        }
+       
+        .features .book:hover button{
+            background-color: #51390100;
+        }
+        .thumbnails {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .thumbnails img {
+            cursor: pointer;
+            width: 120px;
+            height: 150px;
+            object-fit: cover;
+            border: 2px solid transparent;
+        }
+
+        .thumbnails img:hover {
+            border: 2px solid #007bff;
+        }
+      
+        .thumb-section{
+          width: 100%;
+        }
+
+        /* Grid container */
+        .room-details-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+        gap: 10px; /* Space between items */
+        padding: 20px;
+        background-color:  white; /* Light background */
+        border: 1px solid #ddd; /* Optional border */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the container */
+        }
+
+            /* Grid items */
+            .grid-item {
+            padding: 10px;
+            background-color: #ffffff; /* Item background */
+
+            text-align: center; /* Center the text */
+            font-size: 13px; /* Adjust text size */
+            color: #333; /* Text color */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for items */
+            }
+
+            /* Responsive design for smaller screens */
+            /* Grid Container */
+            @media (max-width: 768px){
+              .thumb-section{
+                width: 90%;
+                justify-content: center;
+                margin: auto;
+                margin-top: 1rem;
+                
+               
+              }
+              .thumbnails{
+                display: block;
+                justify-content: center;
+                margin: auto;
+                
+              }
+              .thumbnails img {
+            cursor: pointer;
+            width: 110px;
+            height: 150px;
+            object-fit: cover;
+            border: 2px solid transparent;
+            
+        }
+           
+            .room-details-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* Two columns for mobile */
+                gap: 15px;
+               
+                max-width: 23em;
+                padding: 10px;
+                box-shadow: 0 4px 6px rgba(3, 24, 210, 0.2); /* Box shadow for styling */
+                border-radius: 8px; /* Optional: Rounded corners */
+                background: #fff; /* Background color */
+            }
+
+            /* Individual Grid Item */
+
+            .grid-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                background-color: #f9f9f9;
+                max-width: 100%;
+            }
+
+            /* Paragraph and Text Styling */
+            .grid-item p {
+                margin: 0;
+                font-size: 14px;
+                color: #555;
+            }
+
+            .grid-item strong {
+                margin-top: 5px;
+                font-size: 16px;
+                font-weight: bold;
+                color: #333;
+            }
+
+          }
+
+          @media (max-width: 768px){
+            .description-tex-para-main-contain{
+              display: none;
+            }
+          }
+          
+
+            /* text grid */
+            .description-tex-grid{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+                gap: 10px; /* Space between items */
+             
+            }
+
+            .room-btn{
+                text-decoration: none;
+                color: white;
+            }
+
+         
+            .description-direct{
+                width: 19rem;
+                padding: 4px;
+                justify-content: center;
+                text-align: center;
+                height: 20em;
+                background-color: rgba(156, 156, 156, 0.188);
+            }
+            .description-text{
+              margin-top: -13em;
+              width: 68%;
+              font-size: 18px ;
+            }
+
+            .regular-plan-grid{
+                display: grid;
+                grid-template-columns: repeat(7, 1fr); /* seven equal columns */
+                gap: 10px; /* Space between items */
+            }
+
+        
+
+            .hair-dryer-icon i {
+                font-size: 24px; /* Adjust icon size */
+                color: #ff4081; /* Optional color */
+                margin-right: 8px; /* Spacing from the text */
+            }
+            
+
+            .air-conditioner-icon i {
+                 font-size: 24px; /* Adjust icon size */
+                color: #00bcd4; /* Cool blue color */
+                margin-right: 8px; /* Space between icon and text */
+            }
+
+            
+
+            .wine-glass-icon i {
+                font-size: 24px; /* Adjust icon size */
+                color: #504f4f; /* Wine red color */
+                margin-right: 8px; /* Space between icon and text */
+                
+            }
+
+            .whatsapp-link {
+                position: fixed;
+                bottom: 120px;
+                left: 20px;
+                z-index: 30;
+            } 
+
+            .whatsapp-link img {
+                width: 50px;
+                height: 50px;
+            } 
+
+
+
+
+            /* customers review  */
+
+            .carousel-item {
+            padding: 0.5rem;
+            text-align: center;
+        }
+        .review-text {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        .review-author {
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+        .customers-header{
+         
+          padding-top: 1em;
+          font-weight: bold;
+          font-style: italic;
+          font-family: 'Times New Roman', Times, serif;
+        }
+        .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgb(17, 17, 137);
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 5%;
+      z-index: 10;
+    }
+
+        .property-card{
+          box-shadow: 0 4px 6px rgb(3, 24, 210);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 8px;
+      margin-top: 3em;
+        }
+        .property-card a{
+            text-decoration: none;
+            color: black;
+        }
+        .property-card:hover{
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .property-card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .property-info-btn button{
+        border: none;
+        text-align: center;
+        border-radius: 4px;
+    }
+    .property-info-btn button a{
+        text-decoration: none;
+        color: white;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
+    }
+
+    .new-price {
+      font-weight: bold;
+     
+    }
+
+    .property-info {
+      font-size: 0.9rem;
+    }
+
+   
+    .customers-review .carousel-control-prev{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin:  auto;
+      position: absolute;
+     
+    }
+
+
+            /* foootter */
+
+
+
+     
+            footer {
+  background-color: #d1e9eb;
+  color: #333;
+  height: 67rem; /* Let the height adjust automatically for content */
+  padding: 20px 0;
+}
+.footer{
+    margin-top: 7em;
+  }
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: space-between;
+}
+
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #000;
+  padding: 20px 10px;
+}
+
+.footer .btn {
+  background-color: #6c5236;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+}
+
+.footer .btn:hover {
+  background-color: #523f2a;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #b30707;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #6c5236;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer .col-lg-3 {
+  flex: 1 1 30%; /* Allow each column to take up 30% of available space and adjust as needed */
+  margin: 10px;
+}
+
+.footer .calton-desp,
+.footer .connet-sec {
+  flex-direction: column;
+}
+
+.footer .calton-desp,
+.footer .connet-sec,
+.footer .locate-content {
+  width: 100%; /* Ensure full width on smaller screens */
+}
+@media (max-width: 768px) {
+  .footer .col-lg-3 {
+    flex: 1 1 100%; /* Make each column take up the full width on smaller screens */
+  }
+  .footer{
+    margin-top: 7em;
+  }
+  
+
+  .locate-content{
+    display: none;
+  }
+}
+   /* map */
+   .mobileMap {
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically (optional) */
+  margin: auto; /* Centers horizontally if a width is set */
+  text-align: center; /* Ensures alignment for inline elements */
+}
+/* Hide the map by default */
+.mobileMap {
+  display: none; /* Hidden on all devices by default */
+}
+
+/* Show the map only on mobile devices (screen width ≤ 768px) */
+@media (max-width: 768px) {
+  .mobileMap {
+    display: block; /* Visible on mobile screens */
+    text-align: center; /* Center align for better appearance */
+    margin: auto;
+    justify-content: center;
+  
+    height: 400px;
+
+  }
+
+  .mobileMap iframe {
+    margin-top:rem; /* Adjust top margin for spacing */
+    width: 90%;
+    height: 100%;
+    /* Ensure responsiveness */
+     /* Adjust height for smaller screens */
+   
+  }
+}
+
+
+    /* Mobile Dev */
+    #penthouse-title {
+    margin: 0 auto;
+    width: 14em;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgb(3, 24, 210);
+  }
+  
+
+    @media (max-width: 768px){
+
+      #penthouse-title {
+      width: 14.3em; /* Allows flexibility */
+      font-size: 24px; /* Slightly smaller font */
+      box-shadow: 0 3px 5px rgb(3, 24, 210); /* Subtle shadow for smaller screens */
+      font-style: italic;
+    }
+
+    /* booking bar */
+
+    @media screen and (max-width: 768px) {
+    .booking-bar {
+        display: none;
+    }
+
+}
+
+
+    }
+
+    
+    /* General Styling for Header */
+    .description {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between items */
+    align-items: flex-start; /* Align items at the top */
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 2rem; /* Top margin */
+    padding: 1.5rem; /* Padding around content */
+    max-width: 1200px; /* Limit container width for large screens */
+    width: 100%; /* Default full width */
+    font-family: 'Times New Roman', Times, serif; /* Font styling */
+    box-sizing: border-box; /* Padding and borders included in width */
+}
+
+.description-header {
+    margin: auto;
+    text-align: center;
+    margin: 0 auto; /* Center the header */
+    width: 50%; /* Default full width for larger screens */
+    max-width: 600px; /* Optional: prevent it from becoming too wide */
+    padding: 10px 0; /* Add some vertical padding */
+    box-shadow: 0 4px 6px rgba(3, 24, 210, 0.853);
+    box-sizing: border-box; /* Include padding and borders in width */
+}
+.description-tex-para{
+  margin-top: 2em;
+}
+
+/* Heading Text */
+.description-header h3 {
+    margin: 0;
+    font-size: 24px; /* Default font size */
+    color: #333;
+}
+
+.other-properties {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Ensure text inside the div is centered */
+  box-shadow: 0 4px 6px rgb(12, 46, 179); /* Keep existing box shadow */
+  height: 100px; /* Adjust height as needed to center vertically */
+  width: 100%; /* Optional: make the div take up the full width */
+}
+
+.other-properties h3 {
+  margin: 0; /* Remove default margin to center perfectly */
+}
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+
+
+    .description-header h3 {
+        font-size: 20px; /* Reduce font size for tablets and smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+  .description{
+    width: 100%;
+   
+  }
+  .description-direct{
+    display: none;
+  }
+    .description-header {
+        width: 95%; /* Almost full width for smaller screens */
+        padding: 8px 0; /* Reduce padding for compact view */
+        margin-top: 12rem;
+    }
+
+    .description-header h3 {
+        font-size: 35px; /* Smaller font size for mobile phones */
+    }
+      .description-text{
+              margin-top: -13em;
+              width: 100%;
+              font-size: 15px ;
+            }
+}
+.features-mobile{
+  display: none;
+}
+@media (max-width: 480px){
+  .features-mobile{
+    display: block;
+  }
+  .features-mobile {
+           background-color: #007BFF;
+            color: white;
+            width: 90%;
+            height: 27em;
+            position: relative;
+            margin: auto;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            animation: animated-shadow 3.5s infinite ease-in-out;
+        }
+        .discountz-badge {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #ffffff;
+  color: white;
+  padding: 10px 15px;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+        .features-mobile ul{
+            font-size: 13px;
+        }
+        .desktop-price{
+          margin-top: 0;
+        }
+        .features-mobile .btn a{
+          color: rgb(0, 0, 0);
+          text-decoration: none;
+        }
+        .features-mobile .btn{
+            
+            width: 85%;
+            height: 3em;
+            text-align: center;
+            margin-top: 5.4em;
+            font-size: 19px;
+            background-color: white;
+            color: black;
+           
+        }
+        
+}
+
+.btn-book {
+            position: fixed; /* Fix the button at the bottom of the viewport */
+            bottom: 0; /* Position it at the bottom */
+            left: 0;
+            width: 100%; /* Full width */
+            background-color: #007BFF; /* Blue background */
+            color: white; /* White text */
+            text-align: center; /* Center the text */
+            padding: 1px 0; /* Padding for better touch experience */
+            font-size: 18px; /* Font size */
+            font-weight: bold; /* Bold text */
+            text-decoration: none; /* Remove underline */
+           
+            display: none; /* Initially hidden */
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for a floating effect */
+            border: none;
+        }
+
+        /* Show the button only on mobile screens */
+        @media (max-width: 768px) {
+            .btn-book {
+                display: block; /* Display the button on mobile */
+                height: 3em;
+            }
+            .btn-book a{
+              color: white;
+              text-decoration: none;
+            }
+        }
+
+        
+@keyframes animated-shadow {
+  0% {
+    box-shadow: 2px 4px 9px rgba(247, 8, 167, 0.821);
+  }
+  25% {
+    box-shadow: 1px 7px 11px rgb(1, 52, 255);
+  }
+  50% {
+    box-shadow: 1px 4px 13px rgb(255, 234, 0);
+  }
+  75% {
+    box-shadow: 0px 6px 9px rgba(234, 8, 151, 0.855);
+  }
+  100% {
+    box-shadow: 3px 8px 11px rgba(250, 5, 5, 0.883);
+  }
+}
+
+
+.pricz{
+  margin-top: -1em;
+  text-decoration: line-through;
+}
+.discount-badge {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59GPZ9JP"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+    <div class="parent-contaiin">
+
+      <header class="header container-fluid py-3">
+        <div class="row align-items-center px-4">
+          <!-- Logo Section -->
+          <div class="col-12 col-md-4 text-center text-md-start">
+            <div class="logo" style="width: 189px; margin: 0;">
+              <a href="index.html">
+                <img
+                  src="images/6-5-e1626882432619.png"
+                  alt=""
+                  style="height: 50px; display: block; margin: 0;"
+                />
+              </a>
+              <span style="font-weight: bold; display: block; text-align: center;">
+              </span>
+            </div>
+          </div>
+      
+          <!-- Contact Information Section -->
+          <div class="col-12 col-md-8 mt-3 mt-md-0 p">
+            <div class="contact-info row g-3">
+              <!-- Location -->
+              <div class="contact-info-location col-12 col-lg-6 text-center text-lg-start">
+                <p>
+                  <i class="fas fa-map-marker-alt"></i>
+                  #Plot 219, Apo Dutse, Apo, Abuja FCT, Nigeria
+                  46 km from Abuja Int'l Airport
+  
+                  
+                </p>
+              </div>
+          
+              <!-- Contact Details -->
+              <div class="contact-info-call col-12 col-lg-6 text-center text-lg-end ms-auto">
+                <p>
+                  <i class="fas fa-phone"></i> (+234) 0802 982 3593</p>
+                <p>
+                  <i></i>
+                </p>
+                <p>
+                  <i class="fas fa-envelope"></i>
+                  <a href="mailto:Support@prestineapartment.com">Support@prestineapartment.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+      </header>
+
+          <!-- nav section -->
+          <nav class="mainNv">
+            <div class="mainNav-container">
+              <!-- Logo -->
+              <a href="#" class="logo">
+                <img src="images/6-5-e1626882432619.png" alt="Logo">
+              </a>
+          
+              <!-- Toggle Button -->
+              <button class="Navmenu-toggle" id="NavmenuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+               
+              </button>
+          
+              <!-- Navigation Links -->
+              <ul class="mainnav-links" id="mainnavLinks">
+                <button class="closeNav-toggle" id="closeNavToggle">✕</button>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Apartment.html">Apartments</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+          
+          
+
+    <section class="container mt-5">
+      <h1 class="text-center penthouse" id="penthouse-title">Deluxe-3 Bedroom Apartment </h1>
+
+        <div class="booking-bar  justify-content-between align-items-center">
+            <input type="date" class="form-control w-25" placeholder="Check In">
+            <input type="date" class="form-control w-25" placeholder="Check Out">
+            <select class="form-select w-25">
+                <option>Adults</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            <button class="btn btn-primary w-25"><a href="Apartment.html" class="room-btn">Check Rooms</a></button>
+        </div>
+
+
+
+
+        <div id="roomCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="images/Apo rm4.jpg" class="d-block w-100" alt="Room 1">
+              </div>
+              <div class="carousel-item">
+                  <img src="images/apo rm 11.jpg" class="d-block w-100" alt="Room 2">
+              </div>
+              <div class="carousel-item">
+                  <img src="images/plesant street.jpg" class="d-block w-100" alt="Room 3">
+              </div>
+              <div class="carousel-item">
+                  <img src="images/apo rm12.jpg" class="d-block w-100" alt="Room 4">
+              </div>
+              <div class="carousel-item">
+                  <img src="images/apo rm10.jpg" class="d-block w-100" alt="Room 5">
+              </div>
+              <div class="carousel-item">
+                  <img src="images/Apo-8.jpeg" class="d-block w-100" alt="Room 6">
+              </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+      
+        
+
+        <div class="thumb-section p-2  ;">
+
+            <div class="thumbnails  justify-content-between p-2 m-auto ">
+                <div class="thumbnails-contents">
+                    <div class="thum-images d-flex bg-white">
+    
+                        <div class="IMG-content2">
+                            <img src="images/Apo rm4.jpg" alt="Room 2" onclick="changeCarouselImage(0)">
+                        </div>
+    
+                        <div class="IMG-content4">
+                            <img src="images/apo rm 11.jpg"  alt="Room 2" onclick="changeCarouselImage(1)">
+                        </div>
+    
+                        <div class="IMG-content2">
+                            <img src="images/plesant street.jpg" alt="Room 2" onclick="changeCarouselImage(2)">
+                        </div>
+                        <div class="IMG-content3">
+                            <img src="images/apo rm12.jpg" alt="Room 3" onclick="changeCarouselImage(3)">
+                        </div>
+                        <div class="IMG-content4">
+                            <img src="images/apo rm10.jpg" alt="Room 3" onclick="changeCarouselImage(4)">
+                        </div>
+                        <div class="IMG-content2">
+                            <img src="images/Apo-8.jpeg" alt="Room 3" onclick="changeCarouselImage(5)">
+                        </div>
+                    </div>
+
+                    
+        <div class="room-details-grid mt-5" style="box-shadow: 0 4px 6px rgb(3, 24, 210);">
+            <div class="grid-item">
+                <p>Room size</p>
+                <strong>48m²</strong>
+            </div>
+            <div class="grid-item">
+                <p>Sleeps</p>
+                <strong>6 guest</strong>
+            </div>
+            <div class="grid-item">
+                <p>Bed size</p>
+                <strong>King Size</strong> 
+            </div>
+            <div class="grid-item">
+                <p>Bathrooms</p>
+                <strong> 1 per Room</strong>
+            </div>
+          </div>
+        </div>
+    
+    
+                <div class="features text-start" style="box-shadow: 0 4px 6px rgb(1, 7, 55); font-family: 'Times New Roman', Times, serif;">
+                  <!-- <div class="discount-badge">30% OFF</div> -->
+                    <h4  class="">Features</h4>
+
+                    <li>Fully Equipped Kitchen</li>
+                    <li>Three Spacious Bedrooms</li>
+                    <li>Stylish Bathroom</li>
+                    <li>Prime Location</li>
+                    </ul>
+
+
+                    
+                    <!-- <p class="text-center desktop-price " style="margin-top: em; font-size: 2em;"> ⁠₦125,000 per night</p> -->
+                    <!-- <p class="pricz text-center">₦107,000 per night</p> -->
+                   
+                    <!-- <p style="font-size: 16px; text-align: center;">Excluding charges</p> -->
+                  
+                    
+                    
+      <div class="centered-div">
+        <button type="button" class="btn book-now-btn bg-white" style="color: rgb(0, 0, 0);"><a href="delux-policy.html">Book Now</a>
+          </button>
+      </div>
+                    
+                        
+                </div>
+                </div>
+    
+         </div>
+
+       
+     
+
+
+            <!-- WhatsApp Icon -->
+            <a href="https://wa.me/+2348029823593" class="whatsapp-link" target="_blank">
+                <img src="images/whatssap.png" alt="WhatsApp">
+              </a>
+
+           <!-- Modal for Reservation -->
+           <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="reservationModalLabel">Hotel Reservation</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="reservationForm">
+                    <div class="mb-3">
+                      <!-- Title on the first line -->
+                      <label for="title" class="form-label">Title</label>
+                      <select class="form-select mb-2" id="title" name="user_title" required>
+                          <option value="" disabled selected>Select Title</option>
+                          <option value="Mr">Mr</option>
+                          <option value="Mrs">Mrs</option>
+                          <option value="Ms">Ms</option>
+                          <option value="Dr">Dr</option>
+                          <option value="Other">Other</option>
+                      </select>
+                  </div>
+                  
+                  <div class="mb-3">
+                      <div class="row">
+                          <!-- First Name on the second line -->
+                          <div class="col">
+                              <label for="first_name" class="form-label">First Name</label>
+                              <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter your first name" required>
+                          </div>
+                          <!-- Last Name on the second line -->
+                          <div class="col">
+                              <label for="last_name" class="form-label">Last Name</label>
+                              <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter your last name" required>
+                          </div>
+                      </div>
+                  </div>
+                  
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email Address</label>
+                      <input type="email" class="form-control" id="email" name="user_email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="phone" class="form-label">Phone Number</label>
+                      <input type="tel" class="form-control" id="phone" name="user_phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="checkin" class="form-label">Check-In Date</label>
+                      <input type="date" class="form-control" id="checkin" name="checkin_date" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="checkout" class="form-label">Check-Out Date</label>
+                      <input type="date" class="form-control" id="checkout" name="checkout_date" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="guests" class="form-label">Number of Guests</label>
+                      <input type="number" class="form-control" id="guests" name="guest_number" placeholder="Enter number of guests" required>
+                    </div>
+
+                   
+                    <input type="hidden" id="hiddenRoomRate" name="room_rate">
+                    <input type="hidden" id="hiddenVAT" name="vat_amount">
+                    <input type="hidden" id="hiddenServiceCharge" name="service_charge">
+                    <input type="hidden" id="hiddenGrandTotal" name="grand_total">
+                    <input type="hidden" name="apartment_name" id="apartmentName">
+                    <input type="hidden" id="hiddensubtotal" name="subtotal">
+                    <input type="hidden" id="hiddenTotalNights" name="total_nights">
+                    
+                    <!-- <p>Total Price (Excluding VAT): <span id="priceDisplay">₦0.00</span></p> -->
+        
+
+                    <button type="submit" class="btn btn-primary w-100">Submit Reservation</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+        
+             
+
+           <!-- Placeholder for Notification -->
+           <div id="notificationArea" class="fixed top-0 left-0 right-0 text-center text-lg font-semibold hidden"></div>
+
+
+
+
+
+           <div class="description">
+            <!-- Your content here -->
+  
+
+            <div class="description-text ">
+              <div class="description-header">
+                <h3>Room Details</h3>
+            </div>
+
+
+
+                <div class="description-tex-para " >
+                    <div class="description-tex-para1">
+                        <h3 style="text-align: center;">Deluxe 3 Bedroom  Apartment - Apo
+                        </h3>
+                         <p>  This expansive 3-room apartment offers modern living in one of the most sought-after neighborhoods, located just a short walk from Shoprite Apo. With a versatile layout perfect for families, professionals, or roommates, this apartment combines comfort, convenience, and style. Key features include:
+
+                          </p>
+                    </div>
+
+                    <div class="description-tex-para2">
+                        <P>●	Generous Living Area: A bright and open-plan living room, perfect for relaxing or entertaining, with ample space for your furniture and a cozy atmosphere.
+                        </P>
+                        <p>●	Fully Equipped Kitchen: A modern kitchen with contemporary appliances, plenty of counter space, and storage, designed to make cooking and dining a pleasure.</p> 
+                        <p>●	Three Cozy Bedrooms: Two well-sized bedrooms with built-in closets, each offering a peaceful retreat. The rooms are designed for comfort, with large windows to allow for plenty of natural light.</p> 
+                        <p> ●	Three Spacious Bedrooms: Three well-sized bedrooms, each featuring built-in closets and large windows that provide plenty of natural light, offering comfortable private spaces for rest and relaxation.
+                          .</p>
+                        <p> ●	Prime Location: Just minutes from Shoprite Apo, offering easy access to shopping, dining, entertainment, and public transportation. Enjoy the convenience of living in one of the city’s most desirable neighborhoods.</p>
+                        <p> ●	Secure Building: A well-maintained and secure building with a friendly, community-oriented atmosphere, providing peace of mind.</p>
+                        <p>  This 3-room apartment combines style, functionality, and an unbeatable location, making it the ideal place to call home. Schedule a viewing today and discover the best that city living has to offer!</P>
+                    </div>
+
+                    <div class="description-tex-para3">
+                        
+                    </div>
+
+                    <div class="description-tex-para-main-contain">
+
+                    
+                   
+
+
+
+
+                  
+                  </div>
+                </div>
+            </div>
+
+        
+
+
+
+
+
+            <div class="description-direct ">
+                <div class="description-direct-content">
+                    <div class="Direct-reservations">
+                        <h3>Direct Reservations</h3>
+                    </div>
+
+
+                    <div class="Direct-Reservations-contact -subtle mt-4 text-center">
+                        <p><i class="fas fa-phone"></i>+234 908 756 1269</p>
+                        <p><a href=""><a href="mailto:Support@prestineapartment.com">Support@prestineapartment.com</a></p>
+                    </div>
+
+                    <button class="m-2 border-0" style="background-color: #513901aa;">
+                        <H4>? Ask any question</H4>
+                    </button>
+                </div>
+            </div>
+
+          </div>
+
+    </section>
+
+    <div class="features-mobile text-start" style="box-shadow: 0 4px 6px rgb(1, 7, 55); font-family: 'Times New Roman', Times, serif;">
+      <h4  class="">Features</h4>
+      <ul>
+          <li>Fully Equipped Kitchen</li>
+          <li>Three Spacious Bedrooms</li>
+          <li>Stylish Bathroom</li>
+          <li>Prime Location</li>
+      </ul>
+
+
+      <!-- <p class="text-center desktop-price " style="margin-top: em; font-size: 1.7em;"> ⁠₦125,000 per night</p> -->
+     
+    
+      <!-- <p style="font-size: 16px; text-align: center;">Excluding charges</p> -->
+     
+          
+      
+      <div class="centered-div">
+        <button type="button" class="btn book-now-btn bg-white" style="color: rgb(0, 0, 0);"><a href="delux-policy.html">Book Now</a>
+          </button>
+      </div>
+      
+          
+  </div>
+
+
+    <section>
+
+       
+
+
+      <div class="container my-5">
+        <div class="other-properties justify-content-center text-center" style=" box-shadow: 0 4px 6px rgb(12, 46, 179);">
+            <h3>Other Properties</h3>
+        </div>
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card property-card" >
+                <a href="">
+                  <img src="images/apo rm 12.jpg" class="card-img-top" alt="Beach Resort Estate">
+                    <div class="card-body">
+                      <h5 class="card-title">Executive 2-Room Apartment - Apo</h5>
+                      <p class="card-text">
+                       
+                        <!-- <span class="new-price">⁠₦102,000 per night</span> -->
+                      </p>
+                      <p class="property-info">Standard Bedroom and Bathrooms</p>
+
+                      <div class="property-info-content d-flex justify-content-between">
+  
+                          <div class="property-info-para">
+                              <p class="property-info"><i class="fas fa-map-marker-alt"></i>location -Apo</p>
+                          </div>
+  
+                          <div class="property-info-btn">
+                            <button class="bg-primary" style="height: 37px; width: 135px;  "><a href="Executive 2-Room Apartment .html">Book now</a></button>
+                        </div>
+                         
+                      </div>
+                    </div>
+                </a>
+            
+            </div>
+          </div>
+    
+          <!-- Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card property-card" >
+                <a href="">
+                  <img src="images/studio.apart2.jpg" class="card-img-top" alt="Beach Resort Estate">
+                    <div class="card-body">
+                      <h5 class="card-title">Classic  Studio Apartment - Apo</h5>
+                      <p class="card-text">
+                       
+                        <!-- <span class="new-price">⁠₦60,000 per night</span> -->
+                      </p>
+                      <p class="property-info">Standard Bedroom and Bathrooms</p>
+
+                      <div class="property-info-content d-flex justify-content-between">
+  
+                          <div class="property-info-para">
+                              <p class="property-info"><i class="fas fa-map-marker-alt"></i>location -Apo</p>
+                          </div>
+  
+                          <div class="property-info-btn">
+                            <button class="bg-primary" style="height: 37px; width: 135px;  "><a href="classic-studio-apartment.html">Book now</a></button>
+                        </div>
+                         
+                      </div>
+                    </div>
+                </a>
+            
+            </div>
+          </div>
+    
+          <!-- Card 3 -->
+           <div class="col-lg-4 col-md-6">
+            <div class="card property-card" >
+                <a href="">
+                  <img src="images/AJ_4533-93.jpg" class="card-img-top" alt="Beach Resort Estate">
+                    <div class="card-body">
+                      <h5 class="card-title">Modern 1-room Apartment - Lugbe</h5>
+                      <p class="card-text">
+                       
+                        <!-- <span class="new-price">⁠₦45,000 per night</span> -->
+                      </p>
+                      <p class="property-info">Standard Bedroom and Bathrooms</p>
+
+                      <div class="property-info-content d-flex justify-content-between">
+  
+                          <div class="property-info-para">
+                              <p class="property-info"><i class="fas fa-map-marker-alt"></i>location -Lugbe</p>
+                          </div>
+  
+                          <div class="property-info-btn">
+                            <button class="bg-primary" style="height: 37px; width: 135px;  "><a href="Modern 1-room-Apartment - Lugbe.html">Book now</a></button>
+                        </div>
+                         
+                      </div>
+                    </div>
+                </a>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+  </section>
+
+
+
+    <!-- customers review section -->
+
+   
+    <!-- customers review section -->
+
+    <section>
+
+      <div class="container" style="margin-top: 2rem; height: 380px;  box-shadow: 0 4px 6px rgb(12, 46, 179);">
+        <h1 class=" customers-header text-center mb-4">Customer Reviews</h1>
+        <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner m-auto" style="height: 400px;">
+                <div class="carousel-item active">
+                    <p class="review-text">"Amazing staff, superb food, outstanding services, and I felt at home. I could have stayed longer. I like the great services I got from the staff. I loved everything and felt at home. Food was superb as I did not expect such a great meal from a hotel. So, I will absolutely come back again."</p>
+                    <p class="review-author">-Jane Pattrick </p>
+                </div>
+                <div class="carousel-item">
+                    <p class="review-text">"The location is fantastic; it's in the middle of everywhere. It's easily accessible and easy to describe to guests visiting. The complimentary breakfast is also a nice concept in addition to the self-serviced kitchen in the apartment."</p>
+                    <p class="review-author">- Fred John</p>
+                </div>
+                <div class="carousel-item">
+                    <p class="review-text">"Exceptional hospitality! The rooms were clean, spacious, and equipped with everything we needed. The staff were so friendly and made sure all our needs were met. Definitely coming back!"</p>
+                    <p class="review-author">- Alex Miracle</p>
+                </div>
+                <div class="carousel-item">
+                    <p class="review-text">"Loved the vibe and atmosphere! The decor was modern, and the services were beyond my expectations. A perfect getaway destination. Highly recommended!"</p>
+                    <p class="review-author">- Daniel Princewill</p>
+                </div>
+                <div class="carousel-item">
+                    <p class="review-text">"Conveniently located, comfortable rooms, and outstanding customer care. The entire experience felt personalized and memorable. Kudos to the team!"</p>
+                    <p class="review-author">- Fortune Godsgift</p>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+        
+
+    </section>
+
+
+
+    <!-- footer -->
+
+
+    <div class="mobileMap mt-5 m-auto">
+      <H2>Locate us on Map</H2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.8384986523947!2d7.4910934000000005!3d8.987004599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0d2a678a79e3%3A0x1124c0d588f26144!2sPleasant%20Places%2CApo!5e0!3m2!1sen!2sng!4v1735572037165!5m2!1sen!2sng" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+     
+  
+      <!-- footer -->
+    <footer class="footer">
+      <div class="container d-flex">
+      
+          <!-- Locate Us Section -->
+          <div class=" bg-white locate-content justify-content-between mt-4 col-lg-3 col-md-6 mb-4" style="height: 30em; width: 0%;">
+              <div class="locate-content p-3 m-auto" style="height: 17em; width: 90%;">
+                  <h3 style="font-size: 30px;">Locate Us</h3>
+                  <button class="btn btn-sm w-50"  style="height: 70px;">View on Map</button>
+  
+                  <h2 class="mt-5">Places Near by</h2>
+                  <ul class="mt-3">
+                    <li>1. - Novare ShopRite Apo </li>
+                    <li>2. - ⁠Cedarcrest Hospitals-Apo</li>
+                    <li>3. - Trademore Estates- lugbe</li>
+                    <li>4. -  ⁠Dunamis International Gospel Centre, Glory Dome</li>
+                  </ul>
+                </div>
+  
+                <div class="map w-100" style="margin-top: 15em;">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.8384986523947!2d7.4910934000000005!3d8.987004599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0d2a678a79e3%3A0x1124c0d588f26144!2sPleasant%20Places%2CApo!5e0!3m2!1sen!2sng!4v1735572037165!5m2!1sen!2sng" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div> 
+  
+              
+           
+          </div>
+          
+          
+          <!-- About Us Section -->
+          <div class="col-lg-3 col-md-6  mb-4 w-100" style="text-align: start; margin-top: rem;">
+  
+              <div class="calton-desp d-flex justify-content-between m-auto" style="font-size: smaller;  width: 100%; ">
+  
+                  <div class="calton-desp-img mt-3">
+                      <img src="images/6-5-e1626882432619.png" alt="The Wells Carlton Logo" class="img-fluid mb-3" style="max-width: 200px;">
+                  </div>
+      
+  
+  
+                  <div class="calton-desp-p">
+                    <p>
+                      Welcome to Prestine Apartments, where comfort meets convenience in the heart of Apo. Located just minutes away from the bustling Shoprite Apo, our apartments offer the perfect blend of modern living and easy access to the city’s top attractions.
+                      
+                      At Prestine Apartments, we are dedicated to providing a living experience that is not only stylish and comfortable but also tailored to meet the diverse needs of our residents. From cozy studio apartments to spacious three-bedroom units, each space is thoughtfully designed with high-quality finishes, contemporary amenities, and a focus on functionality.
+                      Our prime location ensures that you’re always connected to the best the city has to offer. Whether it’s shopping, dining, entertainment, or transportation, everything you need is right at your doorstep. We prioritize safety and peace of mind with secure, well-maintained buildings and a welcoming community atmosphere.
+                      Experience modern living redefined at Prestine Apartments. Welcome home!
+                  .</p>
+                </div>
+                 
+              </div>
+            
+              
+  
+          <!-- Connect With Us Section -->
+  
+          <div class="connet-sec  d-flex m-auto" style="height:55rem;">
+              <div class="">
+                  <h3>Connect With Us</h3>
+                  <div class="Connect-content" style="margin-top: -1.5rem;">
+                    <p><i class="fas fa-map-marker-alt"></i> Plot 219, Apo Dutse, Apo, Abuja FCT, Nigeria.</p>
+                    <p><i class="fas fa-phone"></i> (+234) 0802 982 3593</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:Support@prestineapartment.com">Support@prestineapartment.com</a></p>
+                    
+                  </div>
+          
+                  </div>
+              
+                <!-- Useful Links Section -->
+                <div class="usefull-container;">
+                  <h3>Useful Links</h3>
+                  <ul>
+                    <li><a href="Apartment.html">Check Apartments</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                  <div class="social-icons mt-3">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-google-plus"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+                <p><p>Copyright © 2021 <strong>Prestine Apartments</strong>. All rights reserved.</p></p>
+          </div>
+          
+        </div>
+        
+      </div>
+    </footer>
+
+ 
+   <button type="button" class="btn-book book-now-btn" id="read-more-btn" style="color: white;"><a href="delux-policy.html">Book Now
+    <!-- <p style="font-size: 15px;">₦125,000 per night</p></a> -->
+   </button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function changeCarouselImage(index) {
+            const carousel = document.querySelector('#roomCarousel');
+            const carouselInstance = bootstrap.Carousel.getInstance(carousel);
+            carouselInstance.to(index);
+        }
+    </script>
+
+
+<!-- Toggle Nav section -->
+
+<script>
+  // JavaScript for Navbar Toggle
+// JavaScript for Navbar Toggle
+const toggleButton = document.getElementById("NavmenuToggle");
+const closeNavButton = document.getElementById("closeNavToggle");
+const navLinks = document.getElementById("mainnavLinks");
+
+// Function to show or hide the navigation menu
+const toggleNav = () => {
+  navLinks.classList.toggle("show");
+};
+
+// Event listener for the main toggle button
+if (toggleButton) {
+  toggleButton.addEventListener("click", toggleNav);
+}
+
+// Event listener for the close button inside the menu
+if (closeNavButton) {
+  closeNavButton.addEventListener("click", toggleNav);
+}
+
+// Optional: Close the nav menu when clicking on a link (for smaller screens)
+const navItems = document.querySelectorAll(".mainnav-links a");
+navItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+  });
+});
+
+</script>
+
+
+<script>
+  // Get the dropdown and name input elements
+  const titleDropdown = document.getElementById("title");
+  const nameInput = document.getElementById("name");
+
+  // Add an event listener for when the dropdown value changes
+  titleDropdown.addEventListener("change", function () {
+    // Get the selected title
+    const selectedTitle = titleDropdown.value;
+
+    // Update the name input to start with the selected title
+    nameInput.value = selectedTitle + " ";
+  });
+</script>
+
+
+<!-- Include EmailJS -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+
+
+
+
+</script>
+
+
+    </div>
+
+    
+</body>
+</html>

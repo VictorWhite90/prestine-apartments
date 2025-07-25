@@ -1,0 +1,15 @@
+.sticky-nav {
+    position: sticky;
+    top: 0; /* Sticks to the top of its container when scrolling */
+    z-index: 1020; /* Ensure it appears above other content */
+    background-color: rgba(0, 0, 0, 0.9); /* Optional: Add a background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+  }
+  .sticky-navs{
+    position: sticky;
+    top: 52px; /* Sticks to the top of its container when scrolling */
+    z-index: 020; /* Ensure it appears above other content */
+   
+  }
+
+  
