@@ -351,7 +351,7 @@ justify-content: center;
     }
     .room-card a{
       text-decoration: none;
-      color: #000;
+     
     }
     .room-card .card-title {
       font-size: 24px;
@@ -392,7 +392,8 @@ justify-content: center;
    
 
      .room-card-btn{
-   
+      display: inline-block;
+      background-color: #007bff;
       font-size: 15px;
       
       color: #ffffff;
@@ -401,12 +402,14 @@ justify-content: center;
       padding: 0.5rem 1rem;
       cursor: pointer;
       font-weight: bold;
-      width: 125px;
+       width: 135px;
       margin-left: -5em;
       text-transform: uppercase;
       margin-top: 4rem;
     
      }
+
+
      .room-card-btn a{
       text-decoration: none;
       color: white;
@@ -419,68 +422,70 @@ justify-content: center;
     }
 
 
-    @media (max-width: 768px) {
-      .room-card {
-      position: relative;
-      background: #fff;
-      border: 1px solid #ddd;
-    
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 6px rgb(3, 24, 210);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .room-card .card-title{
-      font-size: 1.5rem;
-    }
-      .room-card{
-        height: auto; /* Let the content dictate height */
-        margin-bottom: 1rem;
-        margin: auto;
-      }
-   
-      .room-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .room-card img {
-      height: 310px; /* Restrict image height */
-      object-fit: cover;
-      width: 100%; /* Ensure the image takes the full width */
-    }
-    .room-card-btn{
-   
-   color: #ffffff;
-   border: none;
-   border-radius: 4px;
-   padding: 0.5rem 1rem;
-   cursor: pointer;
-   font-weight: bold;
-   margin-top: rem;
-   margin-left: -5em;
-   text-transform: uppercase;
-   width: 135px;
+@media (max-width: 768px) {
+  .room-card {
+    position: relative;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgb(3, 24, 210);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
   }
+
+  .room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .room-card img {
+    height: 310px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .room-card .card-title {
+    font-size: 1.5rem;
+  }
+
   .room-card .room-details {
-      font-size: 17px;
-      color: #777;
-      
-      
-    }
-    .room-btn-div:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+    font-size: 17px;
+    color: #777;
+  }
+
+  .room-btn-div {
+    height: auto;
+    margin-top: 1rem;
+  }
+
+  .room-card-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 135px;
+    display: block;
+    margin-top: 8rem;
+  }
+
+  .room-card-btn a {
+    color: white;
+    text-decoration: none;
+    display: block;
     width: 100%;
     height: 100%;
-    border: 3px solid #d50756;
-    box-sizing: border-box;
-    animation:  4s linear infinite;
   }
-  
-  }
+}
+
+
+
+
+
   .carousel-control-prev-icon,
     .carousel-control-next-icon {
       background-color: rgb(17, 17, 137);
@@ -930,8 +935,8 @@ justify-content: center;
                  
 
 
-                    <div class="room-btn-div" style="height:0px;">
-                      <button class="room-card-btn bg-primary"><a href="Delux-Apartment.html">Book Now</a></button>
+                    <div class="room-btn-div">
+                        <a href="Delux-Apartment.html" class="room-card-btn">Book Now</a>
                     </div>
                     
                   </div>
@@ -956,8 +961,8 @@ justify-content: center;
                  
 
 
-                    <div class="room-btn-div" style="height:0px;">
-                      <button class="room-card-btn bg-primary"><a href="Executive 2-Room Apartment .html">Book Now</a></button>
+                    <div class="room-btn-div">
+                        <a href="Executive 2-Room Apartment .html" class="room-card-btn">Book Now</a>
                     </div>
                     
                   </div>
@@ -980,8 +985,8 @@ justify-content: center;
                  
 
 
-                    <div class="room-btn-div" style="height:0px;">
-                      <button class="room-card-btn bg-primary"><a href="Delux-Royal.html">Book Now</a></button>
+                    <div class="room-btn-div">
+                        <a href="Delux-Royal.html" class="room-card-btn">Book Now</a>
                     </div>
                     
                   </div>
@@ -1008,8 +1013,8 @@ justify-content: center;
                  
 
 
-                    <div class="room-btn-div" style="height:0px;">
-                      <button class="room-card-btn bg-primary"><a href="classic-studio-apartment.html">Book Now</a></button>
+                    <div class="room-btn-div">
+                        <a href="classic-studio-apartment.html" class="room-card-btn">Book Now</a>
                     </div>
                     
                   </div>
@@ -1032,8 +1037,8 @@ justify-content: center;
                  
 
 
-                    <div class="room-btn-div" style="height:0px;">
-                      <button class="room-card-btn bg-primary"><a href="Elegant-apartment.html">Book Now</a></button>
+                    <div class="room-btn-div">
+                      <a href="Elegant-apartment.html" class="room-card-btn">Book Now</a>
                     </div>
                     
                   </div>
@@ -1055,8 +1060,8 @@ justify-content: center;
                     </div>
 
 
-                    <div class="room-btn-div" style="height:0px;">
-                      <button class="room-card-btn bg-primary"><a href="Modern 1-room-Apartment - Lugbe.html">Book Now</a></button>
+                    <div class="room-btn-div">
+                      <a href="Modern 1-room-Apartment - Lugbe.html" class="room-card-btn">Book Now</a>
                     </div>
                     
                   </div>
@@ -1080,8 +1085,8 @@ justify-content: center;
                  
 
 
-                    <div class="room-btn-div" style="height:0px;">
-                      <button class="room-card-btn bg-primary"><a href="Prestige Suite - 2-Bedroom-Apartment-.html">Book Now</a></button>
+                    <div class="room-btn-div">
+                      <a href="Prestige Suite - 2-Bedroom-Apartment-.html"class="room-card-btn">Book Now</a>
                     </div>
                     
                   </div>
