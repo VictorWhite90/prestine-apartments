@@ -1347,7 +1347,7 @@ justify-content: center;
                       <h3 style="text-align: center;">Prestige Suite - 2-Bedroom Apartment with Boys’ Quarter- Lugbe</h3> 
                     </div>
 
-                    <div class="description-tex-para1-descrip">
+                    <div class="description-tex-para1-descrip"
                       <p>Experience the perfect combination of comfort, functionality, and convenience in this stylish 2-bedroom apartment, complete with a boys’ quarter, located just 15 minutes from the airport. Ideal for families, professionals, or travelers seeking a versatile space, this property offers:
                       </p>
                       <p>●	Generous Living Space: A well-lit and airy living room, perfect for relaxation and entertainment.</p>
@@ -1705,10 +1705,30 @@ justify-content: center;
     const firstSlide = carouselEl.querySelector('.carousel-item.active');
     loadImage(firstSlide);
 
+    // Preload first few slides to avoid visible delay
+    const allSlides = Array.from(carouselEl.querySelectorAll('.carousel-item'));
+    for (let i = 0; i < Math.min(3, allSlides.length); i++) {
+      loadImage(allSlides[i]);
+    }
+
     // Listen for slide events to lazy-load the next slide
     carouselEl.addEventListener('slide.bs.carousel', (event) => {
       const nextSlide = event.relatedTarget;
       loadImage(nextSlide);
+    });
+
+    // After slide completes, proactively preload the upcoming next slide
+    carouselEl.addEventListener('slid.bs.carousel', () => {
+      const active = carouselEl.querySelector('.carousel-item.active');
+      const slides = Array.from(carouselEl.querySelectorAll('.carousel-item'));
+      const nextIndex = (slides.indexOf(active) + 1) % slides.length;
+      loadImage(slides[nextIndex]);
+    });
+
+    // Ensure thumbnail images are lazy-loaded to reduce initial bandwidth
+    document.querySelectorAll('.thumbnails img').forEach((img) => {
+      img.loading = 'lazy';
+      img.decoding = 'async';
     });
   });
 

@@ -1481,7 +1481,7 @@ justify-content: center;
                 <a href="">
                   <img src="images/prestineAprtBedroom2.jpg" class="card-img-top" alt="Beach Resort Estate">
                     <div class="card-body">
-                      <h5 class="card-title">Luxury 1-Bedroom-Apartment </h5>
+                      <h5 class="card-title">Premium 1-Bedroom-Apartment </h5>
                       <p class="card-text">
                        
                         <!-- <span class="new-price">⁠₦45,000 per night</span> -->
@@ -1495,7 +1495,7 @@ justify-content: center;
                           </div>
   
                           <div class="property-info-btn">
-                            <button class="bg-primary" style="height: 37px; width: 135px;  "><a href="Luxury-apartment.html">Book now</a></button>
+                            <button class="bg-primary" style="height: 37px; width: 135px;  "><a href="Premium-apartment.html">Book now</a></button>
                         </div>
                          
                       </div>
@@ -1671,6 +1671,51 @@ justify-content: center;
             const carouselInstance = bootstrap.Carousel.getInstance(carousel);
             carouselInstance.to(index);
         }
+    </script>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const carouselEl = document.getElementById('roomCarousel');
+    if (!carouselEl) return;
+
+    const carousel = new bootstrap.Carousel(carouselEl, {
+      interval: 8000,
+      ride: 'carousel',
+      pause: 'hover',
+      wrap: true
+    });
+
+    function preloadSlideImage(slide) {
+      const img = slide && slide.querySelector('img');
+      if (!img) return;
+      if (img.complete) return;
+      const preloader = new Image();
+      preloader.src = img.src;
+      preloader.decoding = 'async';
+      preloader.loading = 'eager';
+    }
+
+    const slides = Array.from(carouselEl.querySelectorAll('.carousel-item'));
+    for (let i = 0; i < Math.min(3, slides.length); i++) {
+      preloadSlideImage(slides[i]);
+    }
+
+    carouselEl.addEventListener('slide.bs.carousel', (event) => {
+      preloadSlideImage(event.relatedTarget);
+    });
+
+    carouselEl.addEventListener('slid.bs.carousel', () => {
+      const active = carouselEl.querySelector('.carousel-item.active');
+      const all = Array.from(carouselEl.querySelectorAll('.carousel-item'));
+      const nextIndex = (all.indexOf(active) + 1) % all.length;
+      preloadSlideImage(all[nextIndex]);
+    });
+
+    document.querySelectorAll('.thumbnails img').forEach((img) => {
+      img.loading = 'lazy';
+      img.decoding = 'async';
+    });
+  });
     </script>
 
 
