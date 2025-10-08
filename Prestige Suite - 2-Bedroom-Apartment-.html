@@ -1201,7 +1201,7 @@ justify-content: center;
 
 
               
-                    <p class="text-center desktop-price " style="margin-top: em; font-size: 2em;"> ₦86,000 per night</p>
+                    <p class="text-center desktop-price " style="margin-top: em; font-size: 2em;"> ₦78,000 per night</p>
                     <!-- <p class="pricz text-center">₦107,000 per night</p> -->
                    
                     <!-- <p style="font-size: 16px; text-align: center;">Excluding charges</p> -->
@@ -1404,7 +1404,7 @@ justify-content: center;
       </ul>
 
 
-      <p class="text-center desktop-price " style="margin-top: em; font-size: 1.7em;"> ₦86,000 per night</p>
+      <p class="text-center desktop-price " style="margin-top: em; font-size: 1.7em;"> ₦78,000 per night</p>
      
     
       <!-- <p style="font-size: 16px; text-align: center;">Excluding charges</p> -->
@@ -1758,7 +1758,7 @@ function formatNumberWithCommas(amount) {
 function updatePrice() {
     const checkinDate = document.getElementById('checkin').value;
     const checkoutDate = document.getElementById('checkout').value;
-    const roomRate = parseFloat(document.getElementById('hiddenRoomRate').value) || 86000;
+    const roomRate = parseFloat(document.getElementById('hiddenRoomRate').value) || 78000;
 
     if (!checkinDate || !checkoutDate) {
         document.getElementById('priceDisplay').textContent = "₦0.00";
@@ -1786,7 +1786,7 @@ document.getElementById('checkout').addEventListener('change', updatePrice);
 document.querySelectorAll('.book-now-btn').forEach(button => {
     button.addEventListener('click', function () {
         document.getElementById('apartmentName').value = this.getAttribute('data-apartment');
-        document.getElementById('hiddenRoomRate').value = this.getAttribute('data-price') || 86000;
+        document.getElementById('hiddenRoomRate').value = this.getAttribute('data-price') || 78000;
     });
 });
 
