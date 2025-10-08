@@ -388,13 +388,7 @@ box-shadow: 0 4px 6px rgb(12, 46, 179); /* Adds a subtle shadow */
  
   
 }
-/* .room-card {
-  background: linear-gradient(145deg, #d3b119, #d600c863);
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 
-              -4px -4px 8px rgba(230, 98, 4, 0.7);
-  
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-} */
+
 
 @keyframes animated-shadow {
   0% {
@@ -427,9 +421,7 @@ box-shadow: 0 4px 6px rgb(12, 46, 179); /* Adds a subtle shadow */
       object-fit: cover;
       display: block;
     }
-    .Elegant-room-details-btn{
-      margin-top: 2em;
-    }
+   
     .room-card .overlay {
       position: absolute;
       top: 0;
@@ -481,7 +473,7 @@ box-shadow: 0 4px 6px rgb(12, 46, 179); /* Adds a subtle shadow */
       margin-top: 2rem;
       margin-left: -5em;
       text-transform: uppercase;
-      width: 150px;
+      width: 130px;
       
     }
     
@@ -496,9 +488,7 @@ box-shadow: 0 4px 6px rgb(12, 46, 179); /* Adds a subtle shadow */
     box-sizing: border-box;
     /* animation: moving-border 4s linear infinite; */
   }
-  .rooms .room-details-btn button{
-  
-  }
+ 
   
   @keyframes moving-border {
     0% {
@@ -595,12 +585,11 @@ box-shadow: 0 4px 6px rgb(12, 46, 179); /* Adds a subtle shadow */
    display: none;
 }
 
-.rooms .room-details-btn {
-  font-size: 0.9rem;
-  /* padding: 0.5rem 1rem; */
-  /* margin-top: 90px; */
-  width: 90px;
-  margin-top: 1.3em;
+  .room-details .btn {
+  
+  width: 112px;
+   margin-top: 3.6rem;
+
   
 }
 
@@ -727,7 +716,7 @@ color: rgb(27, 61, 250);
 
 
 .hero {
-    background: url('images/plesant\ street.jpg') center/cover no-repeat;
+    background: url('images/plesant street.jpg') center/cover no-repeat;
     height: 550px;
     position: relative;
     background-color: aqua;
@@ -1528,34 +1517,39 @@ justify-content: center;
     
 
 
-    <div class="container-fluid sliderimages p-0">
-        <!-- Background Container -->
-        <div class="background-container">
-          <div class="background-image" style="background-image: url('images/delux-outsideview.jpg');"></div>
-          <div class="background-image active" style="background-image: url('images/nwpx2.jpg');"></div>
-          <div class="background-image" style="background-image: url('images/prestineAprtBedroom2.jpg');"></div>
-          <div class="background-image" style="background-image: url('images/prestineAprtoutside2.jpg');"></div>
-          <div class="background-image" style="background-image: url('images/prestineAprtoutside3.jpg');"></div>
-          <div class="background-image" style="background-image: url('images/studio.apart2.jpg');"></div>
-          <div class="background-image" style="background-image: url('images/1room.aprt.inner.jpg');"></div>
-          <div class="background-image" style="background-image: url('images/1room.apart.inner.jpg');"></div>
-          <div class="background-image" style="background-image: url('images/nwpx9.jpg');"></div>
-          <div class="background-image" style="background-image: url('images/prestineAprtFrontdesk.jpg');"></div>
-          <div class="background-image" style="background-image: url('images/prestineAprtLivingRoom.jpg');"></div>
-          <div class="background-image" style="background-image: url('images/prestineAprtBedroom3.jpg');"></div>
-          <div class="background-image" style="background-image: url('images/apo\ rm12.jpg');"></div>
-        </div>
+   <div class="container-fluid sliderimages p-0">
+  <!-- Background Container -->
+  <div class="background-container">
+    <!-- Active / first image loads immediately -->
+    <div
+      class="background-image active"
+      style="background-image: url('images/delux-outsideview.jpg');"
+    ></div>
     
-        <!-- Overlay Content -->
-        <div class="overlay-content d-flex justify-content-center align-items-center">
-  
-        </div>
-      </div>
+
+    <!-- Other images will lazy-load -->
+    <!-- <div class="background-image" data-bg="images/images/nwpx2.jpg"></div> -->
+    <div class="background-image" data-bg="images/prestineAprtBedroom2.jpg"></div>
+    <div class="background-image" data-bg="images/prestineAprtoutside2.jpg"></div>
+    <div class="background-image" data-bg="images/prestineAprtoutside3.jpg"></div>
+    <div class="background-image" data-bg="images/studio.apart2.jpg"></div>
+    <div class="background-image" data-bg="images/1room.aprt.inner.jpg"></div>
+    <div class="background-image" data-bg="images/1room.apart.inner.jpg"></div>
+    <div class="background-image" data-bg="images/nwpx9.jpg"></div>
+    <div class="background-image" data-bg="images/prestineAprtFrontdesk.jpg"></div>
+    <div class="background-image" data-bg="images/prestineAprtLivingRoom.jpg"></div>
+    <div class="background-image" data-bg="images/prestineAprtBedroom3.jpg"></div>
+    <div class="background-image" data-bg="images/apo rm12.jpg"></div>
+  </div>
+
+  <!-- Overlay Content -->
+  <div class="overlay-content d-flex justify-content-center align-items-center">
+    <!-- Add overlay text/buttons here -->
+  </div>
+</div>
 
 
 
-
-      
       <!-- <section class="container mt-5 d-none d-md-block">
         <div class="booking-bar d-flex g-5 justify-content-between align-items-center sticky-navs">
           <input type="date" class="form-control w-25" placeholder="Check In">
@@ -1580,128 +1574,85 @@ justify-content: center;
       <div class="room-cards">
         <!-- Deluxe Room -->
          
-        <div class="room-card">
-          <img src="images/1room.apart.inner.jpg"  alt="Penthouse I">
-          <!-- <div class="discount-badge">30% OFF</div> -->
-          <div class="overlay"></div> <!-- Transparent Blue Overlay -->
-          <div class="room-details">
-            <div class="room-details-first d-flex justify-content-between">
-  
-              
-              <div class="room-details-first-details" style="font-size: small;">
-                <h2>Elegant-1 room apartment -Apo</h2>
-              <!-- <p>Room size:48 m²</p> -->
-              </div>
-    
-              <div class="room-icons">
-                <span class="icon"><i class="fas fa-users"></i></span>
-                <span class="icon"><i class="fas fa-bathtub"></i></span>
-                <span class="icon"><i class="fas fa-bed"></i></span>
-              </div>
-              
-            </div>
-         
-    
-            <div class="room-details-second d-flex justify-content-between">
-              <div class="room-details-price">
-                <p class="price">₦85,000 per night</p>
-                <!-- <p class="pricz">₦64,000 per night</p> -->
-                <!-- <p style="font-size: 16px;">Excluding charges</p> -->
-              </div>
-              
-             <div class="Elegant-room-details-btn">
-                <a href="Elegant-apartment.html" class="btn bg-primary">Check Now</a>              
-              </div>
-              
-            </div>
-           
-          </div>
-        </div>
-  
-  
-  
-  
-        <!-- Standard Room -->
-        <div class="room-card">
-          <img src="images/AJ_4533-93.jpg" alt="Penthouse I">
-          <!-- <div class="discount-badge">30% OFF</div> -->
-          <div class="overlay"></div> 
-          <div class="room-details">
-            <div class="room-details-first d-flex justify-content-between">
-  
-              
-              <div class="room-details-first-details" style="font-size: small;">
-                <h2>Prestige-Suite-2-Bedroom-Apartment-Lugbe
-                </h2>
-              <!-- <p>Room size: 48 m²</p> -->
-              </div>
-    
-              <div class="room-icons">
-                <span class="icon"><i class="fas fa-users"></i></span>
-                <span class="icon"><i class="fas fa-bathtub"></i></span>
-                <span class="icon"><i class="fas fa-bed"></i></span>
-              </div>
-              
-            </div>
-         
-    
-            <div class="room-details-second d-flex justify-content-between">
-              <div class="room-details-price">
-                <!-- <p class="price">₦45,000 per night</p> -->
-                <!-- <p class="pricz">₦43,000 per night</p> -->
-                <!-- <p style="font-size: 16px;">Excluding charges</p> -->
-              </div>
-              
-              <div class="room-details-btn ">
-                <a href="Prestige Suite - 2-Bedroom-Apartment-.html" class="btn bg-primary">Check Now</a>              
-              </div>
-              
-            </div>
-           
-          </div>
-        </div>
-  
-  
-  
-  
-        <!-- Penthouse -->
-        <div class="room-card">
-          <img src="images/apo rm 12.jpg">
-          <!-- <div class="discount-badge">30% OFF</div> -->
-          <div class="overlay"></div> <!-- Transparent Blue Overlay -->
-          <div class="room-details">
-            <div class="room-details-first d-flex justify-content-between">
-  
-              
-              <div class="room-details-first-details" >
-                <h2>Deluxe royale 4 Bedroom  Apartment - Apo</h2>
-              <!-- <p>Room size: 48 m²</p> -->
-              </div>
-    
-              <div class="room-icons">
-                <span class="icon"><i class="fas fa-users"></i></span>
-                <span class="icon"><i class="fas fa-bathtub"></i></span>
-                <span class="icon"><i class="fas fa-bed"></i></span>
-              </div>
-              
-            </div>
-         
-    
-            <div class="room-details-second d-flex justify-content-between">
-              <div class="room-details-price">
-                <p class="price">₦163,000 per night</p>
-                <!-- <p class="pricz">₦86,000 per night</p> -->
-                <!-- <p style="font-size: 16px;">Excluding charges</p> -->
-              </div>
-              
-             <div class="room-details-btn-delux " style="margin-top: 2rem;">
-                <a href="Delux-Royal.html" class="btn bg-primary">Check Now</a>              
-              </div>
-              
-            </div>
-           
-          </div>
-        </div>
+      <div class="room-card">
+  <img src="images/AJ_4533-93.jpg" alt="Prestige Suite I">
+  <div class="overlay"></div> 
+  <div class="room-details">
+    <div class="room-details-first d-flex justify-content-between">
+      <div class="room-details-first-details">
+        <h2>Prestige-Suite-2-Bedroom-Apartment-Lugbe</h2>
+      </div>
+      <div class="room-icons">
+        <span class="icon"><i class="fas fa-users"></i></span>
+        <span class="icon"><i class="fas fa-bathtub"></i></span>
+        <span class="icon"><i class="fas fa-bed"></i></span>
+      </div>
+    </div>
+
+    <div class="room-details-second d-flex justify-content-between">
+      <div class="room-details-price">
+        <p class="price">₦45,000 per night</p>
+      </div>
+      <div class="room-details-btn">
+        <a href="Prestige Suite - 2-Bedroom-Apartment-.html" class="btn bg-primary">Check Now</a>              
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="room-card">
+  <img src="images/apo rm 12.jpg" alt="Deluxe Royale">
+  <div class="overlay"></div>
+  <div class="room-details">
+    <div class="room-details-first d-flex justify-content-between">
+      <div class="room-details-first-details">
+        <h2>Deluxe Royale 4-Bedroom Apartment - Apo</h2>
+      </div>
+      <div class="room-icons">
+        <span class="icon"><i class="fas fa-users"></i></span>
+        <span class="icon"><i class="fas fa-bathtub"></i></span>
+        <span class="icon"><i class="fas fa-bed"></i></span>
+      </div>
+    </div>
+
+    <div class="room-details-second d-flex justify-content-between">
+      <div class="room-details-price">
+        <p class="price">₦163,000 per night</p>
+      </div>
+      <div class="room-details-btn">
+        <a href="Delux-Royal.html" class="btn bg-primary">Check Now</a>              
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="room-card">
+  <img src="images/1room.apart.inner.jpg" alt="Luxury 1-Bedroom Apartment">
+  <div class="overlay"></div>
+  <div class="room-details">
+    <div class="room-details-first d-flex justify-content-between">
+      <div class="room-details-first-details">
+        <h2>Luxury Royale 1- <br>Bedroom Apartment - Apo</h2>
+        
+      </div>
+      <div class="room-icons">
+        <span class="icon"><i class="fas fa-users"></i></span>
+        <span class="icon"><i class="fas fa-bathtub"></i></span>
+        <span class="icon"><i class="fas fa-bed"></i></span>
+      </div>
+    </div>
+
+    <div class="room-details-second d-flex justify-content-between">
+      <div class="room-details-price">
+        <p class="price">₦85,000 per night</p>
+      </div>
+      <div class="room-details-btn">
+        <a href="Luxury-apartment.html" class="btn bg-primary">Check Now</a>              
+      </div>
+    </div>
+  </div>
+</div>
+
   
   
       </div>
@@ -2041,46 +1992,56 @@ justify-content: center;
         }
     </script>
 
-    <script>
-
-const images = document.querySelectorAll('.background-image');
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // =============================
+    // 🌄 Background Slideshow (all images preloaded)
+    // =============================
+    const images = document.querySelectorAll(".background-image");
     let currentIndex = 0;
-  
+
+    // Preload all images that use data-bg
+    const lazyBackgrounds = document.querySelectorAll(".background-image[data-bg]");
+    lazyBackgrounds.forEach((img) => {
+      img.style.backgroundImage = `url(${img.dataset.bg})`;
+      img.removeAttribute("data-bg");
+    });
+
+    // Slideshow rotation logic
     function changeBackground() {
-      // Remove 'active' class from all images
-      images.forEach((img) => img.classList.remove('active'));
-  
-      // Add 'active' class to the current image
-      images[currentIndex].classList.add('active');
-  
-      // Update the index for the next image
+      images.forEach((img) => img.classList.remove("active"));
+      images[currentIndex].classList.add("active");
       currentIndex = (currentIndex + 1) % images.length;
     }
-  
-    // Change the background every 8 seconds
+
+    // Start slideshow rotation every 8 seconds
     setInterval(changeBackground, 8000);
-  
-    // Initialize the first image
+
+    // Initialize first image
     changeBackground();
 
+    // =============================
+    // 🎬 Video Play Button Logic
+    // =============================
+    const playButton = document.getElementById("playButton");
+    const video = document.getElementById("aboutVideo");
+    const image = document.getElementById("aboutImage");
 
+    if (playButton && video && image) {
+      playButton.addEventListener("click", () => {
+        // Hide static image and button
+        playButton.style.display = "none";
+        image.style.display = "none";
 
-    document.addEventListener("DOMContentLoaded", () => {
-  const playButton = document.getElementById("playButton");
-  const video = document.getElementById("aboutVideo");
-  const image = document.getElementById("aboutImage");
-
-  playButton.addEventListener("click", () => {
-    // Hide the image and play button
-    playButton.style.display = "none";
-    image.style.display = "none";
-
-    // Show the video and start playback
-    video.style.display = "block";
-    video.play();
+        // Show and play video
+        video.style.display = "block";
+        video.play();
+      });
+    }
   });
-});
-    </script>
+</script>
+
+
 
 
 
