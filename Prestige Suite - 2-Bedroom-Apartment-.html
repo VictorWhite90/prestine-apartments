@@ -1116,22 +1116,22 @@ justify-content: center;
         <div id="roomCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
          <div class="carousel-inner">
     <div class="carousel-item active">
-      <img data-src="images/lugbe dinning2.jpg" class="d-block w-100 lazy" alt="Room 1">
+      <img data-src="images/lugbe dinning2.webp" class="d-block w-100 lazy" alt="Room 1">
     </div>
     <div class="carousel-item">
-      <img data-src="images/lugbe bedroom 2.jpg" class="d-block w-100 lazy" alt="Room 2">
+      <img data-src="images/lugbe bedroom 2.webp" class="d-block w-100 lazy" alt="Room 2">
     </div>
     <div class="carousel-item">
-      <img data-src="images/lugbe kitchen.jpg" class="d-block w-100 lazy" alt="Room 3">
+      <img data-src="images/lugbe kitchen.webp" class="d-block w-100 lazy" alt="Room 3">
     </div>
     <div class="carousel-item">
-      <img data-src="images/lugbe bedroom 3.jpg" class="d-block w-100 lazy" alt="Room 4">
+      <img data-src="images/lugbe bedroom 3.webp" class="d-block w-100 lazy" alt="Room 4">
     </div>
     <div class="carousel-item">
-      <img data-src="images/living room lugbe.jpg" class="d-block w-100 lazy" alt="Room 5">
+      <img data-src="images/living room lugbe.webp" class="d-block w-100 lazy" alt="Room 5">
     </div>
     <div class="carousel-item">
-      <img data-src="images/lugbe outsideview.jpg" class="d-block w-100 lazy" alt="Room 6">
+      <img data-src="images/lugbe outsideview.webp" class="d-block w-100 lazy" alt="Room 6">
     </div>
   </div>
 
@@ -1162,20 +1162,20 @@ justify-content: center;
                     </div>
 
                     <div class="IMG-content2">
-                        <img src="images/lugbe bedroom 2.jpg" alt="Room 2" onclick="changeCarouselImage(1)">
+                        <img src="images/lugbe bedroom 2.webp" alt="Room 2" onclick="changeCarouselImage(1)">
                     </div>
 
                     <div class="IMG-content2">
-                        <img src="images/lugbe kitchen.jpg" alt="Room 2" onclick="changeCarouselImage(2)">
+                        <img src="images/lugbe kitchen.webp" alt="Room 2" onclick="changeCarouselImage(2)">
                     </div>
                     <div class="IMG-content3">
-                        <img src="images/lugbe bedroom 3.jpg" alt="Room 3" onclick="changeCarouselImage(3)">
+                        <img src="images/lugbe bedroom 3.webp" alt="Room 3" onclick="changeCarouselImage(3)">
                     </div>
                     <div class="IMG-content4">
-                        <img src="images/living room lugbe.jpg" alt="Room 3" onclick="changeCarouselImage(4)">
+                        <img src="images/living room lugbe.webp" alt="Room 3" onclick="changeCarouselImage(4)">
                     </div>
                     <div class="IMG-content4">
-                        <img src="images/lugbe outsideview.jpg" alt="Room 3" onclick="changeCarouselImage(5)">
+                        <img src="images/lugbe outsideview.webp" alt="Room 3" onclick="changeCarouselImage(5)">
                     </div>
                    
                     
@@ -1914,117 +1914,7 @@ document.getElementById('reservationForm').addEventListener('submit', function (
 
 </script>
 
-<!-- <script>
-  // Initialize EmailJS
-emailjs.init('2ZNOdi6QPItTHItBO');
 
-// Function to format numbers with commas
-function formatNumberWithCommas(amount) {
-    return amount.toLocaleString(undefined, { minimumFractionDigits: 2 });
-}
-
-// Function to update price based on check-in and check-out dates
-function updatePrice() {
-    const checkinDate = document.getElementById('checkin').value;
-    const checkoutDate = document.getElementById('checkout').value;
-    const roomRate = parseFloat(document.getElementById('hiddenRoomRate').value) || 78000;
-
-    if (!checkinDate || !checkoutDate) {
-        document.getElementById('priceDisplay').textContent = "₦0.00";
-        return;
-    }
-
-    const checkin = new Date(checkinDate);
-    const checkout = new Date(checkoutDate);
-    const totalNights = Math.ceil((checkout - checkin) / (1000 * 60 * 60 * 24));
-
-    if (isNaN(totalNights) || totalNights <= 0) {
-        document.getElementById('priceDisplay').textContent = "₦0.00";
-        return;
-    }
-
-    const subtotal = totalNights * roomRate;
-    document.getElementById('priceDisplay').textContent = `₦${formatNumberWithCommas(subtotal)}`;
-}
-
-// Event listeners for date inputs
-document.getElementById('checkin').addEventListener('change', updatePrice);
-document.getElementById('checkout').addEventListener('change', updatePrice);
-
-// Handle "Book Now" button click
-document.querySelectorAll('.book-now-btn').forEach(button => {
-    button.addEventListener('click', function () {
-        document.getElementById('apartmentName').value = this.getAttribute('data-apartment');
-        document.getElementById('hiddenRoomRate').value = this.getAttribute('data-price') || 78000;
-    });
-});
-
-// Handle form submission
-document.getElementById('reservationForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const checkinDate = document.getElementById('checkin').value;
-    const checkoutDate = document.getElementById('checkout').value;
-    const guestNumber = document.getElementById('guests').value;
-    const totalNights = Math.max(1, parseInt((new Date(checkoutDate) - new Date(checkinDate)) / (1000 * 60 * 60 * 24)));
-
-    if (!checkinDate || !checkoutDate || totalNights <= 0) {
-        alert('Invalid check-in or check-out dates.');
-        return;
-    }
-
-    // Extract form values
-    const title = document.getElementById("title").value;  // Fix: Now extracting the title
-    const firstName = document.getElementById("first_name").value.trim();
-    const lastName = document.getElementById("last_name").value.trim();
-    const userEmail = document.getElementById("email").value;
-    const userPhone = document.getElementById("phone").value;
-    const apartmentName = document.getElementById("apartmentName").value;
-
-    // Calculate pricing
-    const displayedSubtotal = document.getElementById('priceDisplay').textContent.replace(/₦|,/g, '').trim();
-    const subtotal = parseFloat(displayedSubtotal) || 0;
-    const vatAmount = subtotal * 0.075;
-    const serviceCharge = subtotal * 0.1;
-    const grandTotal = subtotal + vatAmount + serviceCharge;
-
-    // ✅ Update hidden form fields before sending (formatted with commas)
-    document.getElementById('hiddensubtotal').value = formatNumberWithCommas(subtotal);
-    document.getElementById('hiddenVAT').value = formatNumberWithCommas(vatAmount);
-    document.getElementById('hiddenServiceCharge').value = formatNumberWithCommas(serviceCharge);
-    document.getElementById('hiddenGrandTotal').value = formatNumberWithCommas(grandTotal);
-    document.getElementById('hiddenTotalNights').value = totalNights;
-
-    console.log("Sending EmailJS Template Params:", {
-      user_title: title,  // Fix: Sending the title
-        first_name: firstName,
-        last_name: lastName,
-        user_email: userEmail,
-        user_phone: userPhone,
-        checkin_date: checkinDate,
-        checkout_date: checkoutDate,
-        guest_number: guestNumber,
-        apartment_name: apartmentName,
-        subtotal: `₦${formatNumberWithCommas(subtotal)}`,
-        vat_amount: `₦${formatNumberWithCommas(vatAmount)}`,
-        service_charge: `₦${formatNumberWithCommas(serviceCharge)}`,
-        grand_total: `₦${formatNumberWithCommas(grandTotal)}`,
-        total_nights: totalNights
-    });
-
-    // ✅ Send the form using EmailJS (hidden inputs included)
-    emailjs.sendForm('service_p6y1fke', 'template_vvm744y', this)
-        .then(response => {
-            console.log('SUCCESS!', response.status, response.text);
-            window.location.href = 'confirmation.html';
-        })
-        .catch(error => {
-            console.log('FAILED...', error);
-            alert('Failed to send booking request. Please try again.');
-        });
-});
-
-</script> -->
 
 <script>
   // Get the dropdown and name input elements
