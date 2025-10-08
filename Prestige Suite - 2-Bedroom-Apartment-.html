@@ -3,57 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prestine Apartments</title><script>
-    window.addEventListener('load', function () {
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-59GPZ9JP');
-    });
-  </script>
+    <title>Prestine Apartments</title>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-59GPZ9JP');</script>
   <!-- End Google Tag Manager -->
-
-  <!-- ✅ Microsoft Clarity (Async load) -->
-  <script async>
-    (function (c, l, a, r, i, t, y) {
-      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-    })(window, document, "clarity", "script", "q4i8nxllpb");
-  </script>
-
-  <!-- ✅ Facebook Pixel (Deferred to load after content) -->
-  <script defer>
-    window.addEventListener('load', function () {
-      !function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
-        if (!f._fbq) f._fbq = n;
-        n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = [];
-        t = b.createElement(e); t.async = !0; t.src = v;
-        s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
-      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '3570049643299661');
-      fbq('track', 'PageView');
-    });
-  </script>
-
-  <!-- ✅ Bootstrap and Font Awesome (via CDN, preload for speed) -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.rel='stylesheet'">
   
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script defer src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-  <!-- ✅ Custom CSS -->
-    <link rel="stylesheet" href="gpt.css">
+
+    <script>
+      !function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
     
+      fbq('init', '3570049643299661'); 
+      fbq('track', 'PageView');
+    </script>
+        <script type="text/javascript">
+          (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "q4i8nxllpb");
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTY8FXJJJ0"></script>
+      <script>
+      window. dataLayer = window.dataLayer || [];
+      function gtag() {dataLayer. push (arguments) ;} gtag ('js', new Date());
+      gtag( 'config', 'G-YTY8FXJJJ0');
+      </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="gpt.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
 
     <style>
@@ -256,21 +257,12 @@ justify-content: center;
 
         /* carousel */
      
-
          .carousel-inner img {
            width: 100%;
             height: 700px;
             object-fit: cover;
         }
-        .customers-review .carousel-control-prev{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin:  auto;
-      position: absolute;
-     
-    }
-  
+
         @media (max-width: 768px) {
             .carousel-inner img {
                 height: 500px;
@@ -300,7 +292,7 @@ justify-content: center;
             background-color: rgba(1, 13, 17, 0.897);
             color: white;
             width: 30%;
-            height: 29em;
+            height: 30em;
             position: relative;
             padding: 20px;
             border-radius: 5px;
@@ -309,19 +301,17 @@ justify-content: center;
         .features ul{
             font-size: 13px;
         }
-        .desktp-price{
-          margin-top: 5rem;
-          text-align: start;
-          font-size: smaller;
-        }
         .features .btn{
            
             width: 85%;
             height: 3em;
             text-align: center;
-            margin-top: 11em;
+            margin-top: 8em;
 
            
+        }
+        .desktop-price{
+          margin-top: 4rem;
         }
         @media (max-width: 768px){
           .features{
@@ -341,7 +331,6 @@ justify-content: center;
             font-size: small;
             width: 100%;
             height: 100%;
-            animation: animated-shadow 3.5s infinite ease-in-out; /* Add continuous animation */
          
         }
         .features button a{
@@ -619,7 +608,14 @@ justify-content: center;
     }
 
    
-   
+    .customers-review .carousel-control-prev{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin:  auto;
+      position: absolute;
+     
+    }
 
 
             /* foootter */
@@ -763,7 +759,7 @@ justify-content: center;
     /* Mobile Dev */
     #penthouse-title {
     margin: 0 auto;
-    width: 17em;
+    width: 14em;
     font-weight: 900;
     font-family: 'Times New Roman', Times, serif;
     font-size: 50px;
@@ -775,8 +771,8 @@ justify-content: center;
     @media (max-width: 768px){
 
       #penthouse-title {
-      width: 12.3em; /* Allows flexibility */
-      font-size: 27px; /* Slightly smaller font */
+      width: 14.3em; /* Allows flexibility */
+      font-size: 24px; /* Slightly smaller font */
       box-shadow: 0 3px 5px rgb(3, 24, 210); /* Subtle shadow for smaller screens */
       font-style: italic;
     }
@@ -885,13 +881,13 @@ justify-content: center;
            background-color: #007BFF;
             color: white;
             width: 90%;
+            height: 21em;
             position: relative;
-            height: 23em;
             margin: auto;
             padding: 20px;
             border-radius: 5px;
             margin-top: 20px;
-            animation: animated-shadow 3.5s infinite ease-in-out; /* Add continuous animation */
+            animation: animated-shadow 3.5s infinite ease-in-out;
         }
         .discountz-badge {
   position: absolute;
@@ -908,43 +904,30 @@ justify-content: center;
         .features-mobile ul{
             font-size: 13px;
         }
+        .desktop-price{
+          margin-top: 0;
+        }
         .features-mobile .btn a{
-            text-decoration: none;
-            color: rgb(0, 0, 0);
-            font-size: 20px;
+          text-decoration: none;
+          color: rgb(0, 0, 0);
         }
         .features-mobile .btn{
             
             width: 85%;
             height: 3em;
             text-align: center;
-            margin-top: 3.7em;
+            margin-top: 5.4em;
             font-size: 19px;
-            animation: animated-shadow 3.5s infinite ease-in-out; /* Add continuous animation */
-          background: #fafafa;
+            background-color: white;
+
            
         }
         
-        
 }
-@keyframes animated-shadow {
-  0% {
-    box-shadow: 2px 4px 9px rgba(247, 8, 167, 0.821);
-  }
-  25% {
-    box-shadow: 1px 7px 11px rgb(1, 52, 255);
-  }
-  50% {
-    box-shadow: 1px 4px 13px rgb(255, 234, 0);
-  }
-  75% {
-    box-shadow: 0px 6px 9px rgba(234, 8, 151, 0.855);
-  }
-  100% {
-    box-shadow: 3px 8px 11px rgba(250, 5, 5, 0.883);
-  }
+.btn-book a{
+  text-decoration: none;
+  color: white;
 }
-
 .btn-book {
             position: fixed; /* Fix the button at the bottom of the viewport */
             bottom: 0; /* Position it at the bottom */
@@ -957,20 +940,17 @@ justify-content: center;
             font-size: 18px; /* Font size */
             font-weight: bold; /* Bold text */
             text-decoration: none; /* Remove underline */
-
+           
             display: none; /* Initially hidden */
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for a floating effect */
             border: none;
         }
-        .btn-book a{
-            text-decoration: none;
-            color: white;
-        }
+
         /* Show the button only on mobile screens */
         @media (max-width: 768px) {
             .btn-book {
                 display: block; /* Display the button on mobile */
-                 height: 3em;
+                height: 3em;
             }
         }
 
@@ -994,11 +974,11 @@ justify-content: center;
 }
 
 
-/* .pricz{
+.pricz{
   margin-top: -1em;
   text-decoration: line-through;
-} */
-/* .discount-badge {
+}
+.discount-badge {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1009,7 +989,8 @@ justify-content: center;
   font-size: 14px;
   font-weight: bold;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-} */
+}
+
 
 
 
@@ -1017,11 +998,12 @@ justify-content: center;
 
 </head>
 <body>
+
   <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59GPZ9JP"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->
-      
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59GPZ9JP"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
     <div class="parent-contaiin">
 
       <header class="header container-fluid py-3">
@@ -1106,38 +1088,45 @@ justify-content: center;
           
 
     <section class="container mt-5">
-      <h1 class="text-center penthouse" id="penthouse-title">Prestige-Suite-2-Bedroom-Apartment-Lugbe</h1>
+      <h1 class="text-center penthouse" id="penthouse-title">Prestige-Suite-2-Bedroom-Apartment-Lugbe </h1>
 
-   
+        <!-- <div class="booking-bar  justify-content-between align-items-center">
+            <input type="date" class="form-control w-25" placeholder="Check In">
+            <input type="date" class="form-control w-25" placeholder="Check Out">
+            <select class="form-select w-25">
+                <option>Adults</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            <button class="btn btn-primary w-25"><a href="Apartment.html" class="room-btn">Check Rooms</a></button>
+        </div> -->
 
 
 
 
         <div id="roomCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
-         <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img data-src="images/lugbe dinning2.webp" class="d-block w-100 lazy" alt="Room 1">
-    </div>
-    <div class="carousel-item">
-      <img data-src="images/lugbe bedroom 2.webp" class="d-block w-100 lazy" alt="Room 2">
-    </div>
-    <div class="carousel-item">
-      <img data-src="images/lugbe kitchen.webp" class="d-block w-100 lazy" alt="Room 3">
-    </div>
-    <div class="carousel-item">
-      <img data-src="images/lugbe bedroom 3.webp" class="d-block w-100 lazy" alt="Room 4">
-    </div>
-    <div class="carousel-item">
-      <img data-src="images/living room lugbe.webp" class="d-block w-100 lazy" alt="Room 5">
-    </div>
-    <div class="carousel-item">
-      <img data-src="images/lugbe outsideview.webp" class="d-block w-100 lazy" alt="Room 6">
-    </div>
-  </div>
-
-  <!-- Carousel Controls -->
-  
-
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                
+                  <img src="images/living room lugbe.webp" class="d-block w-100" alt="Room 1">
+              </div>
+              <div class="carousel-item">
+                  <img src="images/lugbe dinning2.webp" class="d-block w-100" alt="Room 2">
+              </div>
+              <div class="carousel-item">
+                  <img src="images/lugbe kitchen.webp" class="d-block w-100" alt="Room 3">
+              </div>
+              <div class="carousel-item">
+                  <img src="images/lugbe bedroom 3.webp" class="d-block w-100" alt="Room 4">
+              </div>
+              <div class="carousel-item">
+                  <img src="images/lugbe outsideview.webp" class="d-block w-100" alt="Room 5">
+              </div>
+              <div class="carousel-item">
+                  <img src="images/lugbe bedroom 2.webp" class="d-block w-100" alt="Room 6">
+              </div>
+          </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
@@ -1150,89 +1139,84 @@ justify-content: center;
       
         
 
-       
-      <div class="thumb-section p-2  ;">
+        <div class="thumb-section p-2  ;">
 
-        <div class="thumbnails  justify-content-between p-2 m-auto ">
-            <div class="thumbnails-contents">
-                <div class="thum-images d-flex bg-white">
-
-                    <div class="IMG-content2">
-                        <img src="images/A-1.jpg" alt="Room 2" onclick="changeCarouselImage(0)">
-                    </div>
-
-                    <div class="IMG-content2">
-                        <img src="images/lugbe bedroom 2.webp" alt="Room 2" onclick="changeCarouselImage(1)">
-                    </div>
-
-                    <div class="IMG-content2">
-                        <img src="images/lugbe kitchen.webp" alt="Room 2" onclick="changeCarouselImage(2)">
-                    </div>
-                    <div class="IMG-content3">
-                        <img src="images/lugbe bedroom 3.webp" alt="Room 3" onclick="changeCarouselImage(3)">
-                    </div>
-                    <div class="IMG-content4">
-                        <img src="images/living room lugbe.webp" alt="Room 3" onclick="changeCarouselImage(4)">
-                    </div>
-                    <div class="IMG-content4">
-                        <img src="images/lugbe outsideview.webp" alt="Room 3" onclick="changeCarouselImage(5)">
-                    </div>
-                   
-                    
-                </div>
-
-                
-                <div class="room-details-grid mt-5" style="box-shadow: 0 4px 6px rgb(3, 24, 210);">
-                    <div class="grid-item">
-                        <p>Electricy</p>
-                        <strong>24/7</strong>
-                    </div>
-                    <div class="grid-item">
-                        <p>Max Guests</p>
-                        <strong>3</strong>
-                    </div>
-                    <div class="grid-item">
-                        <p>Bed size</p>
-                        <strong>King Size</strong> 
-                    </div>
-                    <div class="grid-item">
-                        <p>Bathrooms</p>
-                        <strong> 1 per Room</strong>
-                    </div>
-                  </div>
-            </div>
-         
-         
-
-
-            <div class="features text-start" style="box-shadow: 0 4px 6px rgb(1, 7, 55); font-family: 'Times New Roman', Times, serif;">
-              <!-- <div class="discount-badge">30% OFF</div> -->
-                <h4  class="">Features</h4>
-                <ul>
-                    <li>Spacious Open-Plan Living Area</li>
-                    <li>Prime Location</li>
-                    <li>Cozy Bedroom</li>
-                    <li>Prime Location</li>
-                    <li>Contemporary Bathrooms</li>
-                </ul>
-
-
-                <p class="text-center desktop-price  " style="margin-top: em; font-size: 2.2em;">₦78,000 per night</p>
-                <!-- <p class="pricz text-center">₦86,000 per night</p> -->
-                <!-- <p style="font-size: 16px; text-align: center;">Excluding charges</p> -->
-                <!-- <p class="text-center" style="font-size: 16px;">Offer last till 5th Marth</p> -->
+            <div class="thumbnails  justify-content-between p-2 m-auto ">
+                <div class="thumbnails-contents">
+                    <div class="thum-images d-flex bg-white">
     
-                
-                <div class="centered-div">
-                    <button type="button" class="btn book-now-btn bg-primary" id="read-more-btn" style="color: white;"><a href="Prestige-policies.html">Book Now</a>
-                    </button>
-                </div>
-                
-                    
-            </div>
-            </div>
+                        <div class="IMG-content2">
+                            <img src="images/living room lugbe.webp" alt="Room 2" onclick="changeCarouselImage(0)">
+                        </div>
+    
+                        <div class="IMG-content4">
+                            <img src="images/lugbe dinning2.webp"  alt="Room 2" onclick="changeCarouselImage(1)">
+                        </div>
+    
+                        <div class="IMG-content2">
+                            <img src="images/lugbe kitchen.webp" alt="Room 2" onclick="changeCarouselImage(2)">
+                        </div>
+                        <div class="IMG-content3">
+                            <img src="images/lugbe bedroom 3.webp" alt="Room 3" onclick="changeCarouselImage(3)">
+                        </div>
+                        <div class="IMG-content4">
+                            <img src="images/lugbe outsideview.webp" alt="Room 3" onclick="changeCarouselImage(4)">
+                        </div>
+                        <div class="IMG-content2">
+                            <img src="images/lugbe bedroom 2.webp" alt="Room 3" onclick="changeCarouselImage(5)">
+                        </div>
+                    </div>
 
-     </div>
+                    
+        <div class="room-details-grid mt-5" style="box-shadow: 0 4px 6px rgb(3, 24, 210);">
+            <div class="grid-item">
+                <p>Electricity</p>
+                <strong>24hrs</strong>
+            </div>
+            <div class="grid-item">
+                <p>Max Guests</p>
+                <strong>3 </strong>
+            </div>
+            <div class="grid-item">
+                <p>Bed size</p>
+                <strong>King Size</strong> 
+            </div>
+            <div class="grid-item">
+                <p>Bathrooms</p>
+                <strong> 1 per Room</strong>
+            </div>
+          </div>
+        </div>
+    
+    
+                <div class="features text-start" style="box-shadow: 0 4px 6px rgb(1, 7, 55); font-family: 'Times New Roman', Times, serif;">
+                  <!-- <div class="discount-badge">30% OFF</div> -->
+                    <h4  class="">Features</h4>
+
+                    <li>Fully Equipped Kitchen</li>
+                    <li>Three Spacious Bedrooms</li>
+                    <li>Stylish Bathroom</li>
+                    <li>Prime Location</li>
+                    </ul>
+
+
+              
+                    <p class="text-center desktop-price " style="margin-top: em; font-size: 2em;"> ₦86,000 per night</p>
+                    <!-- <p class="pricz text-center">₦107,000 per night</p> -->
+                   
+                    <!-- <p style="font-size: 16px; text-align: center;">Excluding charges</p> -->
+                  
+                    
+                    <div class="centered-div">
+                      <button type="button" class="btn book-now-btn bg-white" style="color: rgb(0, 0, 0);"><a href="Prestige-policies.html">Book Now</a>
+                        </button>
+                    </div>
+                    
+                        
+                </div>
+                </div>
+    
+         </div>
 
        
      
@@ -1311,7 +1295,7 @@ justify-content: center;
                     <input type="hidden" id="hiddensubtotal" name="subtotal">
                     <input type="hidden" id="hiddenTotalNights" name="total_nights">
                     
-                    <p>Total Price (Excluding VAT): <span id="priceDisplay">₦0.00</span></p>
+                    <!-- <p>Total Price (Excluding VAT): <span id="priceDisplay">₦0.00</span></p> -->
         
 
                     <button type="submit" class="btn btn-primary w-100">Submit Reservation</button>
@@ -1322,7 +1306,8 @@ justify-content: center;
           </div>
           
 
-
+        
+             
 
            <!-- Placeholder for Notification -->
            <div id="notificationArea" class="fixed top-0 left-0 right-0 text-center text-lg font-semibold hidden"></div>
@@ -1344,21 +1329,40 @@ justify-content: center;
 
                 <div class="description-tex-para " >
                     <div class="description-tex-para1">
-                      <h3 style="text-align: center;">Prestige Suite - 2-Bedroom Apartment with Boys’ Quarter- Lugbe</h3> 
+                        <h3 style="text-align: center;">Prestige-Suite-2-Bedroom-Apartment-Lugbe
+                        </h3>
+                         <p>  Experience the perfect combination of comfort, functionality, and convenience in this stylish 2-bedroom apartment, complete with a boys’ quarter, located just 15 minutes from the airport. Ideal for families, professionals, or travelers seeking a versatile space, this property offers:
+
+''                          </p>
                     </div>
 
-                    <div class="description-tex-para1-descrip"
-                      <p>Experience the perfect combination of comfort, functionality, and convenience in this stylish 2-bedroom apartment, complete with a boys’ quarter, located just 15 minutes from the airport. Ideal for families, professionals, or travelers seeking a versatile space, this property offers:
-                      </p>
-                      <p>●	Generous Living Space: A well-lit and airy living room, perfect for relaxation and entertainment.</p>
+                    <div class="description-tex-para2">
+                        <P>●	Generous Living Area: A bright and open-plan living room, perfect for relaxing or entertaining, with ample space for your furniture and a cozy atmosphere.
+                        </P>
+                        <p>●	Generous Living Space: A well-lit and airy living room, perfect for relaxation and entertainment.</p>
                      <p> ●	Modern Kitchen: Fully equipped with top-of-the-line appliances, ample cabinetry, and elegant finishes, making meal preparation a breeze.</p>
                       <p>●	Two Well-Appointed Bedrooms: Spacious and serene, each room features built-in closets and large windows for natural light.</p>
                       <p>●	Private Boys’ Quarter: A separate living space with its own bathroom, ideal for staff, guests, or additional storage.</p>
                       <p>●	Contemporary Bathrooms: Sleek, stylish, and designed for comfort, with high-quality fixtures and finishes.</p>
                       <p>●	Prime Location: Situated close to Dunamis Int'l Gospel Centre Glory Dome and within 15 mins to the Nnamdi Azikiwe International airport.</p>
                       This apartment is perfect for those who value space, privacy, and convenience in a premium location. 
-
+                      </P>
                     </div>
+
+                    <div class="description-tex-para3">
+                        
+                    </div>
+
+                    <div class="description-tex-para-main-contain">
+
+                    
+                   
+
+
+
+
+                  
+                  </div>
                 </div>
             </div>
 
@@ -1377,7 +1381,7 @@ justify-content: center;
 
                     <div class="Direct-Reservations-contact -subtle mt-4 text-center">
                         <p><i class="fas fa-phone"></i>+234 908 756 1269</p>
-                        <p> <a href="mailto:Support@prestineapartment.com">Support@prestineapartment.com</a></p>
+                        <p><a href=""><a href="mailto:Support@prestineapartment.com">Support@prestineapartment.com</a></p>
                     </div>
 
                     <button class="m-2 border-0" style="background-color: #513901aa;">
@@ -1391,37 +1395,34 @@ justify-content: center;
     </section>
 
     <div class="features-mobile text-start" style="box-shadow: 0 4px 6px rgb(1, 7, 55); font-family: 'Times New Roman', Times, serif;">
-      <!-- <div class="discountz-badge">30% OFF</div> -->
       <h4  class="">Features</h4>
       <ul>
-        <li>Spacious Open-Plan Living Area</li>
-        <li>Prime Location</li>
-        <li>Private Boys’ Quarter</li>
-        <li>Prime Location</li>
-        <li>Contemporary Bathrooms</li>
+          <li>Fully Equipped Kitchen</li>
+          <li>Two Spacious Bedrooms</li>
+          <li>Stylish Bathroom</li>
+          <li>Prime Location</li>
       </ul>
 
 
+      <!-- <p class="text-center desktop-price " style="margin-top: em; font-size: 1.7em;"> ⁠₦163,000 per night</p> -->
      
-      <!-- <p class="text-center " style="margin-top: em; font-size: 2em;">₦78,000 per night</p> -->
-      <!-- <p class="pricz text-center">₦86,000 per night</p> -->
-      <p style="font-size: 16px; text-align: center;">Excluding charges</p>
-      <!-- <p class="text-center" style="font-size: 16px;">Offer last till 5th Marth</p> -->
     
-    
+      <!-- <p style="font-size: 16px; text-align: center;">Excluding charges</p> -->
+     
+          
       
-
+      
       <div class="centered-div">
-        <button type="button" class="btn book-now-btn " id="read-more-btn" style="color: white;"><a href="Prestige-policies.html">Book Now</a>
-        </button>
-    </div>
+                    <button type="button" class="btn book-now-btn bg-primary" id="read-more-btn" style="color: white;"><a href="Prestige-policies.html">Book Now</a>
+                    </button>
+                </div>
       
           
   </div>
 
 
-  
-  <section>
+    <section>
+
        
 
 
@@ -1432,15 +1433,14 @@ justify-content: center;
         <div class="row g-4">
           <!-- Card 1 -->
           <div class="col-lg-4 col-md-6">
-            <div class="card property-card">
+            <div class="card property-card" >
                 <a href="">
-                    <img src="images/studio.apart2.jpg" class="card-img-top" alt="118 Hamptons, Orange Island">
+                  <img src="images/apo rm 12.jpg" class="card-img-top" alt="Beach Resort Estate">
                     <div class="card-body">
-                      <h5 class="card-title">classic-studio-apartment
-                      </h5>
-                      <p></p>
+                      <h5 class="card-title">Premium-1 bedroom apartment - Apo</h5>
                       <p class="card-text">
-                        <!-- <span class="new-price">₦60,000 per night</span> -->
+                       
+                        <!-- <span class="new-price">⁠₦102,000 per night</span> -->
                       </p>
                       <p class="property-info">Standard Bedroom and Bathrooms</p>
 
@@ -1451,13 +1451,13 @@ justify-content: center;
                           </div>
   
                           <div class="property-info-btn">
-                              <button class="bg-primary" style="height: 37px; width: 135px;  "><a href="classic-studio-apartment.html">Book now</a></button>
-                          </div>
+                            <button class="bg-primary" style="height: 37px; width: 135px;  "><a href="Premium-apartment.html">Book now</a></button>
+                        </div>
                          
                       </div>
-                      
                     </div>
                 </a>
+            
             </div>
           </div>
     
@@ -1465,12 +1465,12 @@ justify-content: center;
           <div class="col-lg-4 col-md-6">
             <div class="card property-card" >
                 <a href="">
-                    <img src="images/Apo rm3.jpg" class="card-img-top" alt="Beach Resort Estate">
+                  <img src="images/prestineAprtBedroom.jpg" class="card-img-top" alt="Beach Resort Estate">
                     <div class="card-body">
-                      <h5 class="card-title">Deluxe 3 Bedroom  Apartment - Apo</h5>
+                      <h5 class="card-title">Classic  Studio Apartment - Apo</h5>
                       <p class="card-text">
                        
-                        <!-- <span class="new-price"> ⁠₦125,000 per night</span> -->
+                        <!-- <span class="new-price">⁠₦60,000 per night</span> -->
                       </p>
                       <p class="property-info">Standard Bedroom and Bathrooms</p>
 
@@ -1481,7 +1481,7 @@ justify-content: center;
                           </div>
   
                           <div class="property-info-btn">
-                            <button class="bg-primary" style="height: 37px; width: 135px;  "><a href="Delux-Apartment.html">Book now</a></button>
+                            <button class="bg-primary" style="height: 37px; width: 135px;  "><a href="classic-studio-apartment.html">Book now</a></button>
                         </div>
                          
                       </div>
@@ -1492,15 +1492,15 @@ justify-content: center;
           </div>
     
           <!-- Card 3 -->
-          <div class="col-lg-4 col-md-6">
-            <div class="card property-card">
+           <div class="col-lg-4 col-md-6">
+            <div class="card property-card" >
                 <a href="">
-                    <img src="images/apo rm13.jpg" class="card-img-top" alt="Signature Estate, Lekki">
+                  <img src="images/prestineAprtBedroomDark.jpg" class="card-img-top" alt="Beach Resort Estate">
                     <div class="card-body">
-                      <h5 class="card-title">Executive 2-Room Apartment - Apo</h5>
+                      <h5 class="card-title">Delux-Royal 4  Bedroom Apartment</h5>
                       <p class="card-text">
-                        
-                        <!-- <span class="new-price">₦102,000 per night</span> -->
+                       
+                        <!-- <span class="new-price">⁠₦45,000 per night</span> -->
                       </p>
                       <p class="property-info">Standard Bedroom and Bathrooms</p>
 
@@ -1511,13 +1511,13 @@ justify-content: center;
                           </div>
   
                           <div class="property-info-btn">
-                            <button class="bg-primary" style="height: 37px; width: 135px;  "><a href="Executive 2-Room Apartment .html">Book now</a></button>
+                            <button class="bg-primary" style="height: 37px; width: 135px;  "><a href="Delux-Royal.html">Book now</a></button>
                         </div>
                          
                       </div>
                     </div>
                 </a>
-        
+            
             </div>
           </div>
         </div>
@@ -1530,7 +1530,7 @@ justify-content: center;
 
     <!-- customers review section -->
 
-    
+   
     <!-- customers review section -->
 
     <section>
@@ -1581,7 +1581,7 @@ justify-content: center;
 
     <div class="mobileMap mt-5 m-auto">
       <H2>Locate us on Map</H2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.185278379167!2d7.3625165999999975!3d8.955068699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e7210c74e11d9%3A0x2e5c292e087da8c2!2sClobek%20Crown%20Estate!5e0!3m2!1sen!2sng!4v1735575167600!5m2!1sen!2sng" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.8384986523947!2d7.4910934000000005!3d8.987004599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0d2a678a79e3%3A0x1124c0d588f26144!2sPleasant%20Places%2CApo!5e0!3m2!1sen!2sng!4v1735572037165!5m2!1sen!2sng" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
      
   
@@ -1598,14 +1598,14 @@ justify-content: center;
                   <h2 class="mt-5">Places Near by</h2>
                   <ul class="mt-3">
                     <li>1. - Novare ShopRite Apo </li>
-                    <li>2. - ⁠Cedarcrest Hospitals-Ap0</li>
+                    <li>2. - ⁠Cedarcrest Hospitals-Apo</li>
                     <li>3. - Trademore Estates- lugbe</li>
                     <li>4. -  ⁠Dunamis International Gospel Centre, Glory Dome</li>
                   </ul>
                 </div>
   
                 <div class="map w-100" style="margin-top: 15em;">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.185278379167!2d7.3625165999999975!3d8.955068699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e7210c74e11d9%3A0x2e5c292e087da8c2!2sClobek%20Crown%20Estate!5e0!3m2!1sen!2sng!4v1735575167600!5m2!1sen!2sng" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.8384986523947!2d7.4910934000000005!3d8.987004599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0d2a678a79e3%3A0x1124c0d588f26144!2sPleasant%20Places%2CApo!5e0!3m2!1sen!2sng!4v1735572037165!5m2!1sen!2sng" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div> 
   
               
@@ -1675,71 +1675,20 @@ justify-content: center;
       </div>
     </footer>
 
-    
+   <button type="button" class="btn-book book-now-btn" style="color: white;"><a href="Prestige Suite - 2-Bedroom-Apartment-.html">Book Now
+     <!-- <p style="font-size: 15px;">₦163,000 per night</p></a> -->
 
-   <button type="button" class="btn-book book-now-btn" id="read-more-btn" style="color: white;"><a href="Prestige-policies.html">Book Now
-    <!-- <p style="font-size: 15px;">₦78,000 per night</p></a> -->
    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const carouselEl = document.getElementById('roomCarousel');
-    const carousel = new bootstrap.Carousel(carouselEl, {
-      interval: 8000,
-      ride: 'carousel',
-      pause: 'hover',
-      wrap: true
-    });
-
-    function loadImage(slide) {
-      const img = slide.querySelector('img.lazy');
-      if (img && img.dataset.src) {
-        img.src = img.dataset.src;
-        img.classList.remove('lazy');
-      }
-    }
-
-    // Load first active slide immediately
-    const firstSlide = carouselEl.querySelector('.carousel-item.active');
-    loadImage(firstSlide);
-
-    // Preload first few slides to avoid visible delay
-    const allSlides = Array.from(carouselEl.querySelectorAll('.carousel-item'));
-    for (let i = 0; i < Math.min(3, allSlides.length); i++) {
-      loadImage(allSlides[i]);
-    }
-
-    // Listen for slide events to lazy-load the next slide
-    carouselEl.addEventListener('slide.bs.carousel', (event) => {
-      const nextSlide = event.relatedTarget;
-      loadImage(nextSlide);
-    });
-
-    // After slide completes, proactively preload the upcoming next slide
-    carouselEl.addEventListener('slid.bs.carousel', () => {
-      const active = carouselEl.querySelector('.carousel-item.active');
-      const slides = Array.from(carouselEl.querySelectorAll('.carousel-item'));
-      const nextIndex = (slides.indexOf(active) + 1) % slides.length;
-      loadImage(slides[nextIndex]);
-    });
-
-    // Ensure thumbnail images are lazy-loaded to reduce initial bandwidth
-    document.querySelectorAll('.thumbnails img').forEach((img) => {
-      img.loading = 'lazy';
-      img.decoding = 'async';
-    });
-  });
-
-  // Thumbnail click function
-  function changeCarouselImage(index) {
-    const carousel = document.querySelector('#roomCarousel');
-    const carouselInstance = bootstrap.Carousel.getInstance(carousel);
-    carouselInstance.to(index);
-  }
-</script>
-
+    <script>
+        function changeCarouselImage(index) {
+            const carousel = document.querySelector('#roomCarousel');
+            const carouselInstance = bootstrap.Carousel.getInstance(carousel);
+            carouselInstance.to(index);
+        }
+    </script>
 
 
 <!-- Toggle Nav section -->
@@ -1773,147 +1722,8 @@ navItems.forEach((item) => {
     navLinks.classList.remove("show");
   });
 });
- 
-</script>
-
-
-
-
-
-<script src="https://cdn.emailjs.com/dist/email.min.js">
-  console.log(emailjs);
-</script>
-
- <script>
-  // Initialize EmailJS
-emailjs.init('2ZNOdi6QPItTHItBO');
-
-// Function to format numbers with commas (e.g., 100000 -> 100,000.00)
-function formatNumberWithCommas(amount) {
-    return amount.toLocaleString(undefined, { minimumFractionDigits: 2 });
-}
-
-function updatePrice() {
-    const checkinDate = document.getElementById('checkin').value;
-    const checkoutDate = document.getElementById('checkout').value;
-    const roomRate = parseFloat(document.getElementById('hiddenRoomRate').value) || 78000;
-
-    if (!checkinDate || !checkoutDate) {
-        document.getElementById('priceDisplay').textContent = "₦0.00";
-        document.getElementById('hiddensubtotal').value = "";
-        document.getElementById('hiddenTotalNights').value = "";
-        return;
-    }
-
-    const checkin = new Date(checkinDate);
-    const checkout = new Date(checkoutDate);
-    const totalNights = Math.ceil((checkout - checkin) / (1000 * 60 * 60 * 24));
-
-    if (isNaN(totalNights) || totalNights <= 0) {
-        document.getElementById('priceDisplay').textContent = "₦0.00";
-        document.getElementById('hiddenTotalNights').value = "";
-        document.getElementById('hiddensubtotal').value = "";
-        return;
-    }
-
-    const subtotal = totalNights * roomRate;
-
-    document.getElementById('priceDisplay').textContent = `₦${formatNumberWithCommas(subtotal)}`;
-    document.getElementById('hiddenTotalNights').value = totalNights;
-    document.getElementById('hiddensubtotal').value = subtotal.toFixed(2);
-}
-
-// Event listeners for date inputs
-document.getElementById('checkin').addEventListener('change', updatePrice);
-document.getElementById('checkout').addEventListener('change', updatePrice);
-
-// Handle "Book Now" button click to set apartment details and room rate
-document.querySelectorAll('.book-now-btn').forEach(button => {
-    button.addEventListener('click', function () {
-        const apartmentName = this.getAttribute('data-apartment');
-        const roomRate = parseFloat(this.getAttribute('data-price')) || 78000;
-
-        document.getElementById('apartmentName').value = apartmentName;
-        document.getElementById('hiddenRoomRate').value = roomRate;
-    });
-});
-
-// Handle form submission
-document.getElementById('reservationForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const checkinDate = document.getElementById('checkin').value;
-    const checkoutDate = document.getElementById('checkout').value;
-    const guestNumber = document.getElementById('guests').value;
-    const roomRate = parseFloat(document.getElementById('hiddenRoomRate').value) || 78000;
-    const totalNights = parseInt(document.getElementById('hiddenTotalNights').value) || 1;
-
-    if (!checkinDate || !checkoutDate || totalNights <= 0) {
-        alert('Invalid check-in or check-out dates.');
-        return;
-    }
-
-    // Extract surname (last word in the name)
-    const fullName = document.getElementById("name").value.trim();
-    const nameParts = fullName.split(" ");
-    const surname = nameParts.length > 1 ? nameParts[nameParts.length - 1] : fullName;
-
-    // Extract the displayed subtotal from priceDisplay (remove ₦ sign and commas)
-    const displayedSubtotal = document.getElementById('priceDisplay').textContent.replace(/₦|,/g, '').trim();
-    const subtotal = parseFloat(displayedSubtotal) || 0;
-
-    // Calculate VAT, service charge, and grand total
-    const vatAmount = subtotal * 0.075;
-    const serviceCharge = subtotal * 0.1;
-    const grandTotal = subtotal + vatAmount + serviceCharge;
-
-    // Update hidden input fields before sending
-    document.getElementById('hiddensubtotal').value = formatNumberWithCommas(subtotal);
-    document.getElementById('hiddenVAT').value = formatNumberWithCommas(vatAmount);
-    document.getElementById('hiddenServiceCharge').value = formatNumberWithCommas(serviceCharge);
-    document.getElementById('hiddenGrandTotal').value = formatNumberWithCommas(grandTotal);
-
-    console.log("Updated Subtotal Before Sending:", formatNumberWithCommas(subtotal));
-
-    // Prepare data for EmailJS
-    const templateParams = {
-        surname: surname, // Send only the surname
-        user_name: fullName,
-        user_email: document.getElementById("email").value,
-        user_phone: document.getElementById("phone").value,
-        checkin_date: checkinDate,
-        checkout_date: checkoutDate,
-        guest_number: guestNumber,
-        apartment_name: document.getElementById("apartmentName").value,
-        subtotal: `₦${formatNumberWithCommas(subtotal)}`,
-        vat_amount: `₦${formatNumberWithCommas(vatAmount)}`,
-        service_charge: `₦${formatNumberWithCommas(serviceCharge)}`,
-        grand_total: `₦${formatNumberWithCommas(grandTotal)}`,
-        total_nights: totalNights.toFixed(2)
-    };
-
-    console.log("Final Template Params:", templateParams);
-
-       // Send to Client
-      emailjs.send('service_p6y1fke', 'template_vvm744y', this)
-        .then(res => console.log('Client Email Sent', res))
-        .catch(err => console.error('Client Email Error', err));
-
-          // Send to Company
-    // ✅ Send the form using EmailJS (hidden inputs included)
-    emailjs.sendForm('service_p6y1fke', 'template_iyygb2u', this)
-        .then(response => {
-            console.log('SUCCESS!', response.status, response.text);
-            window.location.href = 'confirmation.html';
-        })
-        .catch(error => {
-            console.log('FAILED...', error);
-            alert('Failed to send booking request. Please try again.');
-        });
-});
 
 </script>
-
 
 
 <script>
@@ -1930,8 +1740,131 @@ document.getElementById('reservationForm').addEventListener('submit', function (
     nameInput.value = selectedTitle + " ";
   });
 </script>
-</div>
 
 
+<!-- Include EmailJS -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script>
+  // Initialize EmailJS
+emailjs.init('2ZNOdi6QPItTHItBO');
+
+// Function to format numbers with commas
+function formatNumberWithCommas(amount) {
+    return amount.toLocaleString(undefined, { minimumFractionDigits: 2 });
+}
+
+// Function to update price based on check-in and check-out dates
+function updatePrice() {
+    const checkinDate = document.getElementById('checkin').value;
+    const checkoutDate = document.getElementById('checkout').value;
+    const roomRate = parseFloat(document.getElementById('hiddenRoomRate').value) || 86000;
+
+    if (!checkinDate || !checkoutDate) {
+        document.getElementById('priceDisplay').textContent = "₦0.00";
+        return;
+    }
+
+    const checkin = new Date(checkinDate);
+    const checkout = new Date(checkoutDate);
+    const totalNights = Math.ceil((checkout - checkin) / (1000 * 60 * 60 * 24));
+
+    if (isNaN(totalNights) || totalNights <= 0) {
+        document.getElementById('priceDisplay').textContent = "₦0.00";
+        return;
+    }
+
+    const subtotal = totalNights * roomRate;
+    document.getElementById('priceDisplay').textContent = `₦${formatNumberWithCommas(subtotal)}`;
+}
+
+// Event listeners for date inputs
+document.getElementById('checkin').addEventListener('change', updatePrice);
+document.getElementById('checkout').addEventListener('change', updatePrice);
+
+// Handle "Book Now" button click
+document.querySelectorAll('.book-now-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        document.getElementById('apartmentName').value = this.getAttribute('data-apartment');
+        document.getElementById('hiddenRoomRate').value = this.getAttribute('data-price') || 86000;
+    });
+});
+
+// Handle form submission
+document.getElementById('reservationForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const checkinDate = document.getElementById('checkin').value;
+    const checkoutDate = document.getElementById('checkout').value;
+    const guestNumber = document.getElementById('guests').value;
+    const totalNights = Math.max(1, parseInt((new Date(checkoutDate) - new Date(checkinDate)) / (1000 * 60 * 60 * 24)));
+
+    if (!checkinDate || !checkoutDate || totalNights <= 0) {
+        alert('Invalid check-in or check-out dates.');
+        return;
+    }
+
+    // Extract form values
+    const title = document.getElementById("title").value;  // Fix: Now extracting the title
+    const firstName = document.getElementById("first_name").value.trim();
+    const lastName = document.getElementById("last_name").value.trim();
+    const userEmail = document.getElementById("email").value;
+    const userPhone = document.getElementById("phone").value;
+    const apartmentName = document.getElementById("apartmentName").value;
+
+    // Calculate pricing
+    const displayedSubtotal = document.getElementById('priceDisplay').textContent.replace(/₦|,/g, '').trim();
+    const subtotal = parseFloat(displayedSubtotal) || 0;
+    const vatAmount = subtotal * 0.075;
+    const serviceCharge = subtotal * 0.1;
+    const grandTotal = subtotal + vatAmount + serviceCharge;
+
+    // ✅ Update hidden form fields before sending (formatted with commas)
+    document.getElementById('hiddensubtotal').value = formatNumberWithCommas(subtotal);
+    document.getElementById('hiddenVAT').value = formatNumberWithCommas(vatAmount);
+    document.getElementById('hiddenServiceCharge').value = formatNumberWithCommas(serviceCharge);
+    document.getElementById('hiddenGrandTotal').value = formatNumberWithCommas(grandTotal);
+    document.getElementById('hiddenTotalNights').value = totalNights;
+
+    console.log("Sending EmailJS Template Params:", {
+      user_title: title,  // Fix: Sending the title
+        first_name: firstName,
+        last_name: lastName,
+        user_email: userEmail,
+        user_phone: userPhone,
+        checkin_date: checkinDate,
+        checkout_date: checkoutDate,
+        guest_number: guestNumber,
+        apartment_name: apartmentName,
+        subtotal: `₦${formatNumberWithCommas(subtotal)}`,
+        vat_amount: `₦${formatNumberWithCommas(vatAmount)}`,
+        service_charge: `₦${formatNumberWithCommas(serviceCharge)}`,
+        grand_total: `₦${formatNumberWithCommas(grandTotal)}`,
+        total_nights: totalNights
+    });
+
+    // ✅ Send the form using EmailJS (hidden inputs included)
+    emailjs.sendForm('service_p6y1fke', 'template_vvm744y', this)
+        .then(response => {
+            console.log('SUCCESS!', response.status, response.text);
+            window.location.href = 'confirmation.html';
+        })
+        .catch(error => {
+            console.log('FAILED...', error);
+            alert('Failed to send booking request. Please try again.');
+        });
+});
+
+</script>
+
+
+
+
+</script>
+
+
+    </div>
+
+    
 </body>
 </html>
