@@ -77,8 +77,8 @@
             padding: 10px;
         }
         h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(90deg, #470b24, #ff758c);
+  font-family: 'Playfair Displays', sans-serif;
+  background: linear-gradient(90deg, #14030a, #ff758c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -170,20 +170,47 @@ p {
   background-position: center;
   opacity: 0;
   transition: opacity 2s ease-in-out;
+  z-index: 0;
 }
 
 .background-image.active {
   opacity: 1;
+  z-index: 1;
 }
 
 /* Overlay content */
 .overlay-content {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 40px;
+  right: 60px;
   z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.hero-text {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  opacity: 0;
+  text-align: right;
+  white-space: nowrap;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  overflow: hidden;
+  width: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-text.visible {
+  opacity: 1;
+  animation: blinkCursor 0.8s steps(1) infinite;
+}
+
+@keyframes blinkCursor {
+  50% {
+    border-color: transparent;
+  }
 }
 
 /* Text container styles */
@@ -1111,7 +1138,7 @@ justify-content: center;
   transition: all 0.3s ease;
 }
   .background-container {
-    background: #ffffff;
+    background: transparent;
   }
 /* Responsive Design */
 
@@ -1175,7 +1202,7 @@ justify-content: center;
   /* sliding bg video */
   .background-container {
     flex-direction: column; /* Stack items vertically on smaller screens */
-    background: #ffffff;
+    background: transparent;
     height: 540px;
   }
 
@@ -1535,7 +1562,6 @@ justify-content: center;
     <div class="background-image" data-bg="images/prestineAprtBedroom2.jpg"></div>
     <div class="background-image" data-bg="images/prestineAprtoutside2.jpg"></div>
     <div class="background-image" data-bg="images/prestineAprtoutside3.jpg"></div>
-    <div class="background-image" data-bg="images/studio.apart2.jpg"></div>
     <div class="background-image" data-bg="images/1room.aprt.inner.jpg"></div>
     <div class="background-image" data-bg="images/1room.apart.inner.jpg"></div>
     <div class="background-image" data-bg="images/nwpx9.jpg"></div>
@@ -1543,12 +1569,18 @@ justify-content: center;
     <div class="background-image" data-bg="images/prestineAprtLivingRoom.jpg"></div>
     <div class="background-image" data-bg="images/prestineAprtBedroom3.jpg"></div>
     <div class="background-image" data-bg="images/apo rm12.jpg"></div>
+
+
+      <!-- Overlay Content -->
+
+      <div class="overlay-content d-flex justify-content-center align-items-center">
+    <!-- Add overlay text/buttons here -->
+     <h4 id="heroText" class="hero-text"></h2>
+  </div>
   </div>
 
-  <!-- Overlay Content -->
-  <div class="overlay-content d-flex justify-content-center align-items-center">
-    <!-- Add overlay text/buttons here -->
-  </div>
+
+
 </div>
 
 
@@ -1604,7 +1636,7 @@ justify-content: center;
 </div>
 
 <div class="room-card">
-  <img src="images/apo rm 12.jpg" alt="Deluxe Royale">
+  <img src="images/nwpx2.jpg" alt="Deluxe Royale">
   <div class="overlay"></div>
   <div class="room-details">
     <div class="room-details-first d-flex justify-content-between">
@@ -1630,7 +1662,7 @@ justify-content: center;
 </div>
 
 <div class="room-card">
-  <img src="images/1room.apart.inner.jpg" alt="Premium 1-Bedroom Apartment">
+  <img src="images/prestineAprtBedroomDark.jpg" alt="Premium 1-Bedroom Apartment">
   <div class="overlay"></div>
   <div class="room-details">
     <div class="room-details-first d-flex justify-content-between">
@@ -1987,15 +2019,99 @@ justify-content: center;
   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function changeCarouselImage(index) {
-            const carousel = document.querySelector('#roomCarousel');
-            const carouselInstance = bootstrap.Carousel.getInstance(carousel);
-            carouselInstance.to(index);
-        }
-    </script>
+<script>
+  // 🔹 For Bootstrap Carousel thumbnails
+  function changeCarouselImage(index) {
+    const carousel = document.querySelector("#roomCarousel");
+    const carouselInstance = bootstrap.Carousel.getInstance(carousel);
+    carouselInstance.to(index);
+  }
 
-  <script>
+  
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(".background-image");
+    let currentIndex = 0;
+    let total = images.length;
+
+    // Typewriter setup
+    const heroText = document.querySelector(".hero-text");
+    const typewriterText = "Luxury & Comfort Redefined";
+    let typed = false;
+
+    // ✅ Preload all images
+    const lazyImages = document.querySelectorAll(".background-image[data-bg]");
+    let loaded = 0;
+
+    lazyImages.forEach((img) => {
+      const temp = new Image();
+      temp.src = img.dataset.bg;
+      temp.onload = () => {
+        img.style.backgroundImage = `url(${img.dataset.bg})`;
+        img.removeAttribute("data-bg");
+        loaded++;
+        if (loaded === lazyImages.length) startSlideshow();
+      };
+    });
+
+    if (lazyImages.length === 0) startSlideshow();
+
+    function typeWriterEffect(text, i = 0) {
+      if (i < text.length) {
+        heroText.textContent += text.charAt(i);
+        setTimeout(() => typeWriterEffect(text, i + 1), 80);
+      }
+    }
+
+    function startSlideshow() {
+      images[currentIndex].classList.add("active");
+
+      // Start typewriter on first slide
+      setTimeout(() => {
+        heroText.classList.add("visible");
+        heroText.style.width = `${typewriterText.length + 1}ch`;
+        typeWriterEffect(typewriterText);
+      }, 500); // slightly earlier on mobile
+
+      // Fade text out before next image
+      setTimeout(() => {
+        heroText.classList.remove("visible");
+      }, 5000);
+
+      // Continue slideshow
+      setInterval(() => {
+        const nextIndex = (currentIndex + 1) % total;
+
+        images[nextIndex].classList.add("active");
+
+        setTimeout(() => {
+          images[currentIndex].classList.remove("active");
+          currentIndex = nextIndex;
+        }, 1500);
+      }, 7000);
+    }
+  });
+
+  // 🎬 Video Play Logic (same)
+  const playButton = document.getElementById("playButton");
+  const video = document.getElementById("aboutVideo");
+  const image = document.getElementById("aboutImage");
+
+  if (playButton && video && image) {
+    playButton.addEventListener("click", () => {
+      playButton.style.display = "none";
+      image.style.display = "none";
+      video.style.display = "block";
+      video.play();
+    });
+  }
+</script>
+
+
+
+<!-- <script>
   document.addEventListener("DOMContentLoaded", () => {
     // =============================
     // 🌄 Background Slideshow (all images preloaded)
@@ -2003,28 +2119,32 @@ justify-content: center;
     const images = document.querySelectorAll(".background-image");
     let currentIndex = 0;
 
-    // Preload all images that use data-bg
+    // ✅ Preload all images to prevent white flash
     const lazyBackgrounds = document.querySelectorAll(".background-image[data-bg]");
     lazyBackgrounds.forEach((img) => {
-      img.style.backgroundImage = `url(${img.dataset.bg})`;
-      img.removeAttribute("data-bg");
+      const temp = new Image();
+      temp.src = img.dataset.bg;
+      temp.onload = () => {
+        img.style.backgroundImage = `url(${img.dataset.bg})`;
+        img.removeAttribute("data-bg");
+      };
     });
 
-    // Slideshow rotation logic
+    // ✅ Slideshow rotation logic — infinite loop, no flicker
     function changeBackground() {
-      images.forEach((img) => img.classList.remove("active"));
-      images[currentIndex].classList.add("active");
+      images[currentIndex].classList.remove("active");
       currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add("active");
     }
 
-    // Start slideshow rotation every 8 seconds
+    // ✅ Ensure the first image is visible immediately
+    images[currentIndex].classList.add("active");
+
+    // ✅ Start rotation every 8 seconds
     setInterval(changeBackground, 8000);
 
-    // Initialize first image
-    changeBackground();
-
     // =============================
-    // 🎬 Video Play Button Logic
+    // 🎬 Video Play Button Logic (kept intact)
     // =============================
     const playButton = document.getElementById("playButton");
     const video = document.getElementById("aboutVideo");
@@ -2032,17 +2152,15 @@ justify-content: center;
 
     if (playButton && video && image) {
       playButton.addEventListener("click", () => {
-        // Hide static image and button
         playButton.style.display = "none";
         image.style.display = "none";
-
-        // Show and play video
         video.style.display = "block";
         video.play();
       });
     }
   });
-</script>
+</script> -->
+
 
 
 
