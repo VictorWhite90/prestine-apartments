@@ -1190,15 +1190,17 @@ justify-content: center;
                   <!-- <div class="discount-badge">30% OFF</div> -->
                     <h4  class="">Features</h4>
 
+                    <li>Luxurious Living Room</li>
                     <li>Fully Equipped Kitchen</li>
-                    <li>Three Spacious Bedrooms</li>
-                    <li>Stylish Bathroom</li>
+                    <li>Two Spacious Bedrooms</li>
+                    <li>Three Stylish Bathrooms</li>
+                    <li>Dinning & Storage Room</li>
                     <li>Prime Location</li>
                     </ul>
 
 
               
-                    <p class="text-center desktop-price " style="margin-top: em; font-size: 2em;"> ₦78,000 per night</p>
+                    <p class="text-center desktop-price " style="margin-top: em; font-size: 2em;"> ₦75,000 per night</p>
                     <!-- <p class="pricz text-center">₦107,000 per night</p> -->
                    
                     <!-- <p style="font-size: 16px; text-align: center;">Excluding charges</p> -->
@@ -1336,7 +1338,7 @@ justify-content: center;
                     <div class="description-tex-para2">
                         <P>●	Generous Living Area: A bright and open-plan living room, perfect for relaxing or entertaining, with ample space for your furniture and a cozy atmosphere.
                         </P>
-                        <p>●	Generous Living Space: A well-lit and airy living room, perfect for relaxation and entertainment.</p>
+                        <p>●	Generous Living Room: A well-lit and airy living room, perfect for relaxation and entertainment.</p>
                      <p> ●	Modern Kitchen: Fully equipped with top-of-the-line appliances, ample cabinetry, and elegant finishes, making meal preparation a breeze.</p>
                       <p>●	Two Well-Appointed Bedrooms: Spacious and serene, each room features built-in closets and large windows for natural light.</p>
                       <p>●	Private Boys’ Quarter: A separate living space with its own bathroom, ideal for staff, guests, or additional storage.</p>
@@ -1394,14 +1396,16 @@ justify-content: center;
     <div class="features-mobile text-start" style="box-shadow: 0 4px 6px rgb(1, 7, 55); font-family: 'Times New Roman', Times, serif;">
       <h4  class="">Features</h4>
       <ul>
+          <li>Luxurious Living Room</li>
           <li>Fully Equipped Kitchen</li>
           <li>Two Spacious Bedrooms</li>
-          <li>Stylish Bathroom</li>
+          <li>Three Stylish Bathrooms</li>
+          <li>Dinning & Storage Room</li>
           <li>Prime Location</li>
       </ul>
 
 
-      <p class="text-center desktop-price " style="margin-top: em; font-size: 1.7em;"> ₦78,000 per night</p>
+      <p class="text-center desktop-price " style="margin-top: em; font-size: 1.7em;"> ₦75,000 per night</p>
      
     
       <!-- <p style="font-size: 16px; text-align: center;">Excluding charges</p> -->
@@ -1432,7 +1436,7 @@ justify-content: center;
           <div class="col-lg-4 col-md-6">
             <div class="card property-card" >
                 <a href="">
-                  <img src="images/prestineAprtBedroomDark.jpg" class="card-img-top" alt="Beach Resort Estate">
+                  <img src="images/prestineAprtLivingRoom.jpg" class="card-img-top" alt="Beach Resort Estate">
                     <div class="card-body">
                       <h5 class="card-title">Premium-1 bedroom apartment - Apo</h5>
                       <p class="card-text">
@@ -1755,7 +1759,7 @@ function formatNumberWithCommas(amount) {
 function updatePrice() {
     const checkinDate = document.getElementById('checkin').value;
     const checkoutDate = document.getElementById('checkout').value;
-    const roomRate = parseFloat(document.getElementById('hiddenRoomRate').value) || 78000;
+    const roomRate = parseFloat(document.getElementById('hiddenRoomRate').value) || 75000;
 
     if (!checkinDate || !checkoutDate) {
         document.getElementById('priceDisplay').textContent = "₦0.00";
@@ -1783,7 +1787,7 @@ document.getElementById('checkout').addEventListener('change', updatePrice);
 document.querySelectorAll('.book-now-btn').forEach(button => {
     button.addEventListener('click', function () {
         document.getElementById('apartmentName').value = this.getAttribute('data-apartment');
-        document.getElementById('hiddenRoomRate').value = this.getAttribute('data-price') || 78000;
+        document.getElementById('hiddenRoomRate').value = this.getAttribute('data-price') || 75000;
     });
 });
 
@@ -1840,17 +1844,28 @@ document.getElementById('reservationForm').addEventListener('submit', function (
         total_nights: totalNights
     });
 
-    // ✅ Send the form using EmailJS (hidden inputs included)
+    // / ✅ Send to Client
     emailjs.sendForm('service_p6y1fke', 'template_vvm744y', this)
         .then(response => {
-            console.log('SUCCESS!', response.status, response.text);
+            console.log('Client Email Sent', response.status, response.text);
+        })
+        .catch(error => {
+            console.error('Client Email Error', error);
+        });
+
+    // ✅ Send to Company
+    emailjs.sendForm('service_p6y1fke', 'template_iyygb2u', this)
+        .then(response => {
+            console.log('Company Email Sent', response.status, response.text);
+            // Only redirect after both are successful (optional)
             window.location.href = 'confirmation.html';
         })
         .catch(error => {
-            console.log('FAILED...', error);
-            alert('Failed to send booking request. Please try again.');
+            console.error('Company Email Error', error);
+            alert('Failed to notify company. Please try again.');
         });
 });
+
 
 </script>
 

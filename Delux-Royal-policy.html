@@ -1582,7 +1582,7 @@ justify-content: center;
         </ul>
         <div style="color: rgb(6, 0, 0);">By proceeding with the booking, you accept the above policies.</div>
         <div class="btn-accpt">
-            <button class="btn book-now-btn bg-primary" id="read-more-btn"             data-apartment="Deluxe-Royal-4-bedroom-Apartment " data-bs-toggle="modal" data-bs-target="#reservationModal">Agree & Proceed</button>
+            <button class="btn book-now-btn bg-primary" id="read-more-btn" data-apartment="Deluxe-Royal-4-bedroom-Apartment " data-bs-toggle="modal" data-bs-target="#reservationModal">Agree & Proceed</button>
 
             <button class="btn cancel-btn"><a href="Delux-Royal-policy.html">Cancel Booking</a></button>
         </div>
@@ -1904,7 +1904,7 @@ const images = document.querySelectorAll('.background-image');
   function updatePrice() {
       const checkinDate = document.getElementById('checkin').value;
       const checkoutDate = document.getElementById('checkout').value;
-      const roomRate = parseFloat(document.getElementById('hiddenRoomRate').value) || 163000;
+      const roomRate = parseFloat(document.getElementById('hiddenRoomRate').value) || 220000;
   
       if (!checkinDate || !checkoutDate) {
           document.getElementById('priceDisplay').textContent = "₦0.00";
@@ -1932,7 +1932,7 @@ const images = document.querySelectorAll('.background-image');
   document.querySelectorAll('.book-now-btn').forEach(button => {
       button.addEventListener('click', function () {
           document.getElementById('apartmentName').value = this.getAttribute('data-apartment');
-          document.getElementById('hiddenRoomRate').value = this.getAttribute('data-price') || 163000;
+          document.getElementById('hiddenRoomRate').value = this.getAttribute('data-price') || 220000;
       });
   });
   

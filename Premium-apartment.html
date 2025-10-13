@@ -1229,7 +1229,7 @@ justify-content: center;
                     </ul>
 
 
-                    <p class="text-center " style="margin-top: em; font-size: 2em;">  ₦85,000 per night</p>
+                    <p class="text-center " style="margin-top: em; font-size: 2em;">  ₦75,000 per night</p>
                     <!-- <p class="pricz text-center">₦64,000 per night</p> -->
                    
                     <!-- <p style="font-size: 16px; text-align: center;">Excluding charges</p> -->
@@ -1238,9 +1238,11 @@ justify-content: center;
                    
                     
                     <div class="centered-div">
-                      <button type="button" class="btn book-now-btn bg-white" style="color: rgb(0, 0, 0);"><a href="Premium-policy.html">Book Now</a>
-                        </button>
-                    </div>
+        <button type="button" class="btn book-now-btn bg-white" data-bs-toggle="modal"
+          data-bs-target="#reservationModal" data-apartment="Premium 1 bedroom Apartment"
+          style="color: rgb(0, 0, 0);">Book Now</a>
+        </button>
+      </div>
                     
                         
                 </div>
@@ -1258,82 +1260,97 @@ justify-content: center;
               </a>
 
            <!-- Modal for Reservation -->
-           <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="reservationModalLabel">Hotel Reservation</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="reservationModalLabel">Hotel Reservation</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="reservationForm">
+                <div class="mb-3">
+                  <!-- Title on the first line -->
+                  <label for="title" class="form-label">Title</label>
+                  <select class="form-select mb-2" id="title" name="user_title" required>
+                    <option value="" disabled selected>Select Title</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Dr">Dr</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
-                <div class="modal-body">
-                  <form id="reservationForm">
-                    <div class="mb-3">
-                      <!-- Title on the first line -->
-                      <label for="title" class="form-label">Title</label>
-                      <select class="form-select mb-2" id="title" name="user_title" required>
-                          <option value="" disabled selected>Select Title</option>
-                          <option value="Mr">Mr</option>
-                          <option value="Mrs">Mrs</option>
-                          <option value="Ms">Ms</option>
-                          <option value="Dr">Dr</option>
-                          <option value="Other">Other</option>
-                      </select>
-                  </div>
-                  
-                  <div class="mb-3">
-                      <div class="row">
-                          <!-- First Name on the second line -->
-                          <div class="col">
-                              <label for="first_name" class="form-label">First Name</label>
-                              <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter your first name" required>
-                          </div>
-                          <!-- Last Name on the second line -->
-                          <div class="col">
-                              <label for="last_name" class="form-label">Last Name</label>
-                              <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter your last name" required>
-                          </div>
-                      </div>
-                  </div>
-                  
-                    <div class="mb-3">
-                      <label for="email" class="form-label">Email Address</label>
-                      <input type="email" class="form-control" id="email" name="user_email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="phone" class="form-label">Phone Number</label>
-                      <input type="tel" class="form-control" id="phone" name="user_phone" placeholder="Enter your phone number" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="checkin" class="form-label">Check-In Date</label>
-                      <input type="date" class="form-control" id="checkin" name="checkin_date" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="checkout" class="form-label">Check-Out Date</label>
-                      <input type="date" class="form-control" id="checkout" name="checkout_date" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="guests" class="form-label">Number of Guests</label>
-                      <input type="number" class="form-control" id="guests" name="guest_number" placeholder="Enter number of guests" required>
-                    </div>
 
-                   
-                    <input type="hidden" id="hiddenRoomRate" name="room_rate">
-                    <input type="hidden" id="hiddenVAT" name="vat_amount">
-                    <input type="hidden" id="hiddenServiceCharge" name="service_charge">
-                    <input type="hidden" id="hiddenGrandTotal" name="grand_total">
-                    <input type="hidden" name="apartment_name" id="apartmentName">
-                    <input type="hidden" id="hiddensubtotal" name="subtotal">
-                    <input type="hidden" id="hiddenTotalNights" name="total_nights">
-                    
-                    <p>Total Price (Excluding VAT): <span id="priceDisplay">₦0.00</span></p>
-        
-
-                    <button type="submit" class="btn btn-primary w-100">Submit Reservation</button>
-                  </form>
+                <div class="mb-3">
+                  <div class="row">
+                    <!-- First Name on the second line -->
+                    <div class="col">
+                      <label for="first_name" class="form-label">First Name</label>
+                      <input type="text" class="form-control" id="first_name" name="first_name"
+                        placeholder="Enter your first name" required>
+                    </div>
+                    <!-- Last Name on the second line -->
+                    <div class="col">
+                      <label for="last_name" class="form-label">Last Name</label>
+                      <input type="text" class="form-control" id="last_name" name="last_name"
+                        placeholder="Enter your last name" required>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="email" name="user_email" placeholder="Enter your email"
+                    required>
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" id="phone" name="user_phone"
+                    placeholder="Enter your phone number" required>
+                </div>
+                <div class="mb-3">
+                  <label for="checkin" class="form-label">Check-In Date</label>
+                  <input type="date" class="form-control" id="checkin" name="checkin_date" required>
+                </div>
+                <div class="mb-3">
+                  <label for="checkout" class="form-label">Check-Out Date</label>
+                  <input type="date" class="form-control" id="checkout" name="checkout_date" required>
+                </div>
+                <div class="mb-3">
+                  <label for="guests" class="form-label">Number of Guests</label>
+                  <input type="number" class="form-control" id="guests" name="guest_number"
+                    placeholder="Enter number of guests" required>
+                </div>
+
+
+                <input type="hidden" id="hiddenRoomRate" name="room_rate">
+                <input type="hidden" id="hiddenVAT" name="vat_amount">
+                <input type="hidden" id="hiddenServiceCharge" name="service_charge">
+                <input type="hidden" id="hiddenGrandTotal" name="grand_total">
+                <input type="hidden" name="apartment_name" id="apartmentName">
+                <input type="hidden" id="hiddensubtotal" name="subtotal">
+                <input type="hidden" id="hiddenTotalNights" name="total_nights">
+
+                <p>Total Price (Excluding VAT): <span id="priceDisplay">₦0.00</span></p>
+
+                <div class="form-check mb-3 d-flex align-items-start gap-2">
+                  <input class="form-check-input mt-1" type="checkbox" id="policyCheck" required>
+                  <p class="mb-0 small">
+                    By clicking on the submit button, I agree to
+                    <a href="Premium-policy.html" target="_blank">Prestine Apartment policies</a>.
+                  </p>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary w-100">Submit Reservation</button>
+              </form>
+            </div>
           </div>
+            
+        </div>
+      </div>
           
 
 
@@ -1413,7 +1430,7 @@ justify-content: center;
       </ul>
 
 
-      <p class="text-center " style="margin-top: em; font-size: 2em;">  ₦85,000 per night</p>
+      <p class="text-center " style="margin-top: em; font-size: 2em;">  ₦75,000 per night</p>
       <!-- <p class="pricz text-center">₦75,000 per night</p> -->
     
       <!-- <p style="font-size: 19px; text-align: center;">Excluding taxes</p> -->
@@ -1421,8 +1438,10 @@ justify-content: center;
      
       
       <div class="centered-div">
-        <button type="button" class="btn book-now-btn bg-white" style="color: rgb(0, 0, 0);"><a href="Premium-policy.html">Book Now</a>
-          </button>
+        <button type="button" class="btn book-now-btn bg-white" data-bs-toggle="modal"
+          data-bs-target="#reservationModal" data-apartment="Premium 1 bedroom Apartment"
+          style="color: rgb(0, 0, 0);">Book Now
+        </button>
       </div>
       
           
@@ -1436,7 +1455,7 @@ justify-content: center;
 
       <div class="container my-5">
         <div class="other-properties justify-content-center text-center" style=" box-shadow: 0 4px 6px rgb(12, 46, 179);">
-            <h3>Other Properties</h3>
+            <h3>Other Apartments</h3>
         </div>
         <div class="row g-4">
           <!-- Card 1 -->
@@ -1681,7 +1700,8 @@ justify-content: center;
       </div>
     </footer>
 
-   <button type="button" class="btn-book book-now-btn" id="read-more-btn" style="color: white;"><a href="Premium-policy.html">Book Now
+   <button type="button" class="btn-book book-now-btn" id="read-more-btn" style="color: white;" data-bs-toggle="modal"
+          data-bs-target="#reservationModal" data-apartment="Premium 1 bedroom Apartment">Book Now
      <!-- <p style="font-size: 15px;">₦85,000 per night</p></a> -->
    </button>
 
@@ -1763,7 +1783,7 @@ function formatNumberWithCommas(amount) {
 function updatePrice() {
     const checkinDate = document.getElementById('checkin').value;
     const checkoutDate = document.getElementById('checkout').value;
-    const roomRate = parseFloat(document.getElementById('hiddenRoomRate').value) || 85000;
+    const roomRate = parseFloat(document.getElementById('hiddenRoomRate').value) || 75000;
 
     if (!checkinDate || !checkoutDate) {
         document.getElementById('priceDisplay').textContent = "₦0.00";
@@ -1791,7 +1811,7 @@ document.getElementById('checkout').addEventListener('change', updatePrice);
 document.querySelectorAll('.book-now-btn').forEach(button => {
     button.addEventListener('click', function () {
         document.getElementById('apartmentName').value = this.getAttribute('data-apartment');
-        document.getElementById('hiddenRoomRate').value = this.getAttribute('data-price') || 85000;
+        document.getElementById('hiddenRoomRate').value = this.getAttribute('data-price') || 75000;
     });
 });
 
@@ -1848,15 +1868,25 @@ document.getElementById('reservationForm').addEventListener('submit', function (
         total_nights: totalNights
     });
 
-    // ✅ Send the form using EmailJS (hidden inputs included)
-    emailjs.sendForm('service_p6y1fke', 'template_vvm744y', this)
+    
+emailjs.sendForm('service_p6y1fke', 'template_vvm744y', this)
         .then(response => {
-            console.log('SUCCESS!', response.status, response.text);
+            console.log('Client Email Sent', response.status, response.text);
+        })
+        .catch(error => {
+            console.error('Client Email Error', error);
+        });
+
+    // ✅ Send to Company
+    emailjs.sendForm('service_p6y1fke', 'template_iyygb2u', this)
+        .then(response => {
+            console.log('Company Email Sent', response.status, response.text);
+            // Only redirect after both are successful (optional)
             window.location.href = 'confirmation.html';
         })
         .catch(error => {
-            console.log('FAILED...', error);
-            alert('Failed to send booking request. Please try again.');
+            console.error('Company Email Error', error);
+            alert('Failed to notify company. Please try again.');
         });
 });
 
