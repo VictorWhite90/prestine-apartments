@@ -295,26 +295,12 @@ justify-content: center;
           }
           .hero-cta {
             flex-direction: column;
-            align-items: stretch;
+            align-items: start;
           }
-          .hero-cta p { text-align: start; font-size: 16px; }
+          .hero-cta p { text-align: start; font-size: smaller; }
           .hero-cta .book-now-btn {
             width: 60%;
           }
-        }
-
-        /* Surface Duo and small tablets: optimize layout */
-        @media (max-width: 900px) {
-          .carousel-inner img { height: 420px; }
-          .room-details-grid { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
-          .description-text { margin-top: 0; width: 100%; font-size: 16px; }
-          footer { height: auto; }
-        }
-        @media (max-width: 600px) {
-          .carousel-inner img { height: 320px; }
-          .room-details-grid { grid-template-columns: 1fr; }
-          .hero-cta { flex-direction: column; align-items: stretch; }
-          .hero-cta .book-now-btn { width: 100%; }
         }
 
         @media (max-width: 576px) {
