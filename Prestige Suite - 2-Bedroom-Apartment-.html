@@ -260,6 +260,31 @@ justify-content: center;
             object-fit: cover;
         }
 
+        /* Hero CTA below carousel */
+        .hero-cta {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 12px;
+          background-color: #f8f9fa;
+          padding: 12px 16px;
+          border-radius: 8px;
+          margin-top: 12px;
+          box-shadow: 0 4px 6px rgba(3, 24, 210, 0.2);
+          max-width: 500px;
+          /* margin-left: auto;
+          margin-right: auto; */
+        }
+        .hero-cta p {
+          margin: 0;
+          font-size: 1rem;
+        }
+        .hero-cta .cta-actions {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+
         @media (max-width: 768px) {
             .carousel-inner img {
                 height: 500px;
@@ -268,6 +293,28 @@ justify-content: center;
             .IMG-content2{
             display: none;
           }
+          .hero-cta {
+            flex-direction: column;
+            align-items: stretch;
+          }
+          .hero-cta p { text-align: start; font-size: 16px; }
+          .hero-cta .book-now-btn {
+            width: 60%;
+          }
+        }
+
+        /* Surface Duo and small tablets: optimize layout */
+        @media (max-width: 900px) {
+          .carousel-inner img { height: 420px; }
+          .room-details-grid { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
+          .description-text { margin-top: 0; width: 100%; font-size: 16px; }
+          footer { height: auto; }
+        }
+        @media (max-width: 600px) {
+          .carousel-inner img { height: 320px; }
+          .room-details-grid { grid-template-columns: 1fr; }
+          .hero-cta { flex-direction: column; align-items: stretch; }
+          .hero-cta .book-now-btn { width: 100%; }
         }
 
         @media (max-width: 576px) {
@@ -875,7 +922,7 @@ justify-content: center;
     display: block;
   }
   .features-mobile {
-           background-color: #007BFF;
+           background-color: #3910ef;
             color: white;
             width: 90%;
             height: 21em;
@@ -906,19 +953,21 @@ justify-content: center;
         }
         .features-mobile .btn a{
           text-decoration: none;
-          color: rgb(255, 255, 255);
+          color: rgb(0, 0, 0);
         }
         .features-mobile .btn{
             
             width: 85%;
             height: 3em;
             text-align: center;
-            margin-top: 2.4em;
+            margin-top: 1em;
             font-size: 19px;
             background-color: white;
+            color: #000;
 
            
         }
+      
         
 }
 .btn-book a{
@@ -1136,6 +1185,16 @@ justify-content: center;
       
         
 
+        <div class="hero-cta">
+          <div>
+            <p><strong>₦75,000</strong> per night</p>
+            <p>Apartments • Lugbe</p>
+          </div>
+          <div class="cta-actions">
+            <button type="button" class="btn btn-primary book-now-btn" data-bs-toggle="modal" data-bs-target="#reservationModal" data-apartment="Prestige-Suite-2-Bedroom-Apartment-Lugbe">Book Now</button>
+          </div>
+        </div>
+
         <div class="thumb-section p-2  ;">
 
             <div class="thumbnails  justify-content-between p-2 m-auto ">
@@ -1295,6 +1354,14 @@ justify-content: center;
                     <input type="hidden" id="hiddenTotalNights" name="total_nights">
                     
                     <p>Total Price (Excluding VAT): <span id="priceDisplay">₦0.00</span></p>
+
+                    <div class="form-check mb-3 d-flex align-items-start gap-2">
+                  <input class="form-check-input mt-1" type="checkbox" id="policyCheck" required>
+                  <p class="mb-0 small">
+                    By clicking on the submit button, I agree to
+                    <a href="Prestige-policies.html" target="_blank">Prestine Apartment policies</a>.
+                  </p>
+                </div>
         
 
                     <button type="submit" class="btn btn-primary w-100">Submit Reservation</button>
@@ -1414,7 +1481,7 @@ justify-content: center;
       
       
       <div class="centered-div">
-                    <button type="button" class="btn book-now-btn bg-primary" id="read-more-btn" data-bs-toggle="modal" data-bs-target="#reservationModal" data-apartment="Prestige-Suite-2-Bedroom-Apartment-Lugbe"  style="color: white;">Book Now
+                    <button type="button" class="btn book-now-btn" id="read-more-btn" data-bs-toggle="modal" data-bs-target="#reservationModal" data-apartment="Prestige-Suite-2-Bedroom-Apartment-Lugbe">Book Now
                     </button>
                 </div>
       
