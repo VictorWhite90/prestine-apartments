@@ -55,19 +55,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="gpt.css">
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-
 
 
     <style>
           body{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            /* allow vertical scrolling and prevent horizontal overflow only */
-            overflow-x: hidden;
-            overflow-y: auto;
-          }
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        overflow-y: scroll;
+        
+      }
 
       .parent-contaiin{
       justify-content: center;
@@ -95,21 +93,20 @@
         }
         
         .mainNv{
-          background-color: #000;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 1rem 2rem;
-          color: white;
-          position: relative;
-          z-index: 1000;
-          width: 100%;
-          /* avoid fixed height so nav can collapse on smaller screens */
-          height: auto;
-          min-height: 60px;
-          font-family: Georgia, 'Times New Roman', Times, serif; /* Use the imported font */
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: white;
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  height: 130px;
+  font-family: Georgia, 'Times New Roman', Times, serif; /* Use the imported font */
   
-        }
+  
+}
 .mainNav-container{
   display: flex;
   justify-content: center;
@@ -142,8 +139,7 @@ justify-content: center;
   color: white;
   text-align: center;
   text-decoration: none;
-  /* use responsive font size instead of huge fixed value */
-  font-size: 1rem;
+  font-size: 2.6rem;
   transition: color 0.3s;
 }
 .closeNav-toggle {
@@ -260,9 +256,7 @@ justify-content: center;
      
          .carousel-inner img {
            width: 100%;
-           /* prefer max-height with auto height so images scale on various screens */
-            max-height: 70vh;
-            height: auto;
+            height: 700px;
             object-fit: cover;
         }
 
@@ -292,10 +286,10 @@ justify-content: center;
           gap: 12px;
         }
 
-    @media (max-width: 768px) {
-      .carousel-inner img {
-        max-height: 50vh;
-      }
+        @media (max-width: 768px) {
+            .carousel-inner img {
+                height: 500px;
+            }
 
             .IMG-content2{
             display: none;
@@ -305,18 +299,24 @@ justify-content: center;
             align-items: start;
              max-width: 280px;
           }
-          .hero-cta p { text-align: start;}
+          .hero-cta p { text-align: start;font-size: smaller;  }
           .hero-cta .book-now-btn {
             width: 100%;
+            font-size: smaller;
             align-items: flex-end;
             justify-content: start;
+            
+           
+            
           }
-          }
+        }
 
-    @media (max-width: 576px) {
-      .carousel-inner img {
-        max-height: 40vh;
-      }
+        @media (max-width: 576px) {
+            .carousel-inner img {
+                height: 300px;
+               
+
+            }
             .thum-images{
               margin-top: -3rem;
               width: 100%;
@@ -326,19 +326,16 @@ justify-content: center;
             }
         }
 
-    .features {
-      background-color: rgba(1, 13, 17, 0.897);
-      color: white;
-      /* make features responsive */
-      width: 30%;
-      max-width: 380px;
-      height: auto;
-      min-height: 200px;
-      position: relative;
-      padding: 20px;
-      border-radius: 5px;
-      margin-top: 20px;
-    }
+        .features {
+            background-color: rgba(1, 13, 17, 0.897);
+            color: white;
+            width: 30%;
+            height: 30em;
+            position: relative;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
         .features ul{
             font-size: 13px;
         }
@@ -526,11 +523,9 @@ justify-content: center;
                 background-color: rgba(156, 156, 156, 0.188);
             }
             .description-text{
-              /* remove large negative offset which breaks layout on many screens */
-              margin-top: 0;
+              margin-top: -13em;
               width: 68%;
               font-size: 18px ;
-              box-sizing: border-box;
             }
 
             .regular-plan-grid{
@@ -669,7 +664,7 @@ justify-content: center;
             footer {
   background-color: #d1e9eb;
   color: #333;
-  /* remove forced huge height so footer can size naturally */
+  height: 67rem; /* Let the height adjust automatically for content */
   padding: 20px 0;
 }
 .footer{
@@ -847,30 +842,6 @@ justify-content: center;
     box-sizing: border-box; /* Padding and borders included in width */
 }
 
-/* New: container to hold description text and features side-by-side */
-.description-container{
-  display: flex;
-  gap: 2rem;
-  width: 100%;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap; /* allow stacking on smaller screens */
-}
-.description-main{
-  flex: 1 1 60%; /* take available space, but can shrink */
-  min-width: 260px;
-}
-.description-aside{
-  flex: 0 0 32%; /* aside stays around ~30% */
-  min-width: 220px;
-}
-@media (max-width: 768px){
-  .description-main, .description-aside{flex: 1 1 100%;}
-}
-@media (max-width: 1024px) {
-  /* Tablet & smaller */
-  
-}
 .description-header {
     margin: auto;
     text-align: center;
@@ -992,28 +963,7 @@ justify-content: center;
         }
       
         
-} 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer utilities {
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(12px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-fadeIn {
-    animation: fadeIn 1.2s ease-in-out forwards;
-  }
 }
-
 .btn-book a{
   text-decoration: none;
   color: white;
@@ -1080,22 +1030,7 @@ justify-content: center;
   font-weight: bold;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
- .btn-primary {
-      background-color: #2563EB;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-    .btn-primary:hover {
-      background-color: #1E40AF;
-      transform: translateY(-2px);
-    }
-    .btn-primary:focus {
-      outline: 2px solid #1E40AF;
-      outline-offset: 2px;
-    }
-    .hero-cta {
-      background-color: #1F2937; /* Black div */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+
 
 
 
@@ -1243,36 +1178,16 @@ justify-content: center;
       </div>
       
         
-<!-- 
- <div class="bg-white font-sans">
-  <div
-    class="hero-cta flex flex-col sm:flex-row justify-between align-items-start
-           p-4 sm:p-6 rounded-xl mx-auto my-6 w-[90%] sm:max-w-2xl 
-           bg-gradient-to-r from-[#001f5a] to-[#003580] text-white
-           animate-fadeIn transition-all duration-500 ease-in-out">
 
-    <div class="text-center sm:text-left mb-4 sm:mb-0">
-      <p class="text-xl sm:text-3xl font-bold text-white">
-        ₦75,000 <span class="text-sm sm:text-base font-normal">per night</span>
-      </p>
-      <p class="text-sm sm:text-lg text-gray-300">Apartments • Lugbe</p>
-    </div>
-
-    <div class="cta-actions">
-      <button
-        type="button"
-        class="btn bg-blue-600 hover:bg-blue-700 text-white font-semibold 
-               py-2 px-4 sm:px-6 rounded-md transition-transform duration-300 
-               hover:scale-105"
-        data-bs-toggle="modal"
-        data-bs-target="#reservationModal"
-        data-apartment="Prestige-Suite-2-Bedroom-Apartment-Lugbe">
-        Book Now
-      </button>
-    </div>
-  </div>
-</div> -->
-
+        <!-- <div class="hero-cta">
+          <div>
+            <p><strong>₦75,000</strong> per night</p>
+            <p>Apartments • Lugbe</p>
+          </div>
+          <div class="cta-actions">
+            <button type="button" class="btn btn-primary book-now-btn" data-bs-toggle="modal" data-bs-target="#reservationModal" data-apartment="Prestige-Suite-2-Bedroom-Apartment-Lugbe">Book Now</button>
+          </div>
+        </div> -->
 
         <div class="thumb-section p-2  ;">
 
@@ -1517,13 +1432,29 @@ justify-content: center;
 
 
 
-         
+            <!-- <div class="description-direct ">
+                <div class="description-direct-content">
+                    <div class="Direct-reservations">
+                        <h3>Direct Reservations</h3>
+                    </div>
+
+
+                    <div class="Direct-Reservations-contact -subtle mt-4 text-center">
+                        <p><i class="fas fa-phone"></i>+234 908 756 1269</p>
+                        <p><a href=""><a href="mailto:Support@prestineapartment.com">Support@prestineapartment.com</a></p>
+                    </div>
+
+                    <button class="m-2 border-0" style="background-color: #513901aa;">
+                        <H4>? Ask any question</H4>
+                    </button>
+                </div>
+            </div> -->
 
           </div>
 
     </section>
 
-    <div class="features-mobile text-start" style="box-shadow: 0 4px 6px rgb(14, 42, 254); font-family: 'Times New Roman', Times, serif;">
+    <div class="features-mobile text-start" style="box-shadow: 0 4px 6px rgb(1, 7, 55); font-family: 'Times New Roman', Times, serif;">
       <h4  class="">Features</h4>
       <ul>
           <li>Luxurious Living Room</li>
@@ -1721,7 +1652,7 @@ justify-content: center;
       <div class="container d-flex">
       
           <!-- Locate Us Section -->
-          <div class=" bg-white locate-content justify-content-between mt-4 col-lg-3 col-md-6 mb-4" style="height: auto; width: 100%;">
+          <div class=" bg-white locate-content justify-content-between mt-4 col-lg-3 col-md-6 mb-4" style="height: 30em; width: 0%;">
               <div class="locate-content p-3 m-auto" style="height: 17em; width: 90%;">
                   <h3 style="font-size: 30px;">Locate Us</h3>
                   <button class="btn btn-sm w-50"  style="height: 70px;">View on Map</button>
@@ -1811,7 +1742,7 @@ justify-content: center;
 
    </button>
 
-  <!-- bootstrap bundle already included in head; removed duplicate include -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
         function changeCarouselImage(index) {
