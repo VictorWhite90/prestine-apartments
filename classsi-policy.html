@@ -1908,7 +1908,7 @@ const images = document.querySelectorAll('.background-image');
   function updatePrice() {
       const checkinDate = document.getElementById('checkin').value;
       const checkoutDate = document.getElementById('checkout').value;
-      const roomRate = parseFloat(document.getElementById('hiddenRoomRate').value) || 85000;
+      const roomRate = parseFloat(document.getElementById('hiddenRoomRate').value) || 75000;
   
       if (!checkinDate || !checkoutDate) {
           document.getElementById('priceDisplay').textContent = "₦0.00";
@@ -1936,7 +1936,7 @@ const images = document.querySelectorAll('.background-image');
   document.querySelectorAll('.book-now-btn').forEach(button => {
       button.addEventListener('click', function () {
           document.getElementById('apartmentName').value = this.getAttribute('data-apartment');
-          document.getElementById('hiddenRoomRate').value = this.getAttribute('data-price') || 85000;
+          document.getElementById('hiddenRoomRate').value = this.getAttribute('data-price') || 75000;
       });
   });
   
